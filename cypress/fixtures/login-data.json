@@ -1,0 +1,7 @@
+{
+  "email": "oudtesting@gmail.com",
+  "password": "oud_testing12",
+  "requiresEmail": "Please enter your Spotify username or email address.",
+  "requiresPassword": "Please enter your password.",
+  "requiresBoth": "Incorrect username or password."
+}

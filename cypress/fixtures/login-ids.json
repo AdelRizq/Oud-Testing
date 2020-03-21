@@ -1,0 +1,9 @@
+{
+  "email": "login-username",
+  "password": "login-password",
+  "button": "login-button",
+  "requiresEmail": "[ng-if='accounts.username.$error.required']",
+  "requiresPassword": "[ng-if='accounts.password.$error.required']",
+  "requiresBoth": "[ng-if='response.error']",
+  "signUpLink": "sign-up-link"
+}
