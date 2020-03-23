@@ -1,17 +1,22 @@
 /// <reference types="cypress"/>
 
 describe("Logging In", () => {
-  beforeEach(() => {
-    cy.visit("/login");
-  });
-
   before(() => {
     cy.fixture("login-data").then(data => {
       self.loginData = data;
     });
+
     cy.fixture("login-ids").then(data => {
       self.loginIds = data;
     });
+
+    cy.fixture("urls").then(data => {
+      self.loginUrl = data.login;
+    });
+  });
+
+  beforeEach(() => {
+    cy.visit(`/${self.loginUrl}`);
   });
 
   it("greets with Sign in", () => {
@@ -22,7 +27,7 @@ describe("Logging In", () => {
   });
 
   it("requires Email", () => {
-    cy.get(`#${self.loginIds.button}`).click();
+    cy.get(`${self.loginIds.button}`).click();
     cy.get(`${self.loginIds.requiresEmail}`).should(
       "contain",
       `${self.loginData.requiresEmail}`
@@ -30,7 +35,7 @@ describe("Logging In", () => {
   });
 
   it("requires Password", () => {
-    cy.get(`#${self.loginIds.button}`).click();
+    cy.get(`${self.loginIds.button}`).click();
     cy.get(`${self.loginIds.requiresPassword}`).should(
       "contain",
       `${self.loginData.requiresPassword}`
@@ -38,9 +43,9 @@ describe("Logging In", () => {
   });
 
   it("requires valid Email ans Password", () => {
-    cy.get(`#${self.loginIds.email}`).type("oud");
-    cy.get(`#${self.loginIds.password}`).type("oud");
-    cy.get(`#${self.loginIds.button}`).click();
+    cy.get(`${self.loginIds.email}`).type("oud");
+    cy.get(`${self.loginIds.password}`).type("oud");
+    cy.get(`${self.loginIds.button}`).click();
 
     cy.get(`${self.loginIds.requiresBoth}`).should(
       "contain",
@@ -49,11 +54,19 @@ describe("Logging In", () => {
   });
 
   it("link to Sign up", () => {
-    cy.get(`#${signUpLink}`).click();
+    cy.get(`${self.loginIds.signUpLink}`).click();
     cy.url().should("contain", "signup");
   });
 
-  it("Successful login", () => {
+  it("forgot pasword", () => {
+    cy.get(`${self.loginIds.forgotPassword}`).click();
+    cy.get("#form_input").type("oudtesting@gmail.com");
+    cy.get("#form_send").click();
+  });
+
+  it.only("Successful login", () => {
     cy.login();
+
+    cy.url().should("contain", "account/overview");
   });
 });

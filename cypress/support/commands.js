@@ -25,7 +25,14 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 Cypress.Commands.add("login", () => {
-  cy.get(`#${self.loginIds.email}`).type(self.loginData.email);
-  cy.get(`#${self.loginIds.password}`).type(self.loginData.password);
-  cy.get(`#${self.loginIds.button}`).click();
+  cy.get(`${self.loginIds.email}`).type(self.loginData.email);
+  cy.get(`${self.loginIds.password}`).type(self.loginData.password);
+  cy.get(`${self.loginIds.button}`).click();
+
+  // cy.request({
+  //   method: "get",
+  //   url: "accounts.spotify.com/en/login"
+  // }).then(() => {
+  //   cy.url().should("contain", "login");
+  // });
 });

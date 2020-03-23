@@ -1,0 +1,22 @@
+{
+  "email": "oudtesting@gmail.com",
+  "confirmEmail": "oudtesting@gmail.com",
+  "password": "oud_testing12",
+  "displayName": "Oud Testing",
+  "month": "January",
+  "day": "1",
+  "year": "1999",
+  "gender": "Male",
+
+  "requiresEmail": "Please enter your email.",
+  "requiresConfirmEmail": "Please enter your email.",
+  "requiresPassword": "Enter a password to continue.",
+  "requiresDisplayName": "What should we call you?",
+  "requiresMonth": "Please enter your birth month.",
+  "requiresDay": "Please enter a valid day of the month.",
+  "requiresYear": "Please enter a valid year.",
+  "requiresGender": "Please indicate your gender.",
+
+  "invalidEmail": "The email address you supplied is invalid.",
+  "shortPassword": "Your password is too short."
+}

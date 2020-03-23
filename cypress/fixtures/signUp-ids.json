@@ -1,0 +1,22 @@
+{
+  "email": "register-email",
+  "confirmEmail": "register-confirm-email",
+  "password": "register-password",
+  "displayName": "register-displayname",
+  "gender": "register-male",
+  "year": "register-dob-year",
+  "month": "register-dob-month",
+  "day": "register-dob-day",
+  "button": "register-button-email-submit",
+
+  "requiresEmail": "[for='register-email']",
+  "requiresConfirmEmail": "[for='register-confirm-email']",
+  "requiresPassword": "[for='register-password']",
+  "requiresDisplayName": "[for='register-displayname']",
+  "requiresYear": "[for='register-dob-year']",
+  "requiresMonth": "[for='register-dob-month']",
+  "requiresDay": "[for='register-dob-day']",
+  "requiresGender": "[for='signup_form[gender]']",
+
+  "loginLink": "#register-link-login"
+}
