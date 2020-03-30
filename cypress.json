@@ -1,3 +1,37 @@
 {
-  "baseUrl": "https://www.spotify.com/us/"
+    "baseUrl": "https://www.spotify.com/eg-en/",
+    "chromeWebSecurity": false,
+    "env": {
+        "username": "31zgveixkdrwubeanrrsduom5jxu",
+        "email": "trytest304@gmail.com",
+        "password": "0142307673",
+        "dataTestIds": {
+            "play": "control-button-play",
+            "pause": "control-button-pause",
+            "forward": "control-button-skip-forward",
+            "backward": "control-button-skip-back",
+            "enableRepeat": "control-button-repeat",
+            "enableRepeatOne": "control-button-repeat-one",
+            "disableRepeat": "control-button-no-repeat",
+            "nowPlaying": "nowplaying-track-link",
+            "shuffle": "control-button-shuffle",
+            "disableShufle": "control-button-disable-shuffle",
+            "queue": "control-button-undefined",
+            "like": "",
+            "likedSongs": "",
+            "volume": "",
+            "volumeBar": "",
+            "search": "",
+            "searchbar": ""
+        },
+        "classes": {
+            "progressTime": ".playback-bar__progress-time",
+            "progressBar": ".progress-bar__fg",
+            "likedSongs": ".tracklist-name .ellipsis-one-line",
+            "trackName": ".tracklist-name .ellipsis-one-line"
+
+
+        }
+
+    }
 }
