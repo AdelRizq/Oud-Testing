@@ -6,10 +6,10 @@ describe("Logging In", () => {
   });
 
   before(() => {
-    cy.fixture("login-data").then(data => {
+    cy.fixture("Login/login-data").then(data => {
       self.loginData = data;
     });
-    cy.fixture("login-ids").then(data => {
+    cy.fixture("Login/login-ids").then(data => {
       self.loginIds = data;
     });
   });

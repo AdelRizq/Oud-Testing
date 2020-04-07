@@ -1,0 +1,7 @@
+{
+    "AccountURL": "http://localhost:3000/Account",
+    "OverViewURL":"http://localhost:3000/account/accountOverview",
+    "EditProfileURL":"http://localhost:3000/account/editProfile",
+    "JoinPremiumURL":"http://localhost:3000/redirectPage",
+    "SignoutURL":"http://localhost:3000/redirectPage"
+}
