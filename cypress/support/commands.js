@@ -31,14 +31,10 @@ Cypress.Commands.add("login", () => {
 });
 
 Cypress.Commands.add("OudChange_Password",()=>{
-
-
-
 /*cy.get('[id="set new password"]').click({force:true})
 cy.contains('Please fill out this field')*/
 // the previous test is made to check that the password won't be changed if you didn't enter any data 
 // but the error message can't be catched ??!! 
-
 
 cy.fixture('Account/Data.json').then((Data)=>{
   cy.get(Data.ChangePasswordButton).click({force:true})
@@ -61,8 +57,6 @@ cy.fixture('Account/Data.json').then((Data)=>{
   cy.get(Data.SubmitButton).click({force:true})
   cy.contains(Data.ChangingPasswordSuccessfullyMessage)
 
-
-
   cy.reload()
   cy.get(Data.CurrentPasswordBox).clear().type(Data.Password)
   cy.get(Data.NewPasswordBox).clear().type(Data.WrongNewPassword)
@@ -70,14 +64,7 @@ cy.fixture('Account/Data.json').then((Data)=>{
   // if y
   cy.get(Data.SubmitButton).click({force:true})
   cy.contains(Data.WrongPasswordMessage)
-
-
-
-
-
 })
-
-
 })
 
 Cypress.Commands.add("CheckOudpattern",(Pattern)=>{
@@ -85,13 +72,9 @@ Cypress.Commands.add("CheckOudpattern",(Pattern)=>{
   cy.get(Data.EmailBoxID)
   .clear()
   .type(Pattern)
-
   cy.contains(Data.InvalidEmailMessage)
 })
-
-
 })
-
 
 Cypress.Commands.add("CheckOudaccountoverview",()=>{
   /* 
@@ -101,12 +84,10 @@ Cypress.Commands.add("CheckOudaccountoverview",()=>{
  
   // it is supposed to use the login command 
   cy.fixture('URLS.json','Account/Data.json').then((URLS_messages_AllData)=>{
-
-    cy.visit(URLS_messages_AllData.AccountURL)
-    cy.get(URLS_messages_AllData.AccountOverviewID).click({force:true})
+  cy.visit(URLS_messages_AllData.AccountURL)
+  cy.get(URLS_messages_AllData.AccountOverviewID).click({force:true})
   cy.url()
     .should('eq',URLS_messages_AllData.OverViewURL)
-  
   cy.scrollTo(0, 500)           
   cy.contains('EDIT BROFILE')
     .click({force:true})
@@ -122,52 +103,24 @@ Cypress.Commands.add("CheckOudaccountoverview",()=>{
     .click({force:true})
   cy.url()
     .should('eq',URLS_messages_AllData.JoinPremiumURL)
-  
   cy.contains('Dummy Sign out and Dummy Get Premium Page')
-  
   cy.go('back')
-  
   cy.scrollTo(0, 1500)     
- 
   cy.contains('SIGN OUT').click({force:true})
   cy.url()
     .should('eq',URLS_messages_AllData.SignoutURL)
   cy.contains('Dummy Sign out and Dummy Get Premium Page')
   cy.go('back')
-
-  })
-  
+  }) 
 })
 Cypress.Commands.add("CheckOudpattern",(Pattern)=>{
   cy.fixture('AllData.json').then((Data)=>{
   cy.get(Data.EmailBoxID)
   .clear()
   .type(Pattern)
-
   cy.contains(Data.InvalidEmailMessage)
 })
-
-
 })
-Cypress.Commands.add("OudCheck_The_Box",( )=>
-{
-  cy.fixture('Account/Data.json').then((Data)=>{
-  cy.get(Data.EditProfileID).click({force:true})})
-  cy.Check_Start_Com_with_invalid_char( )
-  cy.check_end_Com_With_invalid_char( )
-  cy.Check_invalid_char_in_middle_in_Com( )
-
-  cy.Check_Start_at_with_invalid_char( )
-  cy.Check_end_at_with_invalid_char( )
-  cy.Check_Middle_at_with_invalid_char( )
-
-  cy.Check_The_Word_Pre_At( )
-
-
-
-})
-
-
 
 Cypress.Commands.add("Check_Start_Com_with_invalid_char",()=>{
   cy.CheckPattern('123@gamil.')
@@ -186,7 +139,6 @@ Cypress.Commands.add("Check_Start_Com_with_invalid_char",()=>{
     var char = String.fromCharCode(i); 
     var newtext = text+char+'a' ;
     cy.CheckPattern(newtext)
-
   }
 
   for (var i = 91  ; i<=96;i++){
@@ -202,7 +154,6 @@ Cypress.Commands.add("Check_Start_Com_with_invalid_char",()=>{
   }
 
   cy.CheckPattern('123@gamil.1231a fd') // check the space inside the 
-
 })
 
 Cypress.Commands.add("check_end_Com_With_invalid_char",()=>{
@@ -222,7 +173,6 @@ Cypress.Commands.add("check_end_Com_With_invalid_char",()=>{
     var char = String.fromCharCode(i); 
     var newtext = text+'a'+char ;
     cy.CheckPattern(newtext)
-
   }
 
   for (var i = 91  ; i<=96;i++){
@@ -238,8 +188,6 @@ Cypress.Commands.add("check_end_Com_With_invalid_char",()=>{
   }  
 })
 
-
-
 Cypress.Commands.add("Check_invalid_char_in_middle_in_Com",()=>{
 var text='123@gamil.c'
   for (var i = 33 ; i<=44; i++){
@@ -251,7 +199,6 @@ var text='123@gamil.c'
   cy.CheckPattern('123@gamil.c/om' ) 
   // instead of ending the loop at 47 and adding if cond. 
   // in the loop i will test  it outside the loop .. 
-
   for (var i = 58 ; i<=64 ; i++){
     var char = String.fromCharCode(i); 
     var newtext = text+char+'om' ;
@@ -272,13 +219,10 @@ var text='123@gamil.c'
       var newtext = text+char+'a' ;
       cy.CheckPattern(newtext )
     }
-
   }
-
 })
 
 Cypress.Commands.add("Check_Start_at_with_invalid_char",( )=>{
-
   var text = '123@'
 
   for (var i = 33 ; i<=47; i++){
@@ -304,12 +248,9 @@ Cypress.Commands.add("Check_Start_at_with_invalid_char",( )=>{
     var newtext = text+char+'gmail.com' ;
     cy.CheckPattern(newtext )
   }
-
 })
 Cypress.Commands.add("Check_end_at_with_invalid_char",( )=>
 {
-
-
 var text = '123@'
 
   for (var i = 33 ; i<=47; i++){
@@ -337,13 +278,10 @@ var text = '123@'
     var newtext = text+'gmail'+char+'.com' ;
     cy.CheckPattern(newtext )
   }
-
 })
-
 
 Cypress.Commands.add("Check_Middle_at_with_invalid_char",( )=>
 {
-
   var text = '123@g'
   for (var i = 33 ; i<=44; i++){
     var char = String.fromCharCode(i); 
@@ -419,7 +357,6 @@ Cypress.Commands.add("Check_The_Word_Pre_At",( )=>
 
 })
 
-
 Cypress.Commands.add("OudCheck_The_Box",( )=>
 {
   cy.fixture('Account/Data.json').then((Data)=>{
@@ -433,8 +370,6 @@ Cypress.Commands.add("OudCheck_The_Box",( )=>
   cy.Check_Middle_at_with_invalid_char( )
 
   cy.Check_The_Word_Pre_At( )
-
-
 
 })
 
