@@ -2,16 +2,17 @@
 
 describe("Logging In", () => {
   before(() => {
-    cy.fixture("login-data").then(data => {
+    cy.fixture("login-data").then((data) => {
       self.loginData = data;
     });
 
-    cy.fixture("login-ids").then(data => {
+    cy.fixture("login-ids").then((data) => {
       self.loginIds = data;
     });
 
-    cy.fixture("urls").then(data => {
+    cy.fixture("urls").then((data) => {
       self.loginUrl = data.login;
+      self.forgotUrl = data.forgotPassword;
     });
   });
 
@@ -19,54 +20,176 @@ describe("Logging In", () => {
     cy.visit(`/${self.loginUrl}`);
   });
 
-  it("greets with Sign in", () => {
-    cy.get("#login-to-continue").should(
-      "contain",
-      "To continue, log in to Spotify."
-    );
-  });
+  it("valid password empty email", () => {
+    cy.server();
+    cy.route({
+      method: "POST",
+      url: "/login",
+      response: "{test1: test2}",
+    }).as("login");
 
-  it("requires Email", () => {
-    cy.get(`${self.loginIds.button}`).click();
-    cy.get(`${self.loginIds.requiresEmail}`).should(
-      "contain",
-      `${self.loginData.requiresEmail}`
-    );
-  });
-
-  it("requires Password", () => {
-    cy.get(`${self.loginIds.button}`).click();
-    cy.get(`${self.loginIds.requiresPassword}`).should(
-      "contain",
-      `${self.loginData.requiresPassword}`
-    );
-  });
-
-  it("requires valid Email ans Password", () => {
-    cy.get(`${self.loginIds.email}`).type("oud");
-    cy.get(`${self.loginIds.password}`).type("oud");
+    cy.get(`${self.loginIds.password}`).type(self.loginData.password);
     cy.get(`${self.loginIds.button}`).click();
 
-    cy.get(`${self.loginIds.requiresBoth}`).should(
-      "contain",
-      `${self.loginData.requiresBoth}`
-    );
+    cy.get("@login").should("not.exist");
+
+    // cy.get(`${self.loginIds.requiresEmail}`).should(
+    //   "contain",
+    //   `${self.loginData.requiresEmail}`
+    // );
+  });
+
+  it("valid email empty password", () => {
+    cy.server();
+    cy.route({
+      method: "POST",
+      url: "/login",
+      response: "{test1: test2}",
+    }).as("login");
+
+    cy.get(`${self.loginIds.email}`).type(self.loginData.email);
+    cy.get(`${self.loginIds.button}`).click();
+
+    cy.get("@login").should("not.exist");
+
+    // cy.get(`${self.loginIds.requiresPassword}`).should(
+    //   "contain",
+    //   `${self.loginData.requiresPassword}`
+    // );
+  });
+
+  it("invalid email", () => {
+    cy.server();
+    cy.route({
+      method: "POST",
+      url: "/login",
+      response: "{test1: test2}",
+    }).as("login");
+
+    cy.get(`${self.loginIds.password}`).type(`${self.loginData.password}`);
+
+    cy.get(`${self.loginIds.email}`).then(() => {
+      for (let i of self.loginData.invalidEmails) {
+        cy.get(`${self.loginIds.email}`).clear();
+        cy.get(`${self.loginIds.email}`).type(i);
+
+        cy.get(`${self.loginIds.button}`).click();
+        cy.get(`${self.loginIds.requiresEmail}`).should(
+          "contain",
+          `${self.loginData.invalidEmail}`
+        );
+        //cy.get("@login").should("not.exist");
+      }
+    });
+  });
+
+  it("short passwords", () => {
+    cy.server();
+    cy.route({
+      method: "POST",
+      url: "/login",
+      response: "{test1: test2}",
+    }).as("login");
+
+    cy.get(`${self.loginIds.email}`).type(`${self.loginData.email}`);
+
+    cy.get(`${self.loginIds.password}`).then(() => {
+      for (let i of self.loginData.shortPasswords) {
+        cy.get(`${self.loginIds.password}`).clear();
+        cy.get(`${self.loginIds.password}`).type(i);
+
+        cy.get(`${self.loginIds.button}`).click();
+        cy.get(`${self.loginIds.requiresPassword}`).should(
+          "have.html",
+          `${self.loginData.shortPassword}`
+        );
+        //cy.get("@login").should("not.exist");
+      }
+    });
+  });
+
+  it("weak passwords", () => {
+    cy.server();
+    cy.route({
+      method: "POST",
+      url: "/login",
+      response: "{test1: test2}",
+    }).as("login");
+
+    cy.get(`${self.loginIds.email}`).type(`${self.loginData.email}`);
+
+    cy.get(`${self.loginIds.password}`).then(() => {
+      for (let i of self.loginData.weakPasswords) {
+        cy.get(`${self.loginIds.password}`).clear();
+        cy.get(`${self.loginIds.password}`).type(i);
+
+        cy.get(`${self.loginIds.button}`).click();
+        cy.get(`${self.loginIds.requiresPassword}`).should(
+          "have.html",
+          `${self.loginData.waekPassword}`
+        );
+        //cy.get("@login").should("not.exist");
+      }
+    });
   });
 
   it("link to Sign up", () => {
-    cy.get(`${self.loginIds.signUpLink}`).click();
-    cy.url().should("contain", "signup");
+    cy.get(`${self.loginIds.signUpLink}`).should("contain.html", "SIGN UP");
   });
 
   it("forgot pasword", () => {
+    cy.server();
+    cy.route({
+      method: "POST",
+      url: "/ForgottenPasswords",
+      response: {
+        email: "Dola@gmail.com",
+      },
+    }).as("sendEmail");
+
     cy.get(`${self.loginIds.forgotPassword}`).click();
-    cy.get("#form_input").type("oudtesting@gmail.com");
-    cy.get("#form_send").click();
+    cy.get(`${self.loginIds.forgotPasswordEmail}`).type(
+      "oudtesting@gmail.com{enter}"
+    );
+
+    cy.get("@sendEmail").should("exist");
   });
 
-  it.only("Successful login", () => {
+  it("invalid emails in forgot password", () => {
+    cy.server();
+    cy.route({
+      method: "POST",
+      url: "/login",
+      response: "{test1: test2}",
+    }).as("login");
+
+    cy.get(`${self.loginIds.forgotPassword}`).click();
+
+    cy.get(`${self.loginIds.forgotPasswordEmail}`).then(() => {
+      for (let i of self.loginData.invalidEmails) {
+        cy.get(`${self.loginIds.forgotPasswordEmail}`).clear();
+        cy.get(`${self.loginIds.forgotPasswordEmail}`).type(i);
+
+        cy.get(`${self.loginIds.forgotPasswordButton}`).click();
+        cy.get(`${self.loginIds.requiresEmail}`).should(
+          "contain",
+          `${self.loginData.invalidEmail}`
+        );
+        //cy.get("@login").should("not.exist");
+      }
+    });
+  });
+
+  it("Successful login", () => {
+    cy.server();
+    cy.route({
+      method: "POST",
+      url: "login",
+      response: "{as:as}",
+    }).as("login");
+
     cy.login();
 
-    cy.url().should("contain", "account/overview");
+    cy.get("@login").should("exist");
   });
 });

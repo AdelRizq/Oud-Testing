@@ -1,0 +1,272 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 9,
+    "passes": 6,
+    "pending": 0,
+    "failures": 3,
+    "start": "2020-04-07T19:54:02.359Z",
+    "end": "2020-04-07T19:54:46.770Z",
+    "duration": 44411,
+    "testsRegistered": 9,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5a384ec4-61ea-4804-a1ad-183b4d2af100",
+      "title": "",
+      "fullFile": "cypress\\integration\\user\\login.spec.js",
+      "file": "cypress\\integration\\user\\login.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f4152290-bf4c-4c59-969d-d2a6f722df45",
+          "title": "Logging In",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "valid password empty email",
+              "fullTitle": "Logging In valid password empty email",
+              "timedOut": null,
+              "duration": 8141,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.server();\ncy.route({\n  method: \"POST\",\n  url: \"/login\",\n  response: \"{test1: test2}\"\n}).as(\"login\");\ncy.get(\"\".concat(self.loginIds.password)).type(self.loginData.password);\ncy.get(\"\".concat(self.loginIds.button)).click();\ncy.get(\"@login\").should(\"not.exist\"); // cy.get(`${self.loginIds.requiresEmail}`).should(\n//   \"contain\",\n//   `${self.loginData.requiresEmail}`\n// );",
+              "err": {},
+              "uuid": "78b99ab0-0ad4-4c71-8557-ef8393305a96",
+              "parentUUID": "f4152290-bf4c-4c59-969d-d2a6f722df45",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "valid email empty password",
+              "fullTitle": "Logging In valid email empty password",
+              "timedOut": null,
+              "duration": 2426,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.server();\ncy.route({\n  method: \"POST\",\n  url: \"/login\",\n  response: \"{test1: test2}\"\n}).as(\"login\");\ncy.get(\"\".concat(self.loginIds.email)).type(self.loginData.email);\ncy.get(\"\".concat(self.loginIds.button)).click();\ncy.get(\"@login\").should(\"not.exist\"); // cy.get(`${self.loginIds.requiresPassword}`).should(\n//   \"contain\",\n//   `${self.loginData.requiresPassword}`\n// );",
+              "err": {},
+              "uuid": "336101a4-66ee-432c-a837-9ed3c4ddc36d",
+              "parentUUID": "f4152290-bf4c-4c59-969d-d2a6f722df45",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "invalid email",
+              "fullTitle": "Logging In invalid email",
+              "timedOut": null,
+              "duration": 7108,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.server();\ncy.route({\n  method: \"POST\",\n  url: \"/login\",\n  response: \"{test1: test2}\"\n}).as(\"login\");\ncy.get(\"\".concat(self.loginIds.password)).type(\"\".concat(self.loginData.password));\ncy.get(\"\".concat(self.loginIds.email)).then(function () {\n  var _iterator = _createForOfIteratorHelper(self.loginData.invalidEmails),\n      _step;\n  try {\n    for (_iterator.s(); !(_step = _iterator.n()).done;) {\n      var i = _step.value;\n      cy.get(\"\".concat(self.loginIds.email)).clear();\n      cy.get(\"\".concat(self.loginIds.email)).type(i);\n      cy.get(\"\".concat(self.loginIds.button)).click();\n      cy.get(\"\".concat(self.loginIds.requiresEmail)).should(\"contain\", \"\".concat(self.loginData.invalidEmail)); //cy.get(\"@login\").should(\"not.exist\");\n    }\n  } catch (err) {\n    _iterator.e(err);\n  } finally {\n    _iterator.f();\n  }\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `[for='register-email']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `[for='register-email']`, but never found it.\n    at ensureExistence (http://localhost:3001/__cypress/runner/cypress_runner.js:137261:32)\n    at Object.ensureElExistence (http://localhost:3001/__cypress/runner/cypress_runner.js:137279:12)\n    at ensureExistence (http://localhost:3001/__cypress/runner/cypress_runner.js:127867:23)\n    at onFailFn (http://localhost:3001/__cypress/runner/cypress_runner.js:127905:9)\n    at tryCatcher (http://localhost:3001/__cypress/runner/cypress_runner.js:9059:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3001/__cypress/runner/cypress_runner.js:6994:31)\n    at Promise._settlePromise (http://localhost:3001/__cypress/runner/cypress_runner.js:7051:18)\n    at Promise._settlePromise0 (http://localhost:3001/__cypress/runner/cypress_runner.js:7096:10)\n    at Promise._settlePromises (http://localhost:3001/__cypress/runner/cypress_runner.js:7172:18)\n    at _drainQueueStep (http://localhost:3001/__cypress/runner/cypress_runner.js:3766:12)\n    at _drainQueue (http://localhost:3001/__cypress/runner/cypress_runner.js:3759:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3001/__cypress/runner/cypress_runner.js:3775:5)\n    at Async.drainQueues (http://localhost:3001/__cypress/runner/cypress_runner.js:3645:14)",
+                "diff": null
+              },
+              "uuid": "14afa463-b5ee-46b8-b837-931e7589b68f",
+              "parentUUID": "f4152290-bf4c-4c59-969d-d2a6f722df45",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "short passwords",
+              "fullTitle": "Logging In short passwords",
+              "timedOut": null,
+              "duration": 6197,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.server();\ncy.route({\n  method: \"POST\",\n  url: \"/login\",\n  response: \"{test1: test2}\"\n}).as(\"login\");\ncy.get(\"\".concat(self.loginIds.email)).type(\"\".concat(self.loginData.email));\ncy.get(\"\".concat(self.loginIds.password)).then(function () {\n  var _iterator2 = _createForOfIteratorHelper(self.loginData.shortPasswords),\n      _step2;\n  try {\n    for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {\n      var i = _step2.value;\n      cy.get(\"\".concat(self.loginIds.password)).clear();\n      cy.get(\"\".concat(self.loginIds.password)).type(i);\n      cy.get(\"\".concat(self.loginIds.button)).click();\n      cy.get(\"\".concat(self.loginIds.requiresPassword)).should(\"have.html\", \"\".concat(self.loginData.shortPassword)); //cy.get(\"@login\").should(\"not.exist\");\n    }\n  } catch (err) {\n    _iterator2.e(err);\n  } finally {\n    _iterator2.f();\n  }\n});",
+              "err": {},
+              "uuid": "90902161-448e-4718-b8c3-f462a192173f",
+              "parentUUID": "f4152290-bf4c-4c59-969d-d2a6f722df45",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "weak passwords",
+              "fullTitle": "Logging In weak passwords",
+              "timedOut": null,
+              "duration": 9168,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.server();\ncy.route({\n  method: \"POST\",\n  url: \"/login\",\n  response: \"{test1: test2}\"\n}).as(\"login\");\ncy.get(\"\".concat(self.loginIds.email)).type(\"\".concat(self.loginData.email));\ncy.get(\"\".concat(self.loginIds.password)).then(function () {\n  var _iterator3 = _createForOfIteratorHelper(self.loginData.weakPasswords),\n      _step3;\n  try {\n    for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {\n      var i = _step3.value;\n      cy.get(\"\".concat(self.loginIds.password)).clear();\n      cy.get(\"\".concat(self.loginIds.password)).type(i);\n      cy.get(\"\".concat(self.loginIds.button)).click();\n      cy.get(\"\".concat(self.loginIds.requiresPassword)).should(\"have.html\", \"\".concat(self.loginData.waekPassword)); //cy.get(\"@login\").should(\"not.exist\");\n    }\n  } catch (err) {\n    _iterator3.e(err);\n  } finally {\n    _iterator3.f();\n  }\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `[for='register-password']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `[for='register-password']`, but never found it.\n    at ensureExistence (http://localhost:3001/__cypress/runner/cypress_runner.js:137261:32)\n    at Object.ensureElExistence (http://localhost:3001/__cypress/runner/cypress_runner.js:137279:12)\n    at ensureExistence (http://localhost:3001/__cypress/runner/cypress_runner.js:127867:23)\n    at onFailFn (http://localhost:3001/__cypress/runner/cypress_runner.js:127905:9)\n    at tryCatcher (http://localhost:3001/__cypress/runner/cypress_runner.js:9059:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3001/__cypress/runner/cypress_runner.js:6994:31)\n    at Promise._settlePromise (http://localhost:3001/__cypress/runner/cypress_runner.js:7051:18)\n    at Promise._settlePromise0 (http://localhost:3001/__cypress/runner/cypress_runner.js:7096:10)\n    at Promise._settlePromises (http://localhost:3001/__cypress/runner/cypress_runner.js:7172:18)\n    at _drainQueueStep (http://localhost:3001/__cypress/runner/cypress_runner.js:3766:12)\n    at _drainQueue (http://localhost:3001/__cypress/runner/cypress_runner.js:3759:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3001/__cypress/runner/cypress_runner.js:3775:5)\n    at Async.drainQueues (http://localhost:3001/__cypress/runner/cypress_runner.js:3645:14)",
+                "diff": null
+              },
+              "uuid": "e9202743-91e2-4208-bcca-84f714a49031",
+              "parentUUID": "f4152290-bf4c-4c59-969d-d2a6f722df45",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "link to Sign up",
+              "fullTitle": "Logging In link to Sign up",
+              "timedOut": null,
+              "duration": 1868,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"\".concat(self.loginIds.signUpLink)).should(\"contain.html\", \"SIGN UP\");",
+              "err": {},
+              "uuid": "acc2647d-5bb6-487f-b62e-a44642c4f78f",
+              "parentUUID": "f4152290-bf4c-4c59-969d-d2a6f722df45",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "forgot pasword",
+              "fullTitle": "Logging In forgot pasword",
+              "timedOut": null,
+              "duration": 1433,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.server();\ncy.route({\n  method: \"POST\",\n  url: \"/ForgottenPasswords\",\n  response: {\n    email: \"Dola@gmail.com\"\n  }\n}).as(\"sendEmail\");\ncy.get(\"\".concat(self.loginIds.forgotPassword)).click();\ncy.get(\"\".concat(self.loginIds.forgotPasswordEmail)).type(\"oudtesting@gmail.com{enter}\");\ncy.get(\"@sendEmail\").should(\"exist\");",
+              "err": {},
+              "uuid": "3b18d9e7-f3c2-42b1-aa84-11316b5e5fa0",
+              "parentUUID": "f4152290-bf4c-4c59-969d-d2a6f722df45",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "invalid emails in forgot password",
+              "fullTitle": "Logging In invalid emails in forgot password",
+              "timedOut": null,
+              "duration": 6119,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.server();\ncy.route({\n  method: \"POST\",\n  url: \"/login\",\n  response: \"{test1: test2}\"\n}).as(\"login\");\ncy.get(\"\".concat(self.loginIds.forgotPassword)).click();\ncy.get(\"\".concat(self.loginIds.forgotPasswordEmail)).then(function () {\n  var _iterator4 = _createForOfIteratorHelper(self.loginData.invalidEmails),\n      _step4;\n  try {\n    for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {\n      var i = _step4.value;\n      cy.get(\"\".concat(self.loginIds.forgotPasswordEmail)).clear();\n      cy.get(\"\".concat(self.loginIds.forgotPasswordEmail)).type(i);\n      cy.get(\"\".concat(self.loginIds.forgotPasswordButton)).click();\n      cy.get(\"\".concat(self.loginIds.requiresEmail)).should(\"contain\", \"\".concat(self.loginData.invalidEmail)); //cy.get(\"@login\").should(\"not.exist\");\n    }\n  } catch (err) {\n    _iterator4.e(err);\n  } finally {\n    _iterator4.f();\n  }\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `[for='register-email']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `[for='register-email']`, but never found it.\n    at ensureExistence (http://localhost:3001/__cypress/runner/cypress_runner.js:137261:32)\n    at Object.ensureElExistence (http://localhost:3001/__cypress/runner/cypress_runner.js:137279:12)\n    at ensureExistence (http://localhost:3001/__cypress/runner/cypress_runner.js:127867:23)\n    at onFailFn (http://localhost:3001/__cypress/runner/cypress_runner.js:127905:9)\n    at tryCatcher (http://localhost:3001/__cypress/runner/cypress_runner.js:9059:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3001/__cypress/runner/cypress_runner.js:6994:31)\n    at Promise._settlePromise (http://localhost:3001/__cypress/runner/cypress_runner.js:7051:18)\n    at Promise._settlePromise0 (http://localhost:3001/__cypress/runner/cypress_runner.js:7096:10)\n    at Promise._settlePromises (http://localhost:3001/__cypress/runner/cypress_runner.js:7172:18)\n    at _drainQueueStep (http://localhost:3001/__cypress/runner/cypress_runner.js:3766:12)\n    at _drainQueue (http://localhost:3001/__cypress/runner/cypress_runner.js:3759:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3001/__cypress/runner/cypress_runner.js:3775:5)\n    at Async.drainQueues (http://localhost:3001/__cypress/runner/cypress_runner.js:3645:14)",
+                "diff": null
+              },
+              "uuid": "3726b87a-c4c6-4951-8260-c945b6f0c791",
+              "parentUUID": "f4152290-bf4c-4c59-969d-d2a6f722df45",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Successful login",
+              "fullTitle": "Logging In Successful login",
+              "timedOut": null,
+              "duration": 1699,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.server();\ncy.route({\n  method: \"POST\",\n  url: \"login\",\n  response: \"{as:as}\"\n}).as(\"login\");\ncy.login();\ncy.get(\"@login\").should(\"exist\");",
+              "err": {},
+              "uuid": "7572c74a-1ebd-477d-909f-6c4ea885210e",
+              "parentUUID": "f4152290-bf4c-4c59-969d-d2a6f722df45",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "78b99ab0-0ad4-4c71-8557-ef8393305a96",
+            "336101a4-66ee-432c-a837-9ed3c4ddc36d",
+            "90902161-448e-4718-b8c3-f462a192173f",
+            "acc2647d-5bb6-487f-b62e-a44642c4f78f",
+            "3b18d9e7-f3c2-42b1-aa84-11316b5e5fa0",
+            "7572c74a-1ebd-477d-909f-6c4ea885210e"
+          ],
+          "failures": [
+            "14afa463-b5ee-46b8-b837-931e7589b68f",
+            "e9202743-91e2-4208-bcca-84f714a49031",
+            "3726b87a-c4c6-4951-8260-c945b6f0c791"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 44159,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.1.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "5.0.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

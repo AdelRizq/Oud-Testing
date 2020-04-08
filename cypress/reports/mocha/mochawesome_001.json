@@ -1,0 +1,276 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 9,
+    "passes": 5,
+    "pending": 0,
+    "failures": 4,
+    "start": "2020-04-07T19:54:57.830Z",
+    "end": "2020-04-07T19:55:50.220Z",
+    "duration": 52390,
+    "testsRegistered": 9,
+    "passPercent": 55.55555555555556,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0dc4380a-e340-4105-9e0d-c9688f65e67e",
+      "title": "",
+      "fullFile": "cypress\\integration\\user\\sign-up.spec.js",
+      "file": "cypress\\integration\\user\\sign-up.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f7675fa7-1101-4e82-80de-5ac8d07122b9",
+          "title": "Sign-Up",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "all fields are required",
+              "fullTitle": "Sign-Up all fields are required",
+              "timedOut": null,
+              "duration": 12431,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"\".concat(self.signUpIds.button)).click();\ncy.get(\"\".concat(self.signUpIds.requiresDisplayName)).should(\"be.visible\");\ncy.get(\"\".concat(self.signUpIds.requiresEmail)).should(\"be.visible\"); // should contain specific message to differ it from weak password\ncy.get(\"\".concat(self.signUpIds.requiresPassword)).should(\"contain\", \"\".concat(self.signUpData.requiresPassword)); // currently, it will contain until giving it an id\ncy.contains(\"\".concat(self.signUpIds.requiresBirthDate)).should(\"be.visible\");\ncy.get(\"\".concat(self.signUpIds.requiresGender)).should(\"be.visible\");",
+              "err": {},
+              "uuid": "90730ea8-3712-48c5-99b0-f65a1244caa7",
+              "parentUUID": "f7675fa7-1101-4e82-80de-5ac8d07122b9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "invalid emails",
+              "fullTitle": "Sign-Up invalid emails",
+              "timedOut": null,
+              "duration": 8618,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"\".concat(self.signUpIds.email)).then(function () {\n  var _iterator = _createForOfIteratorHelper(self.signUpData.invalidEmails),\n      _step;\n  try {\n    for (_iterator.s(); !(_step = _iterator.n()).done;) {\n      var i = _step.value;\n      cy.get(\"\".concat(self.signUpIds.email)).clear();\n      cy.get(\"\".concat(self.signUpIds.email)).type(i);\n      cy.get(\"\".concat(self.signUpIds.button)).click();\n      cy.get(\"\".concat(self.signUpIds.requiresEmail)).should(\"contain\", \"\".concat(self.signUpData.invalidEmail));\n    }\n  } catch (err) {\n    _iterator.e(err);\n  } finally {\n    _iterator.f();\n  }\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `[data-testid='EmailError']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `[data-testid='EmailError']`, but never found it.\n    at ensureExistence (http://localhost:3001/__cypress/runner/cypress_runner.js:137261:32)\n    at Object.ensureElExistence (http://localhost:3001/__cypress/runner/cypress_runner.js:137279:12)\n    at ensureExistence (http://localhost:3001/__cypress/runner/cypress_runner.js:127867:23)\n    at onFailFn (http://localhost:3001/__cypress/runner/cypress_runner.js:127905:9)\n    at tryCatcher (http://localhost:3001/__cypress/runner/cypress_runner.js:9059:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3001/__cypress/runner/cypress_runner.js:6994:31)\n    at Promise._settlePromise (http://localhost:3001/__cypress/runner/cypress_runner.js:7051:18)\n    at Promise._settlePromise0 (http://localhost:3001/__cypress/runner/cypress_runner.js:7096:10)\n    at Promise._settlePromises (http://localhost:3001/__cypress/runner/cypress_runner.js:7172:18)\n    at _drainQueueStep (http://localhost:3001/__cypress/runner/cypress_runner.js:3766:12)\n    at _drainQueue (http://localhost:3001/__cypress/runner/cypress_runner.js:3759:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3001/__cypress/runner/cypress_runner.js:3775:5)\n    at Async.drainQueues (http://localhost:3001/__cypress/runner/cypress_runner.js:3645:14)",
+                "diff": null
+              },
+              "uuid": "d67dd4bf-b7e4-4017-8b4f-0cac57d5db0c",
+              "parentUUID": "f7675fa7-1101-4e82-80de-5ac8d07122b9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "short passwords",
+              "fullTitle": "Sign-Up short passwords",
+              "timedOut": null,
+              "duration": 5984,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"\".concat(self.signUpIds.password)).then(function (password) {\n  var _iterator2 = _createForOfIteratorHelper(signUpData.shortPasswords),\n      _step2;\n  try {\n    for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {\n      var i = _step2.value;\n      cy.get(\"\".concat(self.signUpIds.password)).clear();\n      cy.get(\"\".concat(self.signUpIds.password)).type(i);\n      cy.get(\"\".concat(self.signUpIds.requiresPassword)).should(\"contain\", \"\".concat(self.signUpData.shortPassword));\n    }\n  } catch (err) {\n    _iterator2.e(err);\n  } finally {\n    _iterator2.f();\n  }\n});",
+              "err": {},
+              "uuid": "aba73245-f6e4-43c6-bf47-68ce1210d139",
+              "parentUUID": "f7675fa7-1101-4e82-80de-5ac8d07122b9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "weak passwords",
+              "fullTitle": "Sign-Up weak passwords",
+              "timedOut": null,
+              "duration": 6942,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"\".concat(self.signUpIds.password)).then(function (password) {\n  var _iterator3 = _createForOfIteratorHelper(signUpData.weakPasswords),\n      _step3;\n  try {\n    for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {\n      var i = _step3.value;\n      cy.get(\"\".concat(self.signUpIds.password)).clear();\n      cy.get(\"\".concat(self.signUpIds.password)).type(i);\n      cy.get(\"\".concat(self.signUpIds.requiresPassword)).should(\"contain\", \"\".concat(self.signUpData.weakPassword));\n    }\n  } catch (err) {\n    _iterator3.e(err);\n  } finally {\n    _iterator3.f();\n  }\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `[for='register-password']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `[for='register-password']`, but never found it.\n    at ensureExistence (http://localhost:3001/__cypress/runner/cypress_runner.js:137261:32)\n    at Object.ensureElExistence (http://localhost:3001/__cypress/runner/cypress_runner.js:137279:12)\n    at ensureExistence (http://localhost:3001/__cypress/runner/cypress_runner.js:127867:23)\n    at onFailFn (http://localhost:3001/__cypress/runner/cypress_runner.js:127905:9)\n    at tryCatcher (http://localhost:3001/__cypress/runner/cypress_runner.js:9059:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3001/__cypress/runner/cypress_runner.js:6994:31)\n    at Promise._settlePromise (http://localhost:3001/__cypress/runner/cypress_runner.js:7051:18)\n    at Promise._settlePromise0 (http://localhost:3001/__cypress/runner/cypress_runner.js:7096:10)\n    at Promise._settlePromises (http://localhost:3001/__cypress/runner/cypress_runner.js:7172:18)\n    at _drainQueueStep (http://localhost:3001/__cypress/runner/cypress_runner.js:3766:12)\n    at _drainQueue (http://localhost:3001/__cypress/runner/cypress_runner.js:3759:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3001/__cypress/runner/cypress_runner.js:3775:5)\n    at Async.drainQueues (http://localhost:3001/__cypress/runner/cypress_runner.js:3645:14)",
+                "diff": null
+              },
+              "uuid": "8119de0f-e676-469d-9013-a885307f2c77",
+              "parentUUID": "f7675fa7-1101-4e82-80de-5ac8d07122b9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "valid birthday",
+              "fullTitle": "Sign-Up valid birthday",
+              "timedOut": null,
+              "duration": 4173,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"\".concat(self.signUpIds.button)).click();\ncy.get(\"\".concat(self.signUpIds.year)).select(\"1990\");\ncy.get(\"\".concat(self.signUpIds.month)).select(\"May\");\ncy.get(\"\".concat(self.signUpIds.day)).select(\"19\");\ncy.contains(\"\".concat(self.signUpIds.requiresBirthDate)).should(\"be.visible\");",
+              "err": {},
+              "uuid": "2ffc9a94-2973-4e06-bf5c-44c551455641",
+              "parentUUID": "f7675fa7-1101-4e82-80de-5ac8d07122b9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "too young age",
+              "fullTitle": "Sign-Up too young age",
+              "timedOut": null,
+              "duration": 5744,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"\".concat(self.signUpIds.button)).click();\ncy.get(\"\".concat(self.signUpIds.year)).select(\"2018\");\ncy.get(\"\".concat(self.signUpIds.month)).select(\"May\");\ncy.get(\"\".concat(self.signUpIds.day)).select(\"15\");\ncy.get(\"\".concat(self.signUpIds.button)).click();\ncy.contains(\"\".concat(self.signUpIds.requiresBirthDate)).should(\"be.visible\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find content: 'please select your Birthdata' but never did.",
+                "estack": "AssertionError: Timed out retrying: Expected to find content: 'please select your Birthdata' but never did.\n    at ensureExistence (http://localhost:3001/__cypress/runner/cypress_runner.js:137261:32)\n    at Object.ensureElExistence (http://localhost:3001/__cypress/runner/cypress_runner.js:137279:12)\n    at ensureExistence (http://localhost:3001/__cypress/runner/cypress_runner.js:127867:23)\n    at onFailFn (http://localhost:3001/__cypress/runner/cypress_runner.js:127905:9)\n    at tryCatcher (http://localhost:3001/__cypress/runner/cypress_runner.js:9059:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3001/__cypress/runner/cypress_runner.js:6994:31)\n    at Promise._settlePromise (http://localhost:3001/__cypress/runner/cypress_runner.js:7051:18)\n    at Promise._settlePromise0 (http://localhost:3001/__cypress/runner/cypress_runner.js:7096:10)\n    at Promise._settlePromises (http://localhost:3001/__cypress/runner/cypress_runner.js:7172:18)\n    at _drainQueueStep (http://localhost:3001/__cypress/runner/cypress_runner.js:3766:12)\n    at _drainQueue (http://localhost:3001/__cypress/runner/cypress_runner.js:3759:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3001/__cypress/runner/cypress_runner.js:3775:5)\n    at Async.drainQueues (http://localhost:3001/__cypress/runner/cypress_runner.js:3645:14)",
+                "diff": null
+              },
+              "uuid": "60820f14-04a4-4577-abc2-eb9cdf9f5019",
+              "parentUUID": "f7675fa7-1101-4e82-80de-5ac8d07122b9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "successful sign-up",
+              "fullTitle": "Sign-Up successful sign-up",
+              "timedOut": null,
+              "duration": 3629,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"\".concat(self.signUpIds.displayName)).type(\"\".concat(self.signUpData.displayName));\ncy.get(\"\".concat(self.signUpIds.email)).type(\"\".concat(self.signUpData.email));\ncy.get(\"\".concat(self.signUpIds.password)).type(\"\".concat(self.signUpData.password));\ncy.get(\"\".concat(self.signUpIds.confirmPassword)).type(\"\".concat(self.signUpData.confirmPassword));\ncy.get(\"\".concat(self.signUpIds.gender)).select(\"\".concat(self.signUpData.gender));\ncy.get(\"\".concat(self.signUpIds.year)).select(\"\".concat(self.signUpData.year));\ncy.get(\"\".concat(self.signUpIds.month)).select(\"\".concat(self.signUpData.month));\ncy.get(\"\".concat(self.signUpIds.day)).select(\"\".concat(self.signUpData.day));\ncy.get(\"\".concat(self.signUpIds.acceptCheck)).click();\ncy.server();\ncy.route({\n  method: \"POST\",\n  url: \"/users\"\n}).as(\"new-user\");\ncy.get(\"\".concat(self.signUpIds.button)).click();\ncy.wait(\"@new-user\").should(\"have.property\", \"status\", 201);",
+              "err": {},
+              "uuid": "26b65ae4-33a2-4306-9653-15151b6d4f76",
+              "parentUUID": "f7675fa7-1101-4e82-80de-5ac8d07122b9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "sign-up without accepting the terms & conditions",
+              "fullTitle": "Sign-Up sign-up without accepting the terms & conditions",
+              "timedOut": null,
+              "duration": 3703,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"\".concat(self.signUpIds.email)).type(\"\".concat(self.signUpData.email));\ncy.get(\"\".concat(self.signUpIds.password)).type(\"\".concat(self.signUpData.password));\ncy.get(\"\".concat(self.signUpIds.confirmPassword)).type(\"\".concat(self.signUpData.confirmPassword));\ncy.get(\"\".concat(self.signUpIds.displayName)).type(\"\".concat(self.signUpData.displayName));\ncy.get(\"\".concat(self.signUpIds.year)).select(\"\".concat(self.signUpData.year));\ncy.get(\"\".concat(self.signUpIds.month)).select(\"\".concat(self.signUpData.month));\ncy.get(\"\".concat(self.signUpIds.day)).select(\"\".concat(self.signUpData.day));\ncy.get(\"\".concat(self.signUpIds.gender)).select(\"\".concat(self.signUpData.gender));\ncy.server();\ncy.route({\n  method: \"POST\",\n  url: \"/users\"\n}).as(\"new-user\");\ncy.get(\"\".concat(self.signUpIds.button)).click();\ncy.wait(\"@new-user\").should(\"not.exist\");",
+              "err": {
+                "message": "AssertionError: expected { Object (xhr, id, ...) } to not exist",
+                "estack": "AssertionError: expected { Object (xhr, id, ...) } to not exist\n    at applyChainer (http://localhost:3001/__cypress/runner/cypress_runner.js:131705:30)\n    at http://localhost:3001/__cypress/runner/cypress_runner.js:131748:16\n    at arrayReduce (http://localhost:3001/__cypress/runner/cypress_runner.js:18403:21)\n    at Function.reduce (http://localhost:3001/__cypress/runner/cypress_runner.js:27401:14)\n    at applyChainers (http://localhost:3001/__cypress/runner/cypress_runner.js:131738:18)\n    at tryCatcher (http://localhost:3001/__cypress/runner/cypress_runner.js:9059:23)\n    at Function.Promise.attempt.Promise.try (http://localhost:3001/__cypress/runner/cypress_runner.js:6333:29)\n    at Context.shouldFn (http://localhost:3001/__cypress/runner/cypress_runner.js:131752:23)\n    at Context.should (http://localhost:3001/__cypress/runner/cypress_runner.js:131767:23)\n    at Context.<anonymous> (http://localhost:3001/__cypress/runner/cypress_runner.js:144515:21)\n    at http://localhost:3001/__cypress/runner/cypress_runner.js:143990:33\n    at tryCatcher (http://localhost:3001/__cypress/runner/cypress_runner.js:9059:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3001/__cypress/runner/cypress_runner.js:6994:31)\n    at Promise._settlePromise (http://localhost:3001/__cypress/runner/cypress_runner.js:7051:18)\n    at Promise._settlePromiseCtx (http://localhost:3001/__cypress/runner/cypress_runner.js:7088:10)\n    at _drainQueueStep (http://localhost:3001/__cypress/runner/cypress_runner.js:3770:12)",
+                "diff": null
+              },
+              "uuid": "c5eee46a-72b8-40c6-9f56-f02c902e034a",
+              "parentUUID": "f7675fa7-1101-4e82-80de-5ac8d07122b9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "login link",
+              "fullTitle": "Sign-Up login link",
+              "timedOut": null,
+              "duration": 846,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"\".concat(self.signUpIds.loginLink)).should(\"exist\");",
+              "err": {},
+              "uuid": "b6cdb8be-67a6-4bab-9b20-35354d67ef24",
+              "parentUUID": "f7675fa7-1101-4e82-80de-5ac8d07122b9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "90730ea8-3712-48c5-99b0-f65a1244caa7",
+            "aba73245-f6e4-43c6-bf47-68ce1210d139",
+            "2ffc9a94-2973-4e06-bf5c-44c551455641",
+            "26b65ae4-33a2-4306-9653-15151b6d4f76",
+            "b6cdb8be-67a6-4bab-9b20-35354d67ef24"
+          ],
+          "failures": [
+            "d67dd4bf-b7e4-4017-8b4f-0cac57d5db0c",
+            "8119de0f-e676-469d-9013-a885307f2c77",
+            "60820f14-04a4-4577-abc2-eb9cdf9f5019",
+            "c5eee46a-72b8-40c6-9f56-f02c902e034a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 52070,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.1.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "5.0.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

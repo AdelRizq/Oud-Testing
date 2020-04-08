@@ -2,21 +2,41 @@
   "email": "oudtesting@gmail.com",
   "confirmEmail": "oudtesting@gmail.com",
   "password": "oud_testing12",
+  "confirmPassword": "oud_testing12",
   "displayName": "Oud Testing",
   "month": "January",
   "day": "1",
-  "year": "1999",
+  "year": "1998",
   "gender": "Male",
 
-  "requiresEmail": "Please enter your email.",
-  "requiresConfirmEmail": "Please enter your email.",
-  "requiresPassword": "Enter a password to continue.",
-  "requiresDisplayName": "What should we call you?",
-  "requiresMonth": "Please enter your birth month.",
-  "requiresDay": "Please enter a valid day of the month.",
-  "requiresYear": "Please enter a valid year.",
-  "requiresGender": "Please indicate your gender.",
+  "requiresEmail": "invalid email address",
+  "requiresPassword": "please enter password",
+  "requiresDisplayName": "please enter a username",
+  "requiresBirth": "please select your Birthdata",
+  "requiresGender": "please select your gender",
+  "requiresConfirmPassword": "Invalid  ,Password not matched",
 
-  "invalidEmail": "The email address you supplied is invalid.",
-  "shortPassword": "Your password is too short."
+  "invalidEmail": "invalid email address",
+  "shortPassword": "minimum 8 characters required",
+  "weakPassword": "Password should contain uppercase,lowercase and a number",
+
+  "invalidEmails": [
+    "oudTesting",
+    "oudTesting@oud",
+    "oudTesting@oud.",
+    "oudTesting.oud",
+    "@oud.oud",
+    "d@.oud",
+    "oud@oud@oud.oud",
+    "$@oud.oud",
+    "[]dsa@oud.oud"
+  ],
+  "shortPasswords": ["1234567", "testing", "TESTING", "tesT123"],
+  "weakPasswords": [
+    "oudtesting12",
+    "oudTESTING",
+    "OUDTESTING12",
+    "oudtesting__12",
+    "oudTESTING__"
+  ]
 }
