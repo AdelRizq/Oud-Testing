@@ -1,0 +1,30 @@
+like button is working in gui but don't add the song to the liked songs
+
+volume bar and progress bar didn't respond untill i click the play button first 
+	and after clicking on it if we click on the most right of the bar it gives only 99% of the bar not 100% and when clicking on the middle it gets only 49% not 50% 	
+		"Not a big deal but still a bug"
+
+the time in the progress bar is not correct it goes about 1.666 secs a second it counts every minute as 100 count not 60
+
+on clicking on the previous button while the song is in the middle it goes to the previous track not the same one but from the beginning like "Spotify"
+
+shuffle doesn't work
+
+repeate one works but the queue is repeating anyway "No repeate all option" 
+
+queue is not working properly when i click on the song to play it's photo doens't appear in the current playing 
+
+	delete works but on deleting the element playing now it doesn't disapear from the now Playing
+
+	like doesn't work either the gui or in the liked songs 
+
+	when having a song in the middle and clicking on another song it play's the new song but from the the same time of the previous song or from the same as i left it 
+
+	on clicking on the name of the song it doesn't play it and goes to "FaceBook" so as the name of the artist
+
+	duration it is correct in the beginning then on waiting it becomes wrong
+
+there is a problem i cannot make a code for on the next/prev button after it ends there are 2 songs are playing in the background 
+	i don't know if it is a bug or because of the slow of responding through cypress 
+ 
+

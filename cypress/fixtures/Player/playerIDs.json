@@ -1,0 +1,26 @@
+{
+    "play": "play-btn",
+    "pause": "pause-btn",
+    "prev": "previous-btn",
+    "next": "next-btn",
+    "repeate": "repeat-btn",
+    "shuffle": "shuffle-btn",
+    "volume": "volume-btn",
+    "queue": "queue-btn",
+    "volumeBar": "volume-click",
+    "currentTime": "current-time",
+    "totalTime": "duration-time",
+    "progressBar": "progress-click",
+    "trackName": "track-name-link",
+    "artistName": "artist-name-link",
+    "queuePlay": "queue-play-btn",
+    "queueTrack": "queue-track-name",
+    "optionMenu": "open-option-menu",
+    "deleteQueue": "delete-option",
+    "Like": "save-to-liked-songs",
+    "likedTrackName": "songName"
+
+
+
+
+}
