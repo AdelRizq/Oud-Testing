@@ -1,0 +1,196 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 2,
+    "pending": 0,
+    "failures": 3,
+    "start": "2020-04-10T20:08:51.874Z",
+    "end": "2020-04-10T20:09:50.444Z",
+    "duration": 58570,
+    "testsRegistered": 5,
+    "passPercent": 40,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "453ca2bf-5634-48bd-8637-b3588ea0dd20",
+      "title": "",
+      "fullFile": "cypress\\integration\\Player\\play_pause.spec.js",
+      "file": "cypress\\integration\\Player\\play_pause.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "74de48ef-d937-4c69-8ce5-2705b2d48dbc",
+          "title": "Play/Pause",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "play button",
+              "fullTitle": "Play/Pause play button",
+              "timedOut": null,
+              "duration": 31400,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(1000); //i used xpath because when i try to get this button with the test id it gives me 61 element not just 1\ncy.xpath('//*[@id=\"root\"]/div/div[4]/div/div[1]/div/div[2]/div/button[2]').click({\n  multiple: true,\n  force: true\n}).then(function (play) {\n  //play assertion\n  cy.get(\"[data-testid='\".concat(self.playerIds.pause, \"']\")).should('be.visible');\n  cy.wait(5000);\n  cy.get(\"[data-testid='\".concat(self.playerIds.currentTime, \"']\")).then(function (cTime) {\n    var pattern = /\\d{2}/g; //regular expression\n    var timeText = cTime.text();\n    var Time = pattern.exec(timeText);\n    expect(parseInt(Time)).to.be.equal(5); //waiting 5 second after clicking play button then check if the time in bar is equal to 5\n  });\n});",
+              "err": {
+                "message": "AssertionError: expected 8 to equal 5",
+                "estack": "AssertionError: expected 8 to equal 5\n    at getRet (http://localhost:3000/__cypress/runner/cypress_runner.js:125261:16)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:165465:23)\n    at Function.Promise.attempt.Promise.try (http://localhost:3000/__cypress/runner/cypress_runner.js:162740:29)\n    at Context.thenFn (http://localhost:3000/__cypress/runner/cypress_runner.js:125275:23)\n    at Context.then (http://localhost:3000/__cypress/runner/cypress_runner.js:125647:21)\n    at Context.<anonymous> (http://localhost:3000/__cypress/runner/cypress_runner.js:137585:21)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:137061:33\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:165465:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:163401:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:163458:18)\n    at Promise._settlePromiseCtx (http://localhost:3000/__cypress/runner/cypress_runner.js:163495:10)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:160195:12)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:160200:10)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:160074:14)",
+                "diff": "- 8\n+ 5\n"
+              },
+              "uuid": "452d77f7-7c51-4ac1-bfa0-a79f1eb4d521",
+              "parentUUID": "74de48ef-d937-4c69-8ce5-2705b2d48dbc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "pause button",
+              "fullTitle": "Play/Pause pause button",
+              "timedOut": null,
+              "duration": 6602,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(1000);\ncy.get(\"[data-testid='\".concat(self.playerIds.pause, \"']\")).click({\n  multiple: true,\n  force: true\n}).then(function (play) {\n  cy.get(\"[data-testid='current-time']\").then(function (cTime) {\n    var timeText = cTime.text(); //pause assertion\n    cy.get(\"[data-testid='\".concat(self.playerIds.play, \"']\")).should('be.visible');\n    cy.wait(5000).then(function () {\n      var timeText2 = cTime.text();\n      expect(timeText).to.be.equal(timeText2);\n    });\n  });\n});",
+              "err": {},
+              "uuid": "f7f629aa-5b35-4455-b156-2ee9e2bbe3bc",
+              "parentUUID": "74de48ef-d937-4c69-8ce5-2705b2d48dbc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "volumeBar \"afterClicking on the play button\"",
+              "fullTitle": "Play/Pause volumeBar \"afterClicking on the play button\"",
+              "timedOut": null,
+              "duration": 5738,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(1000);\ncy.get(\"[data-testid='\".concat(self.playerIds.volumeBar, \"']\")).click('right').then(function () {\n  cy.xpath('//*[@id=\"volume-width\"]/div/div').should('have.attr', \"style\", 'width: 100%;');\n});\ncy.get(\"[data-testid='\".concat(self.playerIds.volumeBar, \"']\")).click().then(function () {\n  cy.xpath('//*[@id=\"volume-width\"]/div/div').should('have.attr', \"style\", 'width: 50%;');\n});",
+              "err": {
+                "message": "CypressError: Timed out retrying: expected '<div.progress>' to have attribute 'style' with the value 'width: 100%;', but the value was 'width: 98%;'",
+                "estack": "CypressError: Timed out retrying: expected '<div.progress>' to have attribute 'style' with the value 'width: 100%;', but the value was 'width: 98%;'\n    at cypressErr (http://localhost:3000/__cypress/runner/cypress_runner.js:138644:9)\n    at throwErr (http://localhost:3000/__cypress/runner/cypress_runner.js:138577:11)\n    at Object.throwErrByPath (http://localhost:3000/__cypress/runner/cypress_runner.js:138625:3)\n    at retry (http://localhost:3000/__cypress/runner/cypress_runner.js:132905:19)\n    at onFailFn (http://localhost:3000/__cypress/runner/cypress_runner.js:121122:16)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:165465:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:163401:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:163458:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:163503:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:163578:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:160190:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:160200:10)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:160074:14)",
+                "diff": null
+              },
+              "uuid": "2ca46275-326f-45c2-a9ca-31abce85078c",
+              "parentUUID": "74de48ef-d937-4c69-8ce5-2705b2d48dbc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "progress Bar 'after clicking on the play button once then pause'",
+              "fullTitle": "Play/Pause progress Bar 'after clicking on the play button once then pause'",
+              "timedOut": null,
+              "duration": 5887,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(1000);\ncy.get(\"[data-testid='\".concat(self.playerIds.progressBar, \"']\")).click('left').then(function () {\n  cy.get(\"[data-testid='\".concat(self.playerIds.currentTime, \"']\")).should('have.text', '0.00');\n});\ncy.get(\"[data-testid='\".concat(self.playerIds.progressBar, \"']\")).click().then(function () {\n  cy.get(\"[data-testid='\".concat(self.playerIds.currentTime, \"']\")).then(function (cTime) {\n    var pattern = /\\d{1}/g; //regular expression\n    var timeText = cTime.text();\n    var Time = pattern.exec(timeText);\n    pattern = /\\d{2}/g;\n    var Time2 = pattern.exec(timeText);\n    var currentTime = Time * 60 + Time2;\n    cy.get(\"[data-testid='duration-time']\").then(function (dTime) {\n      pattern = /\\d{1}/g; //regular expression\n      timeText = cTime.text();\n      Time = pattern.exec(timeText);\n      pattern = /\\d{2}/g;\n      Time2 = pattern.exec(timeText);\n      var durationTime = Time * 60 + Time2;\n      expect(Math.abs(currentTime - durationTime / 2)).lessThan(3);\n    }); //waiting 5 second after clicking play button then check if the time in bar is equal to 5\n  });\n});",
+              "err": {
+                "message": "CypressError: Timed out retrying: expected '<span.progress-time.current>' to have text '0.00', but the text was '0.12'",
+                "estack": "CypressError: Timed out retrying: expected '<span.progress-time.current>' to have text '0.00', but the text was '0.12'\n    at cypressErr (http://localhost:3000/__cypress/runner/cypress_runner.js:138644:9)\n    at throwErr (http://localhost:3000/__cypress/runner/cypress_runner.js:138577:11)\n    at Object.throwErrByPath (http://localhost:3000/__cypress/runner/cypress_runner.js:138625:3)\n    at retry (http://localhost:3000/__cypress/runner/cypress_runner.js:132905:19)\n    at onFailFn (http://localhost:3000/__cypress/runner/cypress_runner.js:121122:16)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:165465:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:163401:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:163458:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:163503:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:163578:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:160190:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:160200:10)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:160074:14)",
+                "diff": null
+              },
+              "uuid": "d459f7ab-7e7c-4574-824d-8fd3faa2073e",
+              "parentUUID": "74de48ef-d937-4c69-8ce5-2705b2d48dbc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "progress Bar 'while the play button is clicked'",
+              "fullTitle": "Play/Pause progress Bar 'while the play button is clicked'",
+              "timedOut": null,
+              "duration": 8743,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(1000);\ncy.xpath('//*[@id=\"root\"]/div/div[4]/div/div[1]/div/div[2]/div/button[2]').click();\ncy.get(\"[data-testid='\".concat(self.playerIds.progressBar, \"']\")).click().then(function () {\n  cy.wait(1000).then(function () {\n    cy.get(\"[data-testid='\".concat(self.playerIds.currentTime, \"']\")).then(function (cTime) {\n      var pattern = /\\d{1}/g; //regular expression\n      var timeText = cTime.text();\n      var Time = pattern.exec(timeText);\n      pattern = /\\d{2}/g;\n      var Time2 = pattern.exec(timeText);\n      var currentTime = parseInt(Time) * 60 + parseInt(Time2);\n      cy.get(\"[data-testid='\".concat(self.playerIds.totalTime, \"']\")).then(function (dTime) {\n        pattern = /\\d{1}/g; //regular expression\n        timeText = dTime.text();\n        Time = pattern.exec(timeText);\n        pattern = /\\d{2}/g;\n        Time2 = pattern.exec(timeText);\n        var durationTime = parseInt(Time) * 60 + parseInt(Time2);\n        expect(Math.abs(parseInt(currentTime) - parseInt(durationTime / 2))).lessThan(3);\n      }); //waiting 5 second after clicking play button then check if the time in bar is equal to 5\n    });\n  }); //it responds a little bit slow\n});\ncy.get(\"[data-testid='\".concat(self.playerIds.progressBar, \"']\")).click('left');\ncy.get(\"[data-testid='\".concat(self.playerIds.pause, \"']\")).click();\ncy.get(\"[data-testid='\".concat(self.playerIds.currentTime, \"']\")).should('have.text', '0.02');\ncy.log(\"it responds a little bit slow so it's 0.02 not 0.00 \");\ncy.get(\"[data-testid='\".concat(self.playerIds.trackName, \"']\")).then(function (trackName) {\n  var Name = trackName.text();\n  cy.xpath('//*[@id=\"root\"]/div/div[4]/div/div[1]/div/div[2]/div/button[2]').click();\n  cy.get(\"[data-testid='\".concat(self.playerIds.progressBar, \"']\")).click('right');\n  cy.wait(5000); // wait untill the song ends and the other one starts\n  cy.get(\"[data-testid='\".concat(self.playerIds.trackName, \"']\")).then(function (trackName2) {\n    var Name2 = trackName2.text();\n    expect(Name).not.eq(Name2);\n  });\n});",
+              "err": {},
+              "uuid": "cb702ff2-497c-4395-877c-4e61e4f2eae4",
+              "parentUUID": "74de48ef-d937-4c69-8ce5-2705b2d48dbc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f7f629aa-5b35-4455-b156-2ee9e2bbe3bc",
+            "cb702ff2-497c-4395-877c-4e61e4f2eae4"
+          ],
+          "failures": [
+            "452d77f7-7c51-4ac1-bfa0-a79f1eb4d521",
+            "2ca46275-326f-45c2-a9ca-31abce85078c",
+            "d459f7ab-7e7c-4574-824d-8fd3faa2073e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 58370,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.1.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "5.0.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

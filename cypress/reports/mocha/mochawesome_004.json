@@ -1,0 +1,154 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 1,
+    "pending": 0,
+    "failures": 2,
+    "start": "2020-04-10T20:10:02.641Z",
+    "end": "2020-04-10T20:10:16.969Z",
+    "duration": 14328,
+    "testsRegistered": 3,
+    "passPercent": 33.33333333333333,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b99fa211-2811-42df-a8a7-0389b4b42646",
+      "title": "",
+      "fullFile": "cypress\\integration\\Player\\progress_volume_bar.spec.js",
+      "file": "cypress\\integration\\Player\\progress_volume_bar.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c7427313-9ed5-4d7f-ac1e-f7b6e0d981e5",
+          "title": "Progress/Volume Bars",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "progress Bar",
+              "fullTitle": "Progress/Volume Bars progress Bar",
+              "timedOut": null,
+              "duration": 7854,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(1000);\ncy.get(\"[data-testid='\".concat(self.playerIds.progressBar, \"']\")).click().then(function () {\n  cy.get(\"[data-testid='\".concat(self.playerIds.currentTime, \"']\")).then(function (cTime) {\n    var pattern = /\\d{1}/g; //regular expression\n    var timeText = cTime.text();\n    var Time = pattern.exec(timeText);\n    pattern = /\\d{2}/g;\n    var Time2 = pattern.exec(timeText);\n    var currentTime = Time * 60 + Time2;\n    cy.get(\"[data-testid='\".concat(self.playerIds.totalTime, \"']\")).then(function (dTime) {\n      pattern = /\\d{1}/g; //regular expression\n      timeText = dTime.text();\n      Time = pattern.exec(timeText);\n      pattern = /\\d{2}/g;\n      Time2 = pattern.exec(timeText);\n      var durationTime = Time * 60 + Time2;\n      expect(parseInt(currentTime)).to.be.equal(parseInt(durationTime / 2));\n    });\n  });\n});",
+              "err": {
+                "message": "AssertionError: expected 0 to equal 12013",
+                "estack": "AssertionError: expected 0 to equal 12013\n    at getRet (http://localhost:3000/__cypress/runner/cypress_runner.js:125261:16)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:165465:23)\n    at Function.Promise.attempt.Promise.try (http://localhost:3000/__cypress/runner/cypress_runner.js:162740:29)\n    at Context.thenFn (http://localhost:3000/__cypress/runner/cypress_runner.js:125275:23)\n    at Context.then (http://localhost:3000/__cypress/runner/cypress_runner.js:125647:21)\n    at Context.<anonymous> (http://localhost:3000/__cypress/runner/cypress_runner.js:137585:21)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:137061:33\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:165465:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:163401:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:163458:18)\n    at Promise._settlePromiseCtx (http://localhost:3000/__cypress/runner/cypress_runner.js:163495:10)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:160195:12)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:160200:10)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:160074:14)",
+                "diff": null
+              },
+              "uuid": "537f5711-9b2a-46bf-a443-c0fa4c2be937",
+              "parentUUID": "c7427313-9ed5-4d7f-ac1e-f7b6e0d981e5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "volumeButton",
+              "fullTitle": "Progress/Volume Bars volumeButton",
+              "timedOut": null,
+              "duration": 1696,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(1000);\ncy.get(\"[data-testid='\".concat(self.playerIds.volume, \"']\")).click().then(function () {\n  //it has no unique id the volume bar\n  cy.xpath('//*[@id=\"volume-width\"]/div/div').should('have.attr', \"style\", 'width: 0%;');\n});\ncy.get(\"[data-testid='\".concat(self.playerIds.volume, \"']\")).click().then(function () {\n  //it has no unique id the volume bar\n  cy.xpath('//*[@id=\"volume-width\"]/div/div').should('not.have.attr', \"style\", 'width: 0%;');\n});",
+              "err": {},
+              "uuid": "c8d082cf-a48b-413d-bf4c-0abce2aab752",
+              "parentUUID": "c7427313-9ed5-4d7f-ac1e-f7b6e0d981e5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "volume Bar",
+              "fullTitle": "Progress/Volume Bars volume Bar",
+              "timedOut": null,
+              "duration": 4632,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"[data-testid='\".concat(self.playerIds.volumeBar, \"']\")).click().then(function () {\n  cy.xpath('//*[@id=\"volume-width\"]/div/div').should('have.attr', \"style\", 'width: 50%;');\n});\ncy.get(\"[data-testid='\".concat(self.playerIds.volumeBar, \"']\")).click('right').then(function () {\n  cy.xpath('//*[@id=\"volume-width\"]/div/div').should('have.attr', \"style\", 'width: 100%;');\n});",
+              "err": {
+                "message": "CypressError: Timed out retrying: expected '<div.progress>' to have attribute 'style' with the value 'width: 50%;', but the value was 'width: 65%;'",
+                "estack": "CypressError: Timed out retrying: expected '<div.progress>' to have attribute 'style' with the value 'width: 50%;', but the value was 'width: 65%;'\n    at cypressErr (http://localhost:3000/__cypress/runner/cypress_runner.js:138644:9)\n    at throwErr (http://localhost:3000/__cypress/runner/cypress_runner.js:138577:11)\n    at Object.throwErrByPath (http://localhost:3000/__cypress/runner/cypress_runner.js:138625:3)\n    at retry (http://localhost:3000/__cypress/runner/cypress_runner.js:132905:19)\n    at onFailFn (http://localhost:3000/__cypress/runner/cypress_runner.js:121122:16)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:165465:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:163401:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:163458:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:163503:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:163578:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:160190:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:160200:10)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:160074:14)",
+                "diff": null
+              },
+              "uuid": "4251efe8-bcf8-4817-8879-c8ef7120fa65",
+              "parentUUID": "c7427313-9ed5-4d7f-ac1e-f7b6e0d981e5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c8d082cf-a48b-413d-bf4c-0abce2aab752"
+          ],
+          "failures": [
+            "537f5711-9b2a-46bf-a443-c0fa4c2be937",
+            "4251efe8-bcf8-4817-8879-c8ef7120fa65"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 14182,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.1.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "5.0.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

@@ -77,7 +77,7 @@ describe('Queue', () => {
                 });
             });
             cy.get(`[data-testid='${self.playerIds.queueTrack}']`).should('not.have.text', 'Dorak gai');
-            //cy.get(`[data-testid='${self.playerIds.trackName}']`).should('not.have.text', 'Dorak gai');
+            cy.get(`[data-testid='${self.playerIds.trackName}']`).should('not.have.text', 'Dorak gai');
         });
 
     });
