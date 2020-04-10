@@ -1,0 +1,299 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 10,
+    "passes": 5,
+    "pending": 0,
+    "failures": 5,
+    "start": "2020-04-10T03:57:23.843Z",
+    "end": "2020-04-10T04:04:36.145Z",
+    "duration": 432302,
+    "testsRegistered": 10,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8bd1d68f-2cc6-4eac-bed8-7a22b479f92b",
+      "title": "",
+      "fullFile": "cypress\\integration\\Home\\OudHome.js",
+      "file": "cypress\\integration\\Home\\OudHome.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "237dd4bc-0bf6-4bfb-8345-5419a8befa7b",
+          "title": "Home Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check Buttons and URLS",
+              "fullTitle": "Home Tests Check Buttons and URLS",
+              "timedOut": null,
+              "duration": 64245,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.HomeOverView();",
+              "err": {
+                "message": "AssertionError: Timed out retrying: expected 'http://localhost:3000/account' to equal 'http://localhost:3000/Account'",
+                "estack": "AssertionError: Timed out retrying: expected 'http://localhost:3000/account' to equal 'http://localhost:3000/Account'\n    at applyChainer (http://localhost:3000/__cypress/runner/cypress_runner.js:131707:32)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:131748:16\n    at arrayReduce (http://localhost:3000/__cypress/runner/cypress_runner.js:18403:21)\n    at Function.reduce (http://localhost:3000/__cypress/runner/cypress_runner.js:27401:14)\n    at applyChainers (http://localhost:3000/__cypress/runner/cypress_runner.js:131738:18)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:9059:23)\n    at Function.Promise.attempt.Promise.try (http://localhost:3000/__cypress/runner/cypress_runner.js:6333:29)\n    at Context.shouldFn (http://localhost:3000/__cypress/runner/cypress_runner.js:131752:23)\n    at Context.should (http://localhost:3000/__cypress/runner/cypress_runner.js:131767:23)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:127819:39\n    at assertions (http://localhost:3000/__cypress/runner/cypress_runner.js:128079:14)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:9059:23)\n    at Object.gotValue (http://localhost:3000/__cypress/runner/cypress_runner.js:8203:18)\n    at Object.gotAccum (http://localhost:3000/__cypress/runner/cypress_runner.js:8190:25)\n    at Object.tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:9059:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:6994:31)",
+                "diff": "- 'http://localhost:3000/account'\n+ 'http://localhost:3000/Account'\n"
+              },
+              "uuid": "552add8f-8bee-46ae-9410-7ddbd44b12d7",
+              "parentUUID": "237dd4bc-0bf6-4bfb-8345-5419a8befa7b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check All the playlist in the Catigories ",
+              "fullTitle": "Home Tests Check All the playlist in the Catigories ",
+              "timedOut": null,
+              "duration": 156436,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.HomePlaylists();",
+              "err": {},
+              "uuid": "805d2314-3291-4209-b42a-df745e39667d",
+              "parentUUID": "237dd4bc-0bf6-4bfb-8345-5419a8befa7b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check The Playlist catigories",
+              "fullTitle": "Home Tests Check The Playlist catigories",
+              "timedOut": null,
+              "duration": 46884,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.CheckCategories();",
+              "err": {},
+              "uuid": "a868877b-0c85-40ea-9614-388575a8f35f",
+              "parentUUID": "237dd4bc-0bf6-4bfb-8345-5419a8befa7b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check Search bar ",
+              "fullTitle": "Home Tests Check Search bar ",
+              "timedOut": null,
+              "duration": 7760,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.CheckSearchBar();",
+              "err": {},
+              "uuid": "330e3712-a9f2-4a62-a4c0-611b34caf722",
+              "parentUUID": "237dd4bc-0bf6-4bfb-8345-5419a8befa7b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CheckUpgradeButtonResponsiveness",
+              "fullTitle": "Home Tests CheckUpgradeButtonResponsiveness",
+              "timedOut": null,
+              "duration": 12986,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.CheckUpgradeButtonResponsiveness();",
+              "err": {
+                "message": "AssertionError: Timed out retrying: expected 'http://localhost:3000/signin' to equal 'http://localhost:3000/?'",
+                "estack": "AssertionError: Timed out retrying: expected 'http://localhost:3000/signin' to equal 'http://localhost:3000/?'\n    at applyChainer (http://localhost:3000/__cypress/runner/cypress_runner.js:131707:32)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:131748:16\n    at arrayReduce (http://localhost:3000/__cypress/runner/cypress_runner.js:18403:21)\n    at Function.reduce (http://localhost:3000/__cypress/runner/cypress_runner.js:27401:14)\n    at applyChainers (http://localhost:3000/__cypress/runner/cypress_runner.js:131738:18)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:9059:23)\n    at Function.Promise.attempt.Promise.try (http://localhost:3000/__cypress/runner/cypress_runner.js:6333:29)\n    at Context.shouldFn (http://localhost:3000/__cypress/runner/cypress_runner.js:131752:23)\n    at Context.should (http://localhost:3000/__cypress/runner/cypress_runner.js:131767:23)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:127819:39\n    at assertions (http://localhost:3000/__cypress/runner/cypress_runner.js:128079:14)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:9059:23)\n    at Object.gotValue (http://localhost:3000/__cypress/runner/cypress_runner.js:8203:18)\n    at Object.gotAccum (http://localhost:3000/__cypress/runner/cypress_runner.js:8190:25)\n    at Object.tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:9059:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:6994:31)",
+                "diff": "- 'http://localhost:3000/signin'\n+ 'http://localhost:3000/?'\n"
+              },
+              "uuid": "c0fc23b0-4277-414d-96dd-33b1e74a7c0e",
+              "parentUUID": "237dd4bc-0bf6-4bfb-8345-5419a8befa7b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CheckAccountButtonResponsiveness",
+              "fullTitle": "Home Tests CheckAccountButtonResponsiveness",
+              "timedOut": null,
+              "duration": 7121,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.CheckAccountButtonResponsiveness();",
+              "err": {
+                "message": "AssertionError: Timed out retrying: expected 'http://localhost:3000/account' to equal 'http://localhost:3000/Account'",
+                "estack": "AssertionError: Timed out retrying: expected 'http://localhost:3000/account' to equal 'http://localhost:3000/Account'\n    at applyChainer (http://localhost:3000/__cypress/runner/cypress_runner.js:131707:32)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:131748:16\n    at arrayReduce (http://localhost:3000/__cypress/runner/cypress_runner.js:18403:21)\n    at Function.reduce (http://localhost:3000/__cypress/runner/cypress_runner.js:27401:14)\n    at applyChainers (http://localhost:3000/__cypress/runner/cypress_runner.js:131738:18)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:9059:23)\n    at Function.Promise.attempt.Promise.try (http://localhost:3000/__cypress/runner/cypress_runner.js:6333:29)\n    at Context.shouldFn (http://localhost:3000/__cypress/runner/cypress_runner.js:131752:23)\n    at Context.should (http://localhost:3000/__cypress/runner/cypress_runner.js:131767:23)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:127819:39\n    at assertions (http://localhost:3000/__cypress/runner/cypress_runner.js:128079:14)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:9059:23)\n    at Object.gotValue (http://localhost:3000/__cypress/runner/cypress_runner.js:8203:18)\n    at Object.gotAccum (http://localhost:3000/__cypress/runner/cypress_runner.js:8190:25)\n    at Object.tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:9059:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:6994:31)",
+                "diff": "- 'http://localhost:3000/account'\n+ 'http://localhost:3000/Account'\n"
+              },
+              "uuid": "5168cab5-c4c7-459c-a425-d571bef1f44b",
+              "parentUUID": "237dd4bc-0bf6-4bfb-8345-5419a8befa7b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CheckLogoutButtonResponsiveness",
+              "fullTitle": "Home Tests CheckLogoutButtonResponsiveness",
+              "timedOut": null,
+              "duration": 1547,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.CheckLogoutButtonResponsiveness();",
+              "err": {},
+              "uuid": "13987764-8722-45d5-9d8e-cffbeac7dc97",
+              "parentUUID": "237dd4bc-0bf6-4bfb-8345-5419a8befa7b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check the Liked Songs ",
+              "fullTitle": "Home Tests Check the Liked Songs ",
+              "timedOut": null,
+              "duration": 18212,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.CheckLikedSongs();",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: this.props.addToPlaylist is not a function\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Uncaught TypeError: this.props.addToPlaylist is not a function\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\nUncaught TypeError: this.props.addToPlaylist is not a function\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n    at Object.addToPlaylist (http://localhost:3000/static/js/main.chunk.js:13580:41)\n    at onClick (http://localhost:3000/static/js/main.chunk.js:13384:33)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/0.chunk.js:15775:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/0.chunk.js:15824:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/0.chunk.js:15877:35)\n    at invokeGuardedCallbackAndCatchFirstError (http://localhost:3000/static/js/0.chunk.js:15892:29)\n    at executeDispatch (http://localhost:3000/static/js/0.chunk.js:15977:7)\n    at executeDispatchesInOrder (http://localhost:3000/static/js/0.chunk.js:15999:11)\n    at executeDispatchesAndRelease (http://localhost:3000/static/js/0.chunk.js:18886:9)\n    at executeDispatchesAndReleaseTopLevel (http://localhost:3000/static/js/0.chunk.js:18895:14)\n    at forEachAccumulated (http://localhost:3000/static/js/0.chunk.js:18867:12)\n    at runEventsInBatch (http://localhost:3000/static/js/0.chunk.js:18912:7)\n    at runExtractedPluginEventsInBatch (http://localhost:3000/static/js/0.chunk.js:19122:7)\n    at handleTopLevel (http://localhost:3000/static/js/0.chunk.js:19166:9)\n    at batchedEventUpdates$1 (http://localhost:3000/static/js/0.chunk.js:37312:16)\n    at batchedEventUpdates (http://localhost:3000/static/js/0.chunk.js:16384:16)\n    at dispatchEventForLegacyPluginEventSystem (http://localhost:3000/static/js/0.chunk.js:19176:9)\n    at attemptToDispatchEvent (http://localhost:3000/static/js/0.chunk.js:19896:9)\n    at dispatchEvent (http://localhost:3000/static/js/0.chunk.js:19817:23)\n    at unstable_runWithPriority (http://localhost:3000/static/js/0.chunk.js:49985:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/0.chunk.js:26662:14)\n    at discreteUpdates$1 (http://localhost:3000/static/js/0.chunk.js:37329:16)\n    at discreteUpdates (http://localhost:3000/static/js/0.chunk.js:16397:16)\n    at dispatchDiscreteEvent (http://localhost:3000/static/js/0.chunk.js:19796:7)",
+                "diff": null
+              },
+              "uuid": "59af0b1c-fc13-4fd9-875f-e903387e38b8",
+              "parentUUID": "237dd4bc-0bf6-4bfb-8345-5419a8befa7b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check the routes of LikedSongs",
+              "fullTitle": "Home Tests check the routes of LikedSongs",
+              "timedOut": null,
+              "duration": 111353,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.CheckRoutesinLikedSongs();",
+              "err": {
+                "message": "AssertionError: Timed out retrying: expected 'http://localhost:3000/' to equal 'http://localhost:3000/likedSongs'",
+                "estack": "AssertionError: Timed out retrying: expected 'http://localhost:3000/' to equal 'http://localhost:3000/likedSongs'\n    at applyChainer (http://localhost:3000/__cypress/runner/cypress_runner.js:131707:32)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:131748:16\n    at arrayReduce (http://localhost:3000/__cypress/runner/cypress_runner.js:18403:21)\n    at Function.reduce (http://localhost:3000/__cypress/runner/cypress_runner.js:27401:14)\n    at applyChainers (http://localhost:3000/__cypress/runner/cypress_runner.js:131738:18)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:9059:23)\n    at Function.Promise.attempt.Promise.try (http://localhost:3000/__cypress/runner/cypress_runner.js:6333:29)\n    at Context.shouldFn (http://localhost:3000/__cypress/runner/cypress_runner.js:131752:23)\n    at Context.should (http://localhost:3000/__cypress/runner/cypress_runner.js:131767:23)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:127819:39\n    at assertions (http://localhost:3000/__cypress/runner/cypress_runner.js:128079:14)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:9059:23)\n    at Object.gotValue (http://localhost:3000/__cypress/runner/cypress_runner.js:8203:18)\n    at Object.gotAccum (http://localhost:3000/__cypress/runner/cypress_runner.js:8190:25)\n    at Object.tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:9059:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:6994:31)",
+                "diff": "- 'http://localhost:3000/'\n+ 'http://localhost:3000/likedSongs'\n"
+              },
+              "uuid": "8c0d3c2f-47ca-4ac7-b058-3fb977fd3db2",
+              "parentUUID": "237dd4bc-0bf6-4bfb-8345-5419a8befa7b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check Back and Forward Buttons ",
+              "fullTitle": "Home Tests Check Back and Forward Buttons ",
+              "timedOut": null,
+              "duration": 5325,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.CheckBackForwardButtons();",
+              "err": {},
+              "uuid": "b3f9edde-fa69-4bf5-b4a9-3818373b9bc0",
+              "parentUUID": "237dd4bc-0bf6-4bfb-8345-5419a8befa7b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "805d2314-3291-4209-b42a-df745e39667d",
+            "a868877b-0c85-40ea-9614-388575a8f35f",
+            "330e3712-a9f2-4a62-a4c0-611b34caf722",
+            "13987764-8722-45d5-9d8e-cffbeac7dc97",
+            "b3f9edde-fa69-4bf5-b4a9-3818373b9bc0"
+          ],
+          "failures": [
+            "552add8f-8bee-46ae-9410-7ddbd44b12d7",
+            "c0fc23b0-4277-414d-96dd-33b1e74a7c0e",
+            "5168cab5-c4c7-459c-a425-d571bef1f44b",
+            "59af0b1c-fc13-4fd9-875f-e903387e38b8",
+            "8c0d3c2f-47ca-4ac7-b058-3fb977fd3db2"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 431869,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.1.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "5.0.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
