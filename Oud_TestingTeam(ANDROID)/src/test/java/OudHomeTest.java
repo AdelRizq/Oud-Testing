@@ -1,24 +1,17 @@
+package tests;
+
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
-import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
-import static io.appium.java_client.touch.offset.PointOption.point;
-
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.interactions.touch.TouchActions;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
+import org.testng.annotations.Test;
+
 interface Xpath{
 String SearchXpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[3]/android.widget.FrameLayout/android.widget.TextView";
 String RenameXpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[3]/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout";
@@ -49,7 +42,7 @@ interface IDS{
     String RenamePlayListButtonID="com.example.oud:id/btn_rename";
     String PlayListNameBoxID="com.example.oud:id/txt_playlist_name";
     String AboutArtist="com.example.oud:id/txt_artist_about_bio";
-    String ArtistNameBoxID="com.example.oud:id/txt_artist_name";     
+    String ArtistNameBoxID="com.example.oud:id/txt_artist_name";
 }
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -63,27 +56,12 @@ interface IDS{
  */
 public class OudHomeTest extends BaseClass{
     ExtentTest test;
-    
-    public static void main(String args[]){
-        try{        
-           OudHomeTest calling=new OudHomeTest(); 
-           calling.setCaps();
-           calling.HomeAccountreportSetup();
-           calling.openHome();
-           calling.Wait(2000);
-           calling.CheckButtons();
-           calling.CheckAccount();
-           calling.Home();
-           calling.HomeAccounttearDown();
-        }catch(Exception exp){
-         System.out.println(exp.getCause());
-         System.out.println(exp.getMessage());
-        }
-    } 
+
+    @Test(priority = 4)
     public void Home(){
-      
-        // Testing the routes and the Playlists .. 
-       test = Home_Account.createTest("Checking the Playlists and Artists ");// adding the test to the report.. 
+
+        // Testing the routes and the Playlists ..
+       test = Home_Account.createTest("Checking the Playlists and Artists ");// adding the test to the report..
        getElementById(IDS.HomeIconID).click();
        Wait(4000);
        getElementByXpath(Xpath.PlayList0).click();
@@ -93,116 +71,119 @@ public class OudHomeTest extends BaseClass{
        getElementById(IDS.ChangePlayListNameBoxID).sendKeys("Test.Name.Playlist");
        getElementById(IDS.RenamePlayListButtonID).click();
        boolean fail = false ;
-       // Changing the playlist without changing the route this test for test the frontend .. 
+       // Changing the playlist without changing the route this test for test the frontend ..
        String PlayListName=getElementById(IDS.PlayListNameBoxID).getText();
        try{
             Assert.assertEquals(PlayListName,"Test.Name.Playlist");
        }catch(AssertionError exp){
            System.out.println(exp.getMessage());
            System.out.println("Changing Playlist Name button Failed");
-           fail = true ; 
+           fail = true ;
        }
        if(fail){
            test.log(Status.FAIL,"Changing Playlist name fails without changing the route");
-           fail = false ; 
+           fail = false ;
        }
        else {
-           test.log(Status.PASS,"Changing Playlist name passes without changing the route"); 
+           test.log(Status.PASS,"Changing Playlist name passes without changing the route");
        }
-       
-       back(); 
-       // Changing the playlist then change the route and go the the playlist again and check its name  this test for the backend .. 
+
+       back();
+       // Changing the playlist then change the route and go the the playlist again and check its name  this test for the backend ..
        String Text=getElementByXpath(Xpath.PlayList0).getText();
        try{
             Assert.assertEquals(Text,"Test.Name.Playlist");
        }catch(AssertionError exp){
            System.out.println(exp.getMessage());
            System.out.println("Changing Playlist Name Failed");
-           fail = true ; 
+           fail = true ;
        }
        if(fail){
            test.log(Status.FAIL,"Changing Playlist name fails after  changing the route");
-           fail = false ; 
+           fail = false ;
        }
        else {
-       
-           test.log(Status.PASS,"Changing Playlist name passes after changing the route"); 
+
+           test.log(Status.PASS,"Changing Playlist name passes after changing the route");
        }
-       
-       // check the artists and its home 
+
+       // check the artists and its home
        getElementByXpath(Xpath.artist10).click();
        Wait(4000);
        ScrollDownArtistPage();
-       // it is different from the usual scroll by the ratio of the scrolling 
+       // it is different from the usual scroll by the ratio of the scrolling
        for (int i = 0 ; i<3;i++)
            Scroll(true);
-       
+
        getElementByXpath(Xpath.artist14_10).click();
        Wait(4000);
        ScrollDownArtistPage();
        for (int i = 0 ; i<3;i++)
            Scroll(true);
-      // check if the artist appears in its home again !! 
+      // check if the artist appears in its home again !!
        Text=getElementByXpath(Xpath.artist14_14).getText();
        try{
            Assert.assertNotEquals(Text,"artist14");
        }catch(AssertionError exp){
-       
+
            System.out.println(exp.getMessage());
            System.out.println("Arist should not appear in his home's Similar artists");
-           fail = true ; 
+           fail = true ;
        }
        if(fail){
            test.log(Status.FAIL,"Arist should not appear in his home's Similar artists");
-           fail = false ; 
+           fail = false ;
        }
        else {
-       
-           test.log(Status.PASS,"Artist's home similar artist passes "); 
+
+           test.log(Status.PASS,"Artist's home similar artist passes ");
        }
-       // checking the bio 
+       // checking the bio
        Text=getElementById(IDS.AboutArtist).getText();
         try{
            Assert.assertEquals(Text,"I'm artist14");
        }catch(AssertionError exp){
-       
+
            System.out.println(exp.getMessage());
            System.out.println("The bio have some problem ");
-           fail = true ; 
+           fail = true ;
        }
-       back(); 
+       back();
        Text=getElementById(IDS.ArtistNameBoxID).getText();
        try{
            Assert.assertEquals(Text,"artist10");
        }catch(AssertionError exp){
-       
+
            System.out.println(exp.getMessage());
            System.out.println("The routes have some problems");
-           fail = true ; 
+           fail = true ;
        }
         if(fail){
            test.log(Status.FAIL,"Routes in the Home Fails ");
-           fail = false ; 
+           fail = false ;
        }
        else {
-       
-           test.log(Status.PASS,"Routes in Home is correct "); 
+
+           test.log(Status.PASS,"Routes in Home is correct ");
        }
     }
-   
+
+    @Test(priority = 1)
     public void openHome(){
-       // opening the home for the testing 
+       // opening the home for the testing
         MobileElement home = getElementById(IDS.Home_ButtonID);
         home.click();
-        Wait(2000); 
+        Wait(2000);
     }
+
+    @Test(priority = 3)
     public void CheckAccount()
     {
-         test=Home_Account.createTest("AccountTests"); // another test for the account to be written in the report 
-         // changing the Account Name by two methods the first method by the pen icon after the Name of hte account 
-         // the second method form the settings 
-         
-         // check changing the Account name without changing the routes .. 
+         test=Home_Account.createTest("AccountTests"); // another test for the account to be written in the report
+         // changing the Account Name by two methods the first method by the pen icon after the Name of hte account
+         // the second method form the settings
+
+         // check changing the Account name without changing the routes ..
          getElementById(IDS.ViewProfile_ButtonID).click();
          getElementById(IDS.Rename_ButtonID).click();
          MobileElement AccountNameBox=getElementById(IDS.Rename_BoxID);
@@ -210,57 +191,57 @@ public class OudHomeTest extends BaseClass{
          AccountNameBox.sendKeys("Test.Name");
          Wait(2000);
          getElementByXpath(Xpath.RenameXpath).click();
-         
+
          String Text = getElementById(IDS.DisplayNameBoxID).getText();
-         boolean fail = false ; 
+         boolean fail = false ;
          try{
           Assert.assertEquals(Text,"Test.Name");
          }catch(AssertionError exp){
-             
+
            System.out.println(exp.getMessage());
            System.out.println("Changing Name By Pen Icon test fails ");
-           fail =true ; 
+           fail =true ;
          }
          if(fail){
-             
+
              test.log(Status.FAIL, "Changing Account Name by pen Icon Fails");
-             fail = false ; 
+             fail = false ;
          }
          else {
-         
+
              test.log(Status.PASS, "Changing Account Name by pen Icon is correct without changing the route");
          }
-         
-         //changing the routes and check if the Name changed or not 
+
+         //changing the routes and check if the Name changed or not
          System.out.println(Text);
          getElementById(IDS.Search_IconID).click();
          getElementById(IDS.Setting_IconID).click();
          getElementById(IDS.ViewProfile_ButtonID).click();
          String Text2 = getElementById(IDS.DisplayNameBoxID).getText();
-         
+
          try
          {
-            Assert.assertEquals(Text2,Text);// printting for now but it means assertion .. 
+            Assert.assertEquals(Text2,Text);// printting for now but it means assertion ..
          }
          catch(AssertionError exp){
              System.out.println(exp.getMessage());
              System.out.println("Changing Name By Pen Icon test fails ");
-             fail =true ; 
+             fail =true ;
          }
          if(fail){
-             
+
              test.log(Status.FAIL, "Changing Account Name by pen Icon Fails after changing the route fails");
-             fail = false ; 
+             fail = false ;
          }
          else {
-         
+
              test.log(Status.PASS, "Changing Account Name by pen Icon after changing the route is correct ");
          }
-         // Testing the rename button from the pen button 
-         // the same previous tests but with the settings . 
+         // Testing the rename button from the pen button
+         // the same previous tests but with the settings .
          getElementById(IDS.SettingsButtonID).click();
          getElementByXpath(Xpath.EditName).click();
-        
+
          AccountNameBox.clear();
          AccountNameBox.sendKeys("Test.Name");
          Wait(2000);
@@ -269,18 +250,18 @@ public class OudHomeTest extends BaseClass{
           try{
           Assert.assertEquals(Text,"Test.Name");
          }catch(AssertionError exp){
-             
+
           System.out.println(exp.getMessage());
           System.out.println("Changing Name using the settings buttons Fails ");
-          fail =false ; 
+          fail =false ;
          }
           if(fail){
-             
+
              test.log(Status.FAIL, "Changing Account Name by settings button fails without changing the routes ");
-             fail = true  ; 
+             fail = true  ;
          }
          else {
-         
+
              test.log(Status.PASS, "Changing Account Name by settings icon  is correct without changing the route");
          }
          getElementById(IDS.Search_IconID).click();
@@ -288,52 +269,54 @@ public class OudHomeTest extends BaseClass{
          getElementById(IDS.ViewProfile_ButtonID).click();
          Text2 = getElementById(IDS.DisplayNameBoxID).getText();
          try
-         { 
+         {
              Assert.assertEquals(Text2,Text);
          }
-         
+
          catch(AssertionError exp){
-         
+
              System.out.println(exp.getMessage());
              System.out.println("Changing Name using the settings buttons Fails ");
-             fail = true ; 
-         }     
+             fail = true ;
+         }
          if(fail){
-             
+
              test.log(Status.FAIL, "Changing Account Name by settings   Icon Fails after chainging the routes ");
-             fail = true ; 
+             fail = true ;
          }
          else {
              test.log(Status.PASS, "Changing Account Name by settings  Icon is correct after changing the route");
          }
     }
+
+    @Test(priority = 2)
     public void CheckButtons()
     {
-         test=Home_Account.createTest("HomeTest"); // Creat the test for the report 
-         // Test the routes after pressing on the buttons 
-         // the first one for the search button .. 
+         test=Home_Account.createTest("HomeTest"); // Creat the test for the report
+         // Test the routes after pressing on the buttons
+         // the first one for the search button ..
          getElementById(IDS.Search_IconID).click();
          String TexT=getElementByXpath(Xpath.SearchXpath).getText();
-         
+
          boolean Fail=false ;
          try{
-            Assert.assertEquals(TexT,"Search");// printting for now but it means assertion .. 
+            Assert.assertEquals(TexT,"Search");// printting for now but it means assertion ..
          }catch(AssertionError exp){
              System.out.println(exp.getMessage());
              Fail=true;
          }
          if(Fail){
              test.log(Status.FAIL,"wrong in the search route");
-             Fail=false ; 
+             Fail=false ;
          }
          else {
              test.log(Status.PASS, "Search route is Correct");
          }
-         
-         // the second one for the Library button 
+
+         // the second one for the Library button
          getElementById(IDS.Library_IconID).click();
          TexT=getElementByXpath(Xpath.LibraryXpath).getText();
-         
+
          try{
             Assert.assertEquals(TexT,"Library");
          }catch(AssertionError exp){
@@ -341,7 +324,7 @@ public class OudHomeTest extends BaseClass{
          }
           if(Fail){
              test.log(Status.FAIL,"wrong in the Library route");
-             Fail=false ; 
+             Fail=false ;
          }
          else {
              test.log(Status.PASS, "Library route is Correct");
@@ -349,40 +332,41 @@ public class OudHomeTest extends BaseClass{
          // the thrid one for the premium button ..
          getElementById(IDS.Premium_IconID).click();
          TexT=getElementByXpath(Xpath.PremuimXpath).getText();
-         
+
          try{
-            Assert.assertEquals(TexT,"Premium"); 
+            Assert.assertEquals(TexT,"Premium");
          }catch(AssertionError exp){
              System.out.println(exp.getMessage());
          }
           if(Fail){
-         
+
              test.log(Status.FAIL,"wrong in the premium route");
-             Fail=false ; 
+             Fail=false ;
          }
          else {
              test.log(Status.PASS, "Premium route is Correct");
          }
-         
-         // the last one for the  settings 
+
+         // the last one for the  settings
          getElementById(IDS.Setting_IconID).click();
          TexT=getElementByXpath(Xpath.SettingsXpath).getText();
-         
+
          try{
             Assert.assertEquals(TexT,"Settings");
          }catch(AssertionError exp){
-             System.out.println(exp.getMessage()); 
+             System.out.println(exp.getMessage());
          }
           if(Fail){
-         
+
              test.log(Status.FAIL,"wrong in the settings route");
-             Fail=false ; 
+             Fail=false ;
          }
          else {
              test.log(Status.PASS, "Search Settings is Correct");
          }
     }
-    public static void ScrollDownArtistPage() {
+
+    public void ScrollDownArtistPage() {
         Dimension dimension = driver.manage().window().getSize();
         Double scrollHeightStart = dimension.getHeight() * 0.9;
         int scrollStart = scrollHeightStart.intValue();
@@ -395,5 +379,5 @@ public class OudHomeTest extends BaseClass{
         .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
         .moveTo(PointOption.point(0, scrollEnd))
         .release().perform();
-    } 
+    }
 }

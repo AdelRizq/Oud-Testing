@@ -1,61 +1,40 @@
-import org.testng.annotations.AfterSuite;
+package tests;
+
 import org.testng.annotations.BeforeSuite;
 
 import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.reporter.ExtentAventReporter;
-import com.aventstack.extentreports.reporter.ExtentBDDReporter;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.aventstack.extentreports.reporter.ExtentReporter;
 
+@SuppressWarnings("deprecation")
 public class extentReports {
 
-	ExtentHtmlReporter  signupReporter, loginReporter;
-	ExtentAventReporter avent;
-	ExtentBDDReporter bdd;
-	ExtentHtmlReporter htmlReporter ;
+	ExtentHtmlReporter homeReporter, signupReporter, loginReporter, playerReporter;
 
-	ExtentReports signup, login;
+	ExtentReports signup, home, login, Home_Account, PlayerRepo;
 
 	@BeforeSuite
 	public void reportSetup() {
 		signupReporter = new ExtentHtmlReporter("reports/signup.html");
+		homeReporter = new ExtentHtmlReporter("reports/Home_Account.html");
 		loginReporter = new ExtentHtmlReporter("reports/login.html");
+		playerReporter = new ExtentHtmlReporter("reports/Player.html");
+
+		Home_Account = new ExtentReports();
 		signup = new ExtentReports();
 		login = new ExtentReports();
+		PlayerRepo = new ExtentReports();
+
+		Home_Account.attachReporter(homeReporter);
+		PlayerRepo.attachReporter(playerReporter);
 		signup.attachReporter(signupReporter);
 		login.attachReporter(loginReporter);
 	}
 
 	public void tearDown() {
 		// calling flush writes everything to the log file
+		Home_Account.flush();
+		PlayerRepo.flush();
 		login.flush();
 		signup.flush();
-	}
-
-public void PlayerreportSetup() {
-		htmlReporter = new ExtentHtmlReporter("reports/Player.html");
-		avent = new ExtentAventReporter("reports/Player_A.html");
-		bdd = new ExtentBDDReporter("reports/Player_B.html");
-
-		PlayerRepo = new ExtentReports();
-		PlayerRepo.attachReporter(avent, bdd, htmlReporter);
-	}
-        public void HomeAccountreportSetup() {
-		htmlReporter = new ExtentHtmlReporter("reports/HomeAccount.html");
-		avent = new ExtentAventReporter("reports/HomeAccount_A.html");
-		bdd = new ExtentBDDReporter("reports/HomeAccount_B.html");
-
-		Home_Account = new ExtentReports();
-		Home_Account.attachReporter(avent, bdd, htmlReporter);
-	}
-
-	@AfterSuite
-	public void PlayertearDown() {
-		// calling flush writes everything to the log file
-		PlayerRepo.flush();
-	}
-        public void HomeAccounttearDown() {
-		// calling flush writes everything to the log file
-		Home_Account.flush();
 	}
 }
