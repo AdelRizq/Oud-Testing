@@ -27,4 +27,4 @@ queue is not working properly when i click on the song to play it's photo doens'
 there is a problem i cannot make a code for on the next/prev button after it ends there are 2 songs are playing in the background 
 	i don't know if it is a bug or because of the slow of responding through cypress 
  
-
+if you copy an password from any file and paste it to the password box it will give error message that the password is weak regardless the strengh of the copied password  ؟؟!!
