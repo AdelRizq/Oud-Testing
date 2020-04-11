@@ -9,32 +9,53 @@ import com.aventstack.extentreports.reporter.ExtentReporter;
 
 public class extentReports {
 
-	ExtentHtmlReporter homeReporter, signupReporter, loginReporter;
+	ExtentHtmlReporter  signupReporter, loginReporter;
+	ExtentAventReporter avent;
+	ExtentBDDReporter bdd;
+	ExtentHtmlReporter htmlReporter ;
 
-	ExtentReports signup, home, login, Home_Account;
+	ExtentReports signup, login;
 
 	@BeforeSuite
 	public void reportSetup() {
 		signupReporter = new ExtentHtmlReporter("reports/signup.html");
-		homeReporter = new ExtentHtmlReporter("reports/Home_Account.html");
 		loginReporter = new ExtentHtmlReporter("reports/login.html");
-
-		Home_Account = new ExtentReports();
 		signup = new ExtentReports();
-		home = new ExtentReports();
 		login = new ExtentReports();
-
-		Home_Account.attachReporter(homeReporter);
-		home.attachReporter(homeReporter);
 		signup.attachReporter(signupReporter);
 		login.attachReporter(loginReporter);
 	}
 
 	public void tearDown() {
 		// calling flush writes everything to the log file
-		Home_Account.flush();
-		home.flush();
 		login.flush();
 		signup.flush();
+	}
+
+public void PlayerreportSetup() {
+		htmlReporter = new ExtentHtmlReporter("reports/Player.html");
+		avent = new ExtentAventReporter("reports/Player_A.html");
+		bdd = new ExtentBDDReporter("reports/Player_B.html");
+
+		PlayerRepo = new ExtentReports();
+		PlayerRepo.attachReporter(avent, bdd, htmlReporter);
+	}
+        public void HomeAccountreportSetup() {
+		htmlReporter = new ExtentHtmlReporter("reports/HomeAccount.html");
+		avent = new ExtentAventReporter("reports/HomeAccount_A.html");
+		bdd = new ExtentBDDReporter("reports/HomeAccount_B.html");
+
+		Home_Account = new ExtentReports();
+		Home_Account.attachReporter(avent, bdd, htmlReporter);
+	}
+
+	@AfterSuite
+	public void PlayertearDown() {
+		// calling flush writes everything to the log file
+		PlayerRepo.flush();
+	}
+        public void HomeAccounttearDown() {
+		// calling flush writes everything to the log file
+		Home_Account.flush();
 	}
 }
