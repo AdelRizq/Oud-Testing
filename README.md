@@ -30,7 +30,10 @@ npm run test
 
 - **This will ask you for access to your web browser so give the access and enjoy watching the automation test**
 ## Android Environment Setup 
-
+go to the Android folder by the terminal and run this command 
+```
+mvn clean install 
+```
 - then run this command 
 ```
 npm install -g appium
