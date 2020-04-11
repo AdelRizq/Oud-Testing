@@ -1,4 +1,3 @@
-package tests;
 
 import org.testng.annotations.BeforeSuite;
 

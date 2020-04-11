@@ -37,10 +37,10 @@ public class BaseClass extends extentReports {
 		cap = new DesiredCapabilities();
 
 		// this four capabilities for the used device
-		cap.setCapability("deviceName", "G3312");
-		cap.setCapability("udid", "WUJ01P6EQJ");
+		cap.setCapability("deviceName", "HUAWEI GR3 2017");
+		cap.setCapability("udid", "PSEDU17216005889");
 		cap.setCapability("platformName", "Android");
-		cap.setCapability("platformversion", "7.0");
+		cap.setCapability("platformversion", "8.0.0");
 		//////////////////
 
 		cap.setCapability("appPackage", "com.example.oud");

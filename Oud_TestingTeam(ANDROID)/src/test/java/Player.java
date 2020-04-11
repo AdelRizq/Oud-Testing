@@ -1,4 +1,3 @@
-package tests;
 
 import java.net.MalformedURLException;
 import com.aventstack.extentreports.ExtentTest;

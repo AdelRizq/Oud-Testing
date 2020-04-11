@@ -1,4 +1,3 @@
-package tests;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
