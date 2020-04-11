@@ -1,13 +1,23 @@
 {
   "email": "oudtesting@gmail.com",
+  "confirmEmail": "oudtesting@gmail.com",
   "password": "oud_testing12",
+  "confirmPassword": "oud_testing12",
+  "displayName": "Oud Testing",
+  "month": "January",
+  "day": "1",
+  "year": "1998",
+  "gender": "Male",
 
   "requiresEmail": "invalid email address",
-  "requiresPassword": "Please enter your password.",
-  "requiresBoth": "Incorrect username or password.",
+  "requiresPassword": "please enter password",
+  "requiresDisplayName": "please enter a username",
+  "requiresBirth": "please select your Birthdata",
+  "requiresGender": "please select your gender",
+  "requiresConfirmPassword": "Invalid  ,Password not matched",
 
   "invalidEmail": "invalid email address",
-  "shortPassword": "minimum 8 characaters required",
+  "shortPassword": "minimum 8 characters required",
   "weakPassword": "Password should contain uppercase,lowercase and a number",
 
   "invalidEmails": [

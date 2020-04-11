@@ -1,5 +1,6 @@
 {
     "baseUrl": "http://localhost:3000/",
+    "browser": "chrome",
     "reporter": "cypress-multi-reporters",
     "reporterOptions": {
         "reporterEnabled": "mochawesome",

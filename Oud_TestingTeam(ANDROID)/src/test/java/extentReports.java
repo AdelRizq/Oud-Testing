@@ -1,4 +1,3 @@
-
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
@@ -12,7 +11,7 @@ public class extentReports {
 
 	ExtentAventReporter avent;
 	ExtentBDDReporter bdd;
-	ExtentHtmlReporter htmlReporter ;
+	ExtentHtmlReporter htmlReporter;
 
 	ExtentReports Home_Account;
 

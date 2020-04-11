@@ -1,0 +1,24 @@
+{
+  "email": "[data-testid='register-email']",
+  "password": "[data-testid='register-password']",
+  "confirmPassword": "[data-testid='register-confirmPassword']",
+  "displayName": "[data-testid='register-displayname']",
+  "gender": "[data-testid='register-male']",
+  "year": "[data-testid='register-dob-year']",
+  "month": "[data-testid='register-dob-month']",
+  "day": "[data-testid='register-dob-day']",
+  "acceptCheck": "#gridCheck",
+  "button": "[data-testid='SignUp-btn']",
+
+  "requiresEmail": "[data-testid='EmailError']",
+  "requiresPassword": "[for='register-password']",
+  "requiresConfirmPassword": "[for='register-confirmPassword']",
+  "requiresDisplayName": "[for='register-displayname']",
+  "requiresBirthDate": "please select your Birthdata",
+  "requiresGender": "[for='register-male']",
+
+  "loginLink": "[data-testid='SignIN-btn']",
+
+  "termsConditions": "Accept terms & conditions of use",
+  "logo": "[data-test='OudImage']"
+}
