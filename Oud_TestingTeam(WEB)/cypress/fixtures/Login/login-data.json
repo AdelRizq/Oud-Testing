@@ -1,0 +1,32 @@
+{
+  "email": "oudtesting@gmail.com",
+  "password": "oud_testing12",
+
+  "requiresEmail": "invalid email address",
+  "requiresPassword": "Please enter your password.",
+  "requiresBoth": "Incorrect username or password.",
+
+  "invalidEmail": "invalid email address",
+  "shortPassword": "minimum 8 characaters required",
+  "weakPassword": "Password should contain uppercase,lowercase and a number",
+
+  "invalidEmails": [
+    "oudTesting",
+    "oudTesting@oud",
+    "oudTesting@oud.",
+    "oudTesting.oud",
+    "@oud.oud",
+    "d@.oud",
+    "oud@oud@oud.oud",
+    "$@oud.oud",
+    "[]dsa@oud.oud"
+  ],
+  "shortPasswords": ["1234567", "testing", "TESTING", "tesT123"],
+  "weakPasswords": [
+    "oudtesting12",
+    "oudTESTING",
+    "OUDTESTING12",
+    "oudtesting__12",
+    "oudTESTING__"
+  ]
+}

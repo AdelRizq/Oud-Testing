@@ -1,0 +1,23 @@
+{
+
+    "Password":"7_DummyPassword_5" ,
+    "NewPassword":"7_DummyPassword_512",
+    "WrongNewPassword":"7_DummyPassword_521",
+    "AccountOverviewID": "[id=\"accountOverview\"]",
+    "EmailBoxID":"[id=\"email\"]",
+    "EditProfileID":"[id=\"editProfile\"]",
+    "ChangePasswordButton":"[id=\"ChangePassword\"]",
+    "CurrentPasswordBox":"[id=\"current password\"]",
+    "SubmitButton":"[id=\"set new password\"]",
+    "WrongPasswordMessage":"Invallid password not matched",
+    "NewPasswordBox":"[id=\"new password\"]", 
+    "ConfirmPasswordBox":"[id=\"repeat new password\"]",
+    "DismatchPasswordsMessage":"Invallid ,password not matched",
+    "ChangingPasswordSuccessfullyMessage":"Password changed successfully",
+    "InvalidEmailMessage":"invalid email address",
+    "NewEmail":"ahmed.mahbou1b991@gmail.com",
+    "ConfirmPasswordBoxID":"[id=\"confirimPassword\"]",
+    "SaveProfileButtonID":"[id=\"save profile\"]"
+    
+}
+

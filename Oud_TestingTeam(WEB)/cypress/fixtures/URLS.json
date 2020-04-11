@@ -1,0 +1,25 @@
+{
+    "AccountURL": "http://localhost:3000/Account",
+    "OverViewURL": "http://localhost:3000/account/accountOverview",
+    "EditProfileURL": "http://localhost:3000/account/editProfile",
+    "JoinPremiumURL": "http://localhost:3000/redirectPage",
+    "SignoutURL": "http://localhost:3000/redirectPage",
+    "HomeURL": "http://localhost:3000/",
+    "SearchURL": "http://localhost:3000/search",
+    "YourLibraryURL": "http://localhost:3000/collection",
+    "CreatingPlaylistURL": "http://localhost:3000/create-playlist",
+    "LikedSongsURL": "http://localhost:3000/likedSongs",
+    "SignUpURL": "http://localhost:3000/signup",
+    "LoginURL": "http://localhost:3000/signin",
+    "LogoutURL": "http://localhost:3000/logout",
+    "SeeAllURL": "http://localhost:3000/playlist",
+    "UpgradeURL": "http://localhost:3000/?",
+    "BaseURL": "http://localhost:3000/",
+    "WrongAccountURL": "http://localhost:3000/account",
+    "WrongAcountEditProfileURL": "http://localhost:3000/editProfile",
+    "ArtistURL": "http://localhost:3000/artist/4",
+
+    "login": "log-in",
+    "signUp": "SignUp",
+    "forgotPassword": "ForgotPassword"
+}

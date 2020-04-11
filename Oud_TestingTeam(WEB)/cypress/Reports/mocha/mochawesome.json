@@ -1,0 +1,226 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 0,
+    "pending": 0,
+    "failures": 6,
+    "start": "2020-04-10T03:46:25.650Z",
+    "end": "2020-04-10T03:46:52.213Z",
+    "duration": 26563,
+    "testsRegistered": 6,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "50d092b3-c6f4-4990-a62d-9e64141a0162",
+      "title": "",
+      "fullFile": "cypress\\integration\\user\\login.spec.js",
+      "file": "cypress\\integration\\user\\login.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3c0edb9d-f20e-453d-8f25-82a523eff879",
+          "title": "Logging In",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "greets with Sign in",
+              "fullTitle": "Logging In greets with Sign in",
+              "timedOut": null,
+              "duration": 6289,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#login-to-continue\").should(\"contain\", \"To continue, log in to Spotify.\");",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: '#login-to-continue', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: '#login-to-continue', but never found it.\n    at cypressErr (http://localhost:3000/__cypress/runner/cypress_runner.js:138644:9)\n    at throwErr (http://localhost:3000/__cypress/runner/cypress_runner.js:138577:11)\n    at Object.throwErrByPath (http://localhost:3000/__cypress/runner/cypress_runner.js:138625:3)\n    at retry (http://localhost:3000/__cypress/runner/cypress_runner.js:132905:19)\n    at onFailFn (http://localhost:3000/__cypress/runner/cypress_runner.js:121122:16)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:165465:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:163401:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:163458:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:163503:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:163578:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:160190:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:160200:10)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:160074:14)",
+                "diff": null
+              },
+              "uuid": "5a6eb92d-3ade-4f36-9a9e-6de4815553dc",
+              "parentUUID": "3c0edb9d-f20e-453d-8f25-82a523eff879",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "requires Email",
+              "fullTitle": "Logging In requires Email",
+              "timedOut": null,
+              "duration": 4967,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#\".concat(self.loginIds.button)).click();\ncy.get(\"\".concat(self.loginIds.requiresEmail)).should(\"contain\", \"\".concat(self.loginData.requiresEmail));",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: '#login-button', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: '#login-button', but never found it.\n    at cypressErr (http://localhost:3000/__cypress/runner/cypress_runner.js:138644:9)\n    at throwErr (http://localhost:3000/__cypress/runner/cypress_runner.js:138577:11)\n    at Object.throwErrByPath (http://localhost:3000/__cypress/runner/cypress_runner.js:138625:3)\n    at retry (http://localhost:3000/__cypress/runner/cypress_runner.js:132905:19)\n    at onFailFn (http://localhost:3000/__cypress/runner/cypress_runner.js:121122:16)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:165465:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:163401:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:163458:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:163503:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:163578:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:160190:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:160200:10)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:160074:14)",
+                "diff": null
+              },
+              "uuid": "19a43d0a-9cd4-46d0-96a6-b4e61d15e68b",
+              "parentUUID": "3c0edb9d-f20e-453d-8f25-82a523eff879",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "requires Password",
+              "fullTitle": "Logging In requires Password",
+              "timedOut": null,
+              "duration": 4702,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#\".concat(self.loginIds.button)).click();\ncy.get(\"\".concat(self.loginIds.requiresPassword)).should(\"contain\", \"\".concat(self.loginData.requiresPassword));",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: '#login-button', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: '#login-button', but never found it.\n    at cypressErr (http://localhost:3000/__cypress/runner/cypress_runner.js:138644:9)\n    at throwErr (http://localhost:3000/__cypress/runner/cypress_runner.js:138577:11)\n    at Object.throwErrByPath (http://localhost:3000/__cypress/runner/cypress_runner.js:138625:3)\n    at retry (http://localhost:3000/__cypress/runner/cypress_runner.js:132905:19)\n    at onFailFn (http://localhost:3000/__cypress/runner/cypress_runner.js:121122:16)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:165465:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:163401:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:163458:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:163503:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:163578:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:160190:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:160200:10)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:160074:14)",
+                "diff": null
+              },
+              "uuid": "81a046a2-9b69-403f-a4c1-393a71bf6b4e",
+              "parentUUID": "3c0edb9d-f20e-453d-8f25-82a523eff879",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "requires valid Email ans Password",
+              "fullTitle": "Logging In requires valid Email ans Password",
+              "timedOut": null,
+              "duration": 4651,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#\".concat(self.loginIds.email)).type(\"oud\");\ncy.get(\"#\".concat(self.loginIds.password)).type(\"oud\");\ncy.get(\"#\".concat(self.loginIds.button)).click();\ncy.get(\"\".concat(self.loginIds.requiresBoth)).should(\"contain\", \"\".concat(self.loginData.requiresBoth));",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: '#login-username', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: '#login-username', but never found it.\n    at cypressErr (http://localhost:3000/__cypress/runner/cypress_runner.js:138644:9)\n    at throwErr (http://localhost:3000/__cypress/runner/cypress_runner.js:138577:11)\n    at Object.throwErrByPath (http://localhost:3000/__cypress/runner/cypress_runner.js:138625:3)\n    at retry (http://localhost:3000/__cypress/runner/cypress_runner.js:132905:19)\n    at onFailFn (http://localhost:3000/__cypress/runner/cypress_runner.js:121122:16)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:165465:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:163401:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:163458:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:163503:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:163578:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:160190:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:160200:10)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:160074:14)",
+                "diff": null
+              },
+              "uuid": "73903480-319c-41ac-8199-80acbade3223",
+              "parentUUID": "3c0edb9d-f20e-453d-8f25-82a523eff879",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "link to Sign up",
+              "fullTitle": "Logging In link to Sign up",
+              "timedOut": null,
+              "duration": 1128,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#\".concat(signUpLink)).click();\ncy.url().should(\"contain\", \"signup\");",
+              "err": {
+                "message": "ReferenceError: signUpLink is not defined",
+                "estack": "ReferenceError: signUpLink is not defined\n    at Context.<anonymous> (http://localhost:3000/__cypress/tests?p=cypress\\integration\\user\\login.spec.js-383:35:23)",
+                "diff": null
+              },
+              "uuid": "d50b6522-049a-443e-a0c9-291cb2c01d2e",
+              "parentUUID": "3c0edb9d-f20e-453d-8f25-82a523eff879",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Successful login",
+              "fullTitle": "Logging In Successful login",
+              "timedOut": null,
+              "duration": 4620,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: '#login-username', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: '#login-username', but never found it.\n    at cypressErr (http://localhost:3000/__cypress/runner/cypress_runner.js:138644:9)\n    at throwErr (http://localhost:3000/__cypress/runner/cypress_runner.js:138577:11)\n    at Object.throwErrByPath (http://localhost:3000/__cypress/runner/cypress_runner.js:138625:3)\n    at retry (http://localhost:3000/__cypress/runner/cypress_runner.js:132905:19)\n    at onFailFn (http://localhost:3000/__cypress/runner/cypress_runner.js:121122:16)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:165465:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:163401:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:163458:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:163503:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:163578:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:160190:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:160200:10)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:160074:14)",
+                "diff": null
+              },
+              "uuid": "652641fc-1acc-441d-9ea1-f4b77a5137d6",
+              "parentUUID": "3c0edb9d-f20e-453d-8f25-82a523eff879",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "5a6eb92d-3ade-4f36-9a9e-6de4815553dc",
+            "19a43d0a-9cd4-46d0-96a6-b4e61d15e68b",
+            "81a046a2-9b69-403f-a4c1-393a71bf6b4e",
+            "73903480-319c-41ac-8199-80acbade3223",
+            "d50b6522-049a-443e-a0c9-291cb2c01d2e",
+            "652641fc-1acc-441d-9ea1-f4b77a5137d6"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 26357,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.1.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "5.0.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": true,
+        "html": true,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

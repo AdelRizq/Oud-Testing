@@ -1,0 +1,15 @@
+{
+  "email": "[data-testid='login-email']",
+  "password": "[data-testid='login-password']",
+  "rememberMe": "[data-testid='gridCheck']",
+  "button": "[data-testid='SignInBtn']",
+
+  "requiresEmail": "[for='register-email']",
+  "requiresPassword": "[for='register-password']",
+
+  "signUpLink": "[data-testid='SignUpBtn']",
+  "forgotPassword": "[data-testid='Forgetpass']",
+  "forgotPasswordEmail": "[data-testid='forgetPassword-email']",
+  "forgotPasswordButton": "[class='btn btn-outline-linkF']",
+  "logo": "[data-test='OudImage']"
+}
