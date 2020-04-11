@@ -2,15 +2,15 @@
 
 describe("Sign-Up", () => {
   before(() => {
-    cy.fixture("urls").then((data) => {
+    cy.fixture("URLS").then((data) => {
       self.signUpUrl = data.signUp;
     });
 
-    cy.fixture("signUp-ids").then((data) => {
+    cy.fixture("SignUP/signUp-ids").then((data) => {
       self.signUpIds = data;
     });
 
-    cy.fixture("signUp-data").then((data) => {
+    cy.fixture("SignUP/signUp-data").then((data) => {
       self.signUpData = data;
     });
   });
