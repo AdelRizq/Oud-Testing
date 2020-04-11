@@ -26,4 +26,27 @@ then run this command
 ```
 npm run test 
 ```
+
 The will ask you for access to your web browser so give the access and enjoy watching the automation test 
+### Android Environment Setup 
+
+then run this command 
+```
+npm install -g appium
+```
+after installtion run this command 
+
+```
+appium 
+```
+and it will start the server 
+then connect your mobile phone to the computer  and allow the developer options(Debugger mode)
+then run this command 
+```
+abd devices 
+```
+and take the id form the terminal 
+then go to /src/test/java/ open  BaseClass.java by any texteditor 
+then go "setCaps" Function  
+Edit your device name , put the udid , Change your Platfrom and Change the PlatformVersion
+then run the test File that you want 
