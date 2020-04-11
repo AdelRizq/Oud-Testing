@@ -28,7 +28,7 @@ npm install -D cypress-xpath
 npm run test 
 ```
 
-- **The will ask you for access to your web browser so give the access and enjoy watching the automation test**
+- **This will ask you for access to your web browser so give the access and enjoy watching the automation test**
 ## Android Environment Setup 
 
 - then run this command 
