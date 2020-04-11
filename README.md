@@ -13,8 +13,10 @@ What things you need to install the software and how to install them
 ```
 git clone https://github.com/Thebrownboy/Oud_TestingTeam.git
 ```
-
-then go to the web directory ,open the terminal and  run this command 
+then run this command 
+```
+cd "Oud_TestingTeam(WEB)"
+```
 ```
 npm install cypress 
 ```
