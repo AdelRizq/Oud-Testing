@@ -9,25 +9,32 @@ import com.aventstack.extentreports.reporter.ExtentReporter;
 
 public class extentReports {
 
-	ExtentAventReporter avent;
-	ExtentBDDReporter bdd;
-	ExtentHtmlReporter htmlReporter;
+	ExtentHtmlReporter homeReporter, signupReporter, loginReporter;
 
-	ExtentReports Home_Account;
+	ExtentReports signup, home, login, Home_Account;
 
 	@BeforeSuite
 	public void reportSetup() {
-		htmlReporter = new ExtentHtmlReporter("reports/Home_Account.html");
-		avent = new ExtentAventReporter("reports/HomeAccount_A.html");
-		bdd = new ExtentBDDReporter("reports/HomeAccount_B.html");
+		signupReporter = new ExtentHtmlReporter("reports/signup.html");
+		homeReporter = new ExtentHtmlReporter("reports/Home_Account.html");
+		loginReporter = new ExtentHtmlReporter("reports/login.html");
 
 		Home_Account = new ExtentReports();
-		Home_Account.attachReporter(avent, bdd, htmlReporter);
+		signup = new ExtentReports();
+		home = new ExtentReports();
+		login = new ExtentReports();
+
+		Home_Account.attachReporter(homeReporter);
+		home.attachReporter(homeReporter);
+		signup.attachReporter(signupReporter);
+		login.attachReporter(loginReporter);
 	}
 
-	@AfterSuite
 	public void tearDown() {
 		// calling flush writes everything to the log file
 		Home_Account.flush();
+		home.flush();
+		login.flush();
+		signup.flush();
 	}
 }
