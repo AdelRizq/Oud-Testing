@@ -1,6 +1,5 @@
 {
-    "baseUrl": "http://localhost:3000/",
-    "browser": "chrome",
+    "baseUrl": "https://oud-zerobase.me/",
     "reporter": "cypress-multi-reporters",
     "reporterOptions": {
         "reporterEnabled": "mochawesome",

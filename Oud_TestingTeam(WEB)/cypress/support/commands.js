@@ -26,7 +26,7 @@ Cypress.Commands.add("Check_Start_Com_with_invalid_char", () => {
   var text = "123@gmail.";
 
   for (var i = 33; i <= 47; i++) {
-    if (i == 45) continue;
+    if (i === 45) continue;
     var char = String.fromCharCode(i);
     var newtext = text + char + "a";
     cy.CheckOudpattern(newtext);
@@ -57,7 +57,7 @@ Cypress.Commands.add("check_end_Com_With_invalid_char", () => {
   var text = "123@gmail.";
 
   for (var i = 33; i <= 47; i++) {
-    if (i == 45) continue; // this test fails so I want to except this to continue the tests
+    if (i === 45) continue; // this test fails so I want to except this to continue the tests
     var char = String.fromCharCode(i);
     var newtext = text + "a" + char;
     cy.CheckOudpattern(newtext);
@@ -121,7 +121,7 @@ Cypress.Commands.add("Check_Start_at_with_invalid_char", () => {
   var text = "123@";
 
   for (var i = 33; i <= 47; i++) {
-    if (i == 45) continue; // this test fails so I want to except this to continue the tests
+    if (i === 45) continue; // this test fails so I want to except this to continue the tests
     var char = String.fromCharCode(i);
     var newtext = text + char + "gmail.com";
     cy.CheckOudpattern(newtext);
@@ -147,7 +147,7 @@ Cypress.Commands.add("Check_end_at_with_invalid_char", () => {
   var text = "123@";
 
   for (var i = 33; i <= 47; i++) {
-    if (i == 45) continue; // this test fails so I want to except this to continue the tests
+    if (i === 45) continue; // this test fails so I want to except this to continue the tests
     var char = String.fromCharCode(i);
     var newtext = text + "gmail" + char + ".com";
     cy.CheckOudpattern(newtext);
@@ -304,9 +304,9 @@ Cypress.Commands.add("CheckInvalidPatterns", (number) => {
   cy.visit(URLS.AccountURL);
   cy.get(AccountData.EditProfileID).click({ force: true });
   cy.wait(3000);
-  if (number == 1) cy.CheckOudpattern("123@gmail.-a");
-  else if (number == 2) cy.CheckOudpattern("123@gmail.a-");
-  else if (number == 3) cy.CheckOudpattern("test@gmail");
+  if (number === 1) cy.CheckOudpattern("123@gmail.-a");
+  else if (number === 2) cy.CheckOudpattern("123@gmail.a-");
+  else if (number === 3) cy.CheckOudpattern("test@gmail");
   else cy.CheckOudpattern("123@gmail.0a");
 });
 
@@ -331,7 +331,7 @@ Cypress.Commands.add("OudChange_Password", () => {
   cy.contains(AccountData.ChangingPasswordSuccessfullyMessage);
 });
 Cypress.Commands.add("CheckChangingpassword", () => {
-  cy.visit("http://localhost:3000/account/changePassword");
+  cy.visit("/account/changePassword");
   cy.get(AccountData.CurrentPasswordBox).clear().type(AccountData.Password);
   cy.get(AccountData.NewPasswordBox).clear().type(AccountData.WrongNewPassword);
   cy.get(AccountData.ConfirmPasswordBox)
@@ -343,7 +343,7 @@ Cypress.Commands.add("CheckChangingpassword", () => {
 });
 
 Cypress.Commands.add("HomeOverView", () => {
-  cy.visit("http://localhost:3000");
+  cy.visit("/");
   cy.wait(3000);
   cy.contains("Search").click();
   cy.wait(2000);
