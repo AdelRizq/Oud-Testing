@@ -1,0 +1,10 @@
+{
+    "username" : "login-username",
+    "password" : "login-password",
+    "loginButton" :"login-button",
+    "launchWebPlayer" : "segmented-desktop-launch",
+    "searchInput":"search-input",
+    "garbageInput" : "assdvsdvsd" ,
+    "clearInput" : "Clear search field",
+    "nowPlayingTrack" : "nowplaying-track-link"
+}

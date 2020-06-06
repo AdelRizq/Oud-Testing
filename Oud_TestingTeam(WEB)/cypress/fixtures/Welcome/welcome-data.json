@@ -1,0 +1,20 @@
+{
+    "loginButton" : "login-button",
+    "stringInLogin" : "To continue, log in to Spotify.",
+    "stringInWelcome" : "Listening is everything",
+    "welcomeTitle" : "Listening is everything - Spotify",
+    "getSpotifyFree" : "generic-btn-premium",
+    "stringInSignup" :"Sign up for free to start listening.",
+    "loginTitle" : "Login - Spotify",
+    "signupTitle" : "Sign up - Spotify",
+    "signupButton" :"Sign up",
+    "helpTitle" :"Support - Spotify",
+    "stringInHelp" : "How can we help you?",
+    "premiumTitle" : "Spotify",
+    "stringInPremium" : "Pick your Premium",
+    "downloadTitle" : "Windows download - Spotify",
+    "stringInDownload" :"Click the install file to finish up.",
+    "instagram" : "Instagram",
+    "facebook" :"Facebook",
+    "twitter" : "Twitter"
+}
