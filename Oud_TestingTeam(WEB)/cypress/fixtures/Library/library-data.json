@@ -1,0 +1,23 @@
+{
+    "username" : "login-username",
+    "password" : "login-password",
+    "loginButton" :"login-button",
+    "launchWebPlayer" : "segmented-desktop-launch",
+    "emptyPlaylistText": "Create your first playlist",
+    "playlistName" : "hello",
+    "createPlaylist":"Create playlist",
+    "createPlaylistButton" : "CREATE",
+    "container" : "contentSpacing",
+    "deletePlaylistButton" : "react-contextmenu-item",
+    "emptyPodcastText" : "Follow your first podcast",
+    "findPodcastButton" : "Find podcasts",
+    "emptyArtistsText" :"Follow your first artist",
+    "findArtistButton" : "Find artists",
+    "searchInput":"search-input",
+    "followButton" : ".b49b68b14a1771a4cb36313f2b350e84-scss",
+    "unfollowButton":".b49b68b14a1771a4cb36313f2b350e84-scss _2b37b3630aee3cbfc97689b5af341d60-scss",
+    "emptyAlbumsText":"Follow your first album",
+    "findAlbumButton":"Find albums",
+    "likeButton" : "Save to Your Library",
+    "unlikeButton" : "Remove from Your Library"
+}

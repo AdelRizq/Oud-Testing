@@ -1,7 +1,11 @@
 {
-    "baseUrl": "http://localhost:3000/",
+    "baseUrl": "https://www.spotify.com/eg-en/",
     "browser": "chrome",
     "reporter": "cypress-multi-reporters",
+    "env":{
+        "username" : "oudtesting@gmail.com",
+        "password" : "oud_testing12"
+    },
     "reporterOptions": {
         "reporterEnabled": "mochawesome",
         "mochawesomeReporterOptions": {
