@@ -1,15 +1,15 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 2,
+    "tests": 1,
     "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2020-04-10T20:07:58.483Z",
-    "end": "2020-04-10T20:08:15.446Z",
-    "duration": 16963,
-    "testsRegistered": 2,
-    "passPercent": 50,
+    "failures": 0,
+    "start": "2020-06-09T19:54:32.762Z",
+    "end": "2020-06-09T19:55:17.226Z",
+    "duration": 44464,
+    "testsRegistered": 1,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,73 +18,49 @@
   },
   "results": [
     {
-      "uuid": "99024bed-eb7a-4614-8572-a8e2ecdb8a12",
+      "uuid": "d9df2724-b3c8-4084-8103-3b49f113d1a8",
       "title": "",
-      "fullFile": "cypress\\integration\\Player\\Like.spec.js",
-      "file": "cypress\\integration\\Player\\Like.spec.js",
+      "fullFile": "cypress\\integration\\likedSongs.spec.js",
+      "file": "cypress\\integration\\likedSongs.spec.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "3583d56d-3a1c-4200-9c22-8a126c1655a2",
-          "title": "Like",
+          "uuid": "526100da-3e7f-46a6-b5e0-d00b355afb37",
+          "title": "liked songs",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "like Song",
-              "fullTitle": "Like like Song",
+              "title": "liked songs",
+              "fullTitle": "liked songs liked songs",
               "timedOut": null,
-              "duration": 11527,
+              "duration": 44386,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.wait(1000); // it has no uniqe id so i had to use xpath\ncy.xpath('//*[@id=\"root\"]/div/div[4]/div/div[3]/div/button[1]/img').should('have.attr', 'alt', 'Love');\ncy.get(\"[data-testid='\".concat(self.playerIds.Like, \"']\")).click().then(function () {\n  cy.xpath('//*[@id=\"root\"]/div/div[4]/div/div[3]/div/button[1]/img').should('have.attr', 'alt', 'Loved');\n});",
+              "code": "cy.wait(8000);\ncy.get(\".react-contextmenu-wrapper\", {\n  timeout: 20000\n}).eq(1).click();\ncy.get('[class=\"tracklist-name ellipsis-one-line\"]').first().then(function ($likedSong) {\n  cy.get('[class=\"tracklist-name ellipsis-one-line\"]').first().rightclick();\n  cy.contains(\"Save to your Liked Songs\").click();\n  cy.contains(\"Liked Songs\").click();\n  cy.get('[class=\"tracklist-name ellipsis-one-line\"]').first().then(function ($songsInLikedSongsPage) {\n    expect($songsInLikedSongsPage.text()).equal($likedSong.text());\n  });\n  cy.get('[class=\"tracklist-name ellipsis-one-line\"]').first().rightclick(\"center\");\n  cy.contains(\"Remove from your Liked Songs\").click();\n  cy.contains(\"It's a bit empty here...\").should(\"exist\");\n});",
               "err": {},
-              "uuid": "30ee7cbe-9148-403b-9c23-1b5276e6ebbc",
-              "parentUUID": "3583d56d-3a1c-4200-9c22-8a126c1655a2",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "see if it liked song is in liked Songs",
-              "fullTitle": "Like see if it liked song is in liked Songs",
-              "timedOut": null,
-              "duration": 5328,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
-              "pending": false,
-              "context": null,
-              "code": "cy.get('a').contains('Liked Songs').click().then(function () {\n  cy.url().should('contains', 'likedSongs');\n  cy.get(\"[data-testid='\".concat(self.playerIds.trackName, \"']\")).then(function (trackName) {\n    var Name = trackName.text();\n    cy.get(\"[data-testid='\".concat(self.playerIds.likedTrackName, \"']\")).should('contain.text', Name);\n  });\n});",
-              "err": {
-                "message": "CypressError: Timed out retrying: expected '[ <span.whiteText>, 5 more... ]' to contain text 'Dorak gai', but the text was 'Hat SogaraHat SogaraHat SogaraHat SogaraHat Sogaraواحد وعشرين'",
-                "estack": "CypressError: Timed out retrying: expected '[ <span.whiteText>, 5 more... ]' to contain text 'Dorak gai', but the text was 'Hat SogaraHat SogaraHat SogaraHat SogaraHat Sogaraواحد وعشرين'\n    at cypressErr (http://localhost:3000/__cypress/runner/cypress_runner.js:138644:9)\n    at throwErr (http://localhost:3000/__cypress/runner/cypress_runner.js:138577:11)\n    at Object.throwErrByPath (http://localhost:3000/__cypress/runner/cypress_runner.js:138625:3)\n    at retry (http://localhost:3000/__cypress/runner/cypress_runner.js:132905:19)\n    at onFailFn (http://localhost:3000/__cypress/runner/cypress_runner.js:121122:16)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:165465:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:163401:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:163458:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:163503:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:163578:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:160190:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:160200:10)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:160074:14)",
-                "diff": null
-              },
-              "uuid": "b83d859d-15f9-4cb0-9ea1-d721b732404b",
-              "parentUUID": "3583d56d-3a1c-4200-9c22-8a126c1655a2",
+              "uuid": "d7a6dbe8-bde2-4d07-878f-037fd8ba741b",
+              "parentUUID": "526100da-3e7f-46a6-b5e0-d00b355afb37",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "30ee7cbe-9148-403b-9c23-1b5276e6ebbc"
+            "d7a6dbe8-bde2-4d07-878f-037fd8ba741b"
           ],
-          "failures": [
-            "b83d859d-15f9-4cb0-9ea1-d721b732404b"
-          ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 16855,
+          "duration": 44386,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

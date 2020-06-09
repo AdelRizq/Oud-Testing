@@ -1,3 +1,4 @@
+package tests;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -87,6 +88,8 @@ public class SignUp_tests extends BaseClass {
 		setGender('m');
 
 		submit();
+
+		//if (getElementById())
 
 		errorMessage = getElementById(errorMessageId).getText();
 
@@ -190,6 +193,7 @@ public class SignUp_tests extends BaseClass {
 
 		submit();
 		errorMessage = ScrollUntilId(errorMessageId, true, 0).getText();
+
 
 		requiredGender = (errorMessage.equals("please select a gender")) ?
 				requiredGender.log(Status.PASS, "required gender test passed") :

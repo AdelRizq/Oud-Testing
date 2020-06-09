@@ -1,14 +1,10 @@
 package tests;
 
-import java.util.List;
-
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
-import io.appium.java_client.MobileElement;
 
 public class Login_tests extends BaseClass {
 
@@ -60,7 +56,6 @@ public class Login_tests extends BaseClass {
 		System.out.println("empty and invalid emails test started");
 		invalidEmail = login.createTest("empty and invalid emails");
 		getElementById(loginId).click();
-		Wait(1000);
 
 		submit();
 		try {

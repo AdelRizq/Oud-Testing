@@ -20,5 +20,7 @@
 
     "login": "log-in",
     "signUp": "SignUp",
-    "forgotPassword": "ForgotPassword"
+    "forgotPassword": "ForgotPassword",
+    "resetPassword": "https://www.spotify.com/eg-ar/password-reset/",
+    "spotifyLogin": "https://accounts.spotify.com/en/login"
 }
