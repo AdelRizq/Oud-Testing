@@ -21,7 +21,7 @@ import io.appium.java_client.touch.offset.PointOption;
 public class BaseClass extends extentReports {
 	DesiredCapabilities cap;
 	static AndroidDriver<MobileElement> driver;
-
+	String homeID = "com.spotify.music:id/home_tab";
 	@BeforeTest
 	public void setup() {
 		try {
@@ -43,12 +43,16 @@ public class BaseClass extends extentReports {
 		cap.setCapability("platformversion", "8.0.0");
 		//////////////////
 
-		cap.setCapability("appPackage", "com.example.oud");
-		cap.setCapability("appActivity", "com.example.oud.MainActivity");
+		cap.setCapability("appPackage", "com.spotify.music");
+		cap.setCapability("appActivity", "com.spotify.music.MainActivity");
 
 		URL url = new URL("http://localhost:4723/wd/hub");
 		driver = new AndroidDriver<MobileElement>(url, cap);
 		System.out.println("Testing Started");
+
+		while (getItemWebViewId(homeID).size() == 0){
+            System.out.println("Please login...");
+        }
 	}
 
 	public MobileElement getElementById(String id) {

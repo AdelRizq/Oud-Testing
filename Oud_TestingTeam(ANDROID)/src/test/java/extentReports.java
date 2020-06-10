@@ -1,4 +1,5 @@
 
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -7,9 +8,9 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 @SuppressWarnings("deprecation")
 public class extentReports {
 
-	ExtentHtmlReporter homeReporter, signupReporter, loginReporter, playerReporter;
+	ExtentHtmlReporter homeReporter, signupReporter, loginReporter, playerReporter,libraryArtistReporter,libraryAlbumReporter,libraryPlaylistReporter;
 
-	ExtentReports signup, home, login, Home_Account, PlayerRepo;
+	ExtentReports signup, home, login, Home_Account, PlayerRepo,libraryArtist,libraryAlbum,libraryPlaylist;
 
 	@BeforeSuite
 	public void reportSetup() {
@@ -18,22 +19,46 @@ public class extentReports {
 		loginReporter = new ExtentHtmlReporter("reports/login.html");
 		playerReporter = new ExtentHtmlReporter("reports/Player.html");
 
+		libraryArtistReporter = new ExtentHtmlReporter("reports/libraryArtist.html");
+		libraryAlbumReporter= new ExtentHtmlReporter("reports/libraryAlbum.html");
+		libraryPlaylistReporter = new ExtentHtmlReporter("reports/libraryPlaylist.html");
+
+		
+
+
+		
 		Home_Account = new ExtentReports();
 		signup = new ExtentReports();
 		login = new ExtentReports();
 		PlayerRepo = new ExtentReports();
 
+		libraryAlbum    = new ExtentReports();
+		libraryArtist   = new ExtentReports();
+		libraryPlaylist = new ExtentReports();
+
 		Home_Account.attachReporter(homeReporter);
 		PlayerRepo.attachReporter(playerReporter);
 		signup.attachReporter(signupReporter);
+
 		login.attachReporter(loginReporter);
+		libraryAlbum.attachReporter(libraryAlbumReporter); 
+		libraryArtist.attachReporter(libraryArtistReporter); 
+		libraryPlaylist.attachReporter(libraryPlaylistReporter); 
 	}
 
-	public void tearDown() {
-		// calling flush writes everything to the log file
-		Home_Account.flush();
-		PlayerRepo.flush();
-		login.flush();
-		signup.flush();
+	@AfterSuite
+	public void artistFlush()
+	{
+		libraryArtist.flush();
+	}
+	@AfterSuite
+	public void playlistFlush()
+	{
+		libraryAlbum.flush();
+	}
+	@AfterSuite
+	public void albumFlush()
+	{
+		libraryPlaylist.flush();
 	}
 }
