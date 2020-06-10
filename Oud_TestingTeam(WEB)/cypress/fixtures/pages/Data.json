@@ -1,0 +1,13 @@
+{
+    "jobcatid":"[id=\"menu-item-1234\"]",
+    "locationid":"[id=\"menu-item-1233\"]",
+    "studentsid":"[id=\"menu-item-1561\"]",
+    "searchjob":"[id=\"menu-item-114\"]",
+    "heartid":"[class=\"icon-heart-empty\"]",
+    "subcatid":"[class=\"filter-select js-show-filter icon-down-dir\"]",
+    "searchbar":"[class=\"js-search-field\"]",
+    "searchicon":"[class=\"btn-search icon-search\"]",
+    "jobheader":"[class=\"table-header-1\"]",
+    "clearicon":"[class=\"js-clear-filter icon-close\"]",
+    "trachid":"[class=\"icon-trash-empty\"]"
+}

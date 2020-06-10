@@ -1,486 +1,251 @@
+// ***********************************************
+// This example commands.js shows you how to
+// create various custom commands and overwrite
+// existing commands.
+//
+// For more comprehensive examples of custom
+// commands please read more here:
+// https://on.cypress.io/custom-commands
+// ***********************************************
+//
+//
+// -- This is a parent command --
+// Cypress.Commands.add("login", (email, password) => { ... })
+//
+//
+// -- This is a child command --
+// Cypress.Commands.add("drag", { prevSubject: 'element'}, (subject, options) => { ... })
+//
+//
+// -- This is a dual command --
+// Cypress.Commands.add("dismiss", { prevSubject: 'optional'}, (subject, options) => { ... })
+//
+//
+// -- This will overwrite an existing command --
+// Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 before(() => {
-  cy.fixture("URLS.json", "utf-8").then((URLSData) => {
-    self.URLS = URLSData;
+    cy.fixture("Profile/Data.json").then((DataID)=>{
+        self.Data=DataID
+    })
+    cy.fixture("Artist/Data.json").then((artistData)=>{
+
+        self.artist=artistData
+    })
+    cy.fixture("pages/Data.json").then((pagesData)=>{
+
+        self.pages=pagesData
+    })
+    cy.fixture("URLS.json").then((urlsData)=>{
+
+        self.URL=urlsData
+    })
   });
-  cy.fixture("Home/Data.json").then((DataID) => {
-    self.Data = DataID;
-  });
-  cy.fixture("Account/Data.json").then((AccData) => {
-    self.AccountData = AccData;
-  });
-});
+Cypress.Commands.add("Login",()=>
+{
 
-Cypress.Commands.add("login", () => {
-  cy.get(`${self.loginIds.email}`).type(self.loginData.email);
-  cy.get(`${self.loginIds.password}`).type(self.loginData.password);
-  cy.get(`${self.loginIds.rememberMe}`).click();
-  cy.get(`${self.loginIds.button}`).click();
-});
+    cy.visit("/")
+    cy.wait(3000)
+    cy.contains("Log In").click()
+    cy.wait(3000)
+    cy.get(Data.emailbox).clear().type(Data.email)
+    cy.get(Data.passwordbox).clear().type(Data.password)
+    cy.get(Data.loginbutton).click({force:true})
+    cy.wait(3000)
 
-Cypress.Commands.add("CheckChangingTheEmail", () => {
-  cy.visit(URLS.OverViewURL);
-  cy.contains(AccountData.NewEmail);
-});
-Cypress.Commands.add("Check_Start_Com_with_invalid_char", () => {
-  cy.CheckOudpattern("123@gamil.");
-  var text = "123@gmail.";
 
-  for (var i = 33; i <= 47; i++) {
-    if (i == 45) continue;
-    var char = String.fromCharCode(i);
-    var newtext = text + char + "a";
-    cy.CheckOudpattern(newtext);
-  }
-  //cy.CheckOudpattern('123@gmail.0a')
-  for (var i = 58; i < 64; i++) {
-    var char = String.fromCharCode(i);
-    var newtext = text + char + "a";
-    cy.CheckOudpattern(newtext);
-  }
+})
+Cypress.Commands.add("toprofile",()=>{
+    cy.wait(3000)
+    cy.contains("Spotify").click()
+    cy.scrollTo(0,500)
+    cy.contains("Launch Web Player").click({force:true})
+    Cypress.on('uncaught:exception', (err, runnable) => {
+        // returning false here prevents Cypress from
+        // failing the test
+        return false
+      })
+    cy.get(Data.profileaccountbutton).click({force:true})
+    cy.contains("Profile").click({force:true})
+})
+Cypress.Commands.add("createlist",()=>{
 
-  for (var i = 91; i <= 96; i++) {
-    var char = String.fromCharCode(i);
-    var newtext = text + char + "a";
-    cy.CheckOudpattern(newtext);
-  }
+    cy.contains("Create Playlist").click({force:true})
+    cy.get(Data.playlistbox).clear().type("testplaylist")
+    cy.contains("CREATE").click({force:true})
+    cy.wait(3000)
+    cy.get(Data.profileaccountbutton).click({force:true})
+    cy.contains("Profile").click({force:true})
+    cy.reload()
+    cy.wait(7000)
+    cy.get('[class="main-view-container__scroll-node"]').scrollTo('bottom')
+    cy.contains("testplaylist")
 
-  for (var i = 123; i <= 126; i++) {
-    var char = String.fromCharCode(i);
-    var newtext = text + char + "a";
-    cy.CheckOudpattern(newtext);
-  }
+})
+Cypress.Commands.add("addartist",()=>{
 
-  cy.CheckOudpattern("123@gamil.1231a fd"); // check the space inside the
-});
+    cy.Login()
+    cy.toprofile()
+    cy.contains("Search").click({force:true})
+    cy.get(Data.searchbox).clear().type("الحصري")
+    cy.wait(3000)
+    cy.contains("Al Sheikh Mahmoud Kh").click({force:true})
+    cy.wait(3000)
+    cy.contains("Follow").click({force:true})
+    cy.wait(500)
+    cy.contains("Saved to Your Library").should('be.visible') 
+    cy.wait(3000)
+    cy.contains("Your Library").click({force:true})
+    cy.wait(1000)
+    cy.contains("Artists").click({force:true})
+    cy.reload()
+    cy.wait(3000)
+    cy.contains("Al Sheikh Mahmo")
+    cy.go('back')
+    cy.go('back')
+    cy.wait(3000)
+    cy.contains("Following").click({force:true})
+    cy.wait(500)
+    cy.contains("Removed from Your Library").should('be.visible') 
+    cy.wait(3000)
+    cy.get(artist.playbutton).click({force:true,multiple:true})
+    cy.reload()
+    cy.wait(3000)
+    cy.contains("Popular").should('be.visible')
+    cy.get('[class="main-view-container__scroll-node"]').scrollTo(0,500)
+    cy.contains("Albums").should('be.visible')
+    cy.get('[class="main-view-container__scroll-node"]').scrollTo(0,500)
+    cy.contains("Singles and EPs").should('be.visible')
+    cy.get('[class="main-view-container__scroll-node"]').scrollTo(0,1500)
+    cy.contains("SHOW MORE").click({force:true})
+    cy.get('[class="main-view-container__scroll-node"]')
+    cy.url().should("eq",URL.artisturl)
+ 
+    cy.contains("Related Artists").click({force:true})
+    cy.url().should("eq",URL.artistrelated)
+    cy.get('[class="main-view-container__scroll-node"]').scrollTo(0,300)
+    cy.contains("Mohamed Siddiq")
 
-Cypress.Commands.add("check_end_Com_With_invalid_char", () => {
-  var text = "123@gmail.";
+    cy.get('[class="main-view-container__scroll-node"]')
+    cy.contains("About").click({force:true})
+    cy.url().should('eq',URL.artistabout)
+    
+    //cy.get(Data.profileaccountbutton).click({force:true})
+    //cy.contains("Profile").click({force:true})
+    //cy.reload()
+    //cy.wait(3000)
+})
 
-  for (var i = 33; i <= 47; i++) {
-    if (i == 45) continue; // this test fails so I want to except this to continue the tests
-    var char = String.fromCharCode(i);
-    var newtext = text + "a" + char;
-    cy.CheckOudpattern(newtext);
-  }
-  //cy.CheckOudpattern('123@gmail.a0')
-  for (var i = 58; i < 64; i++) {
-    var char = String.fromCharCode(i);
-    var newtext = text + "a" + char;
-    cy.CheckOudpattern(newtext);
-  }
+Cypress.Commands.add("catpage",()=>{
+    cy.Login()
+    cy.wait(3000)
+    cy.scrollTo('bottom')
+    cy.wait(3000)
+    cy.contains("Jobs").click({force:true})
+    Cypress.on('uncaught:exception', (err, runnable) => {
+        // returning false here prevents Cypress from
+        // failing the test
+        return false
+      })
+    cy.wait(3000)
+    cy.contains("Join the band")
+    //cy.url().should("eq",URL.jobsurl)
+    cy.scrollTo(0,300)
+    cy.contains("What's your passion?")
+    cy.scrollTo(0,700)
+    cy.contains("Featured jobs")
+    cy.scrollTo(0,-400)
+    cy.contains("All Categories").click({force:true})
+    cy.url().should("eq",URL.categoriesurl)
+    cy.wait(3000)
+    cy.contains("Our Job Categories")
+    cy.scrollTo(0,500)
+    let cats=["Anchor","Brand & Creative","Content","Customer Service Experience","Data and Analytics","Design and User Experience","Engineering","Finance","Free Tier","Gimlet","Legal","Markets","Parcast","People","PR & Communications","Premium Tier","Product","Soundtrap",];
 
-  for (var i = 91; i <= 96; i++) {
-    var char = String.fromCharCode(i);
-    var newtext = text + "a" + char;
-    cy.CheckOudpattern(newtext);
-  }
+    for (let i   = 0 ; i <8;i++)
+    {
 
-  for (var i = 123; i <= 126; i++) {
-    var char = String.fromCharCode(i);
-    var newtext = text + "a" + char;
-    cy.CheckOudpattern(newtext);
-  }
-});
+        cy.contains(cats[i])
 
-Cypress.Commands.add("Check_invalid_char_in_middle_in_Com", () => {
-  var text = "123@gamil.c";
-  for (var i = 33; i <= 44; i++) {
-    var char = String.fromCharCode(i);
-    var newtext = text + char + "om";
-    cy.CheckOudpattern(newtext);
-  }
-
-  cy.CheckOudpattern("123@gamil.c/om");
-  // instead of ending the loop at 47 and adding if cond.
-  // in the loop i will test  it outside the loop ..
-
-  for (var i = 58; i <= 64; i++) {
-    var char = String.fromCharCode(i);
-    var newtext = text + char + "om";
-    cy.CheckOudpattern(newtext);
-  }
-
-  for (var i = 91; i <= 96; i++) {
-    if (i != 95) {
-      var char = String.fromCharCode(i);
-      var newtext = text + char + "a";
-      cy.CheckOudpattern(newtext);
     }
-  }
-
-  for (var i = 123; i <= 126; i++) {
-    if (i != 126) {
-      var char = String.fromCharCode(i);
-      var newtext = text + char + "a";
-      cy.CheckOudpattern(newtext);
+    cy.scrollTo(0,500)
+    for (let i = 8  ; i<16 ; i++){
+        cy.contains(cats[i])
     }
-  }
-});
-
-Cypress.Commands.add("Check_Start_at_with_invalid_char", () => {
-  var text = "123@";
-
-  for (var i = 33; i <= 47; i++) {
-    if (i == 45) continue; // this test fails so I want to except this to continue the tests
-    var char = String.fromCharCode(i);
-    var newtext = text + char + "gmail.com";
-    cy.CheckOudpattern(newtext);
-  }
-  for (var i = 58; i <= 64; i++) {
-    var char = String.fromCharCode(i);
-    var newtext = text + char + "gmail.com";
-    cy.CheckOudpattern(newtext);
-  }
-  for (var i = 91; i <= 96; i++) {
-    var char = String.fromCharCode(i);
-    var newtext = text + char + "gmail.com";
-    cy.CheckOudpattern(newtext);
-  }
-
-  for (var i = 123; i <= 126; i++) {
-    var char = String.fromCharCode(i);
-    var newtext = text + char + "gmail.com";
-    cy.CheckOudpattern(newtext);
-  }
-});
-Cypress.Commands.add("Check_end_at_with_invalid_char", () => {
-  var text = "123@";
-
-  for (var i = 33; i <= 47; i++) {
-    if (i == 45) continue; // this test fails so I want to except this to continue the tests
-    var char = String.fromCharCode(i);
-    var newtext = text + "gmail" + char + ".com";
-    cy.CheckOudpattern(newtext);
-  }
-
-  for (var i = 58; i <= 64; i++) {
-    var char = String.fromCharCode(i);
-    var newtext = text + "gmail" + char + ".com";
-    cy.CheckOudpattern(newtext);
-  }
-
-  for (var i = 91; i <= 96; i++) {
-    var char = String.fromCharCode(i);
-    var newtext = text + "gmail" + char + ".com";
-    cy.CheckOudpattern(newtext);
-  }
-
-  for (var i = 123; i <= 126; i++) {
-    var char = String.fromCharCode(i);
-    var newtext = text + "gmail" + char + ".com";
-    cy.CheckOudpattern(newtext);
-  }
-});
-
-Cypress.Commands.add("Check_Middle_at_with_invalid_char", () => {
-  var text = "123@g";
-  for (var i = 33; i <= 44; i++) {
-    var char = String.fromCharCode(i);
-    var newtext = text + char + "mail.com";
-    cy.CheckOudpattern(newtext);
-  }
-  cy.CheckOudpattern("123@g/mail.com");
-  // instead of adding if condition for just two char which are (. and - )
-  // the loop will stop in , and the / test is written manually
-  for (var i = 58; i <= 64; i++) {
-    var char = String.fromCharCode(i);
-    var newtext = text + char + "mail.com";
-    cy.CheckOudpattern(newtext);
-  }
-
-  for (var i = 91; i <= 94; i++) {
-    var char = String.fromCharCode(i);
-    var newtext = text + char + "mail.com";
-    cy.CheckOudpattern(newtext);
-  }
-  cy.CheckOudpattern("123@g'mail.com");
-  // instead of writting if condition inside the loop for just one char which is (_)
-  // It will stop on (^) and write the last test outside the loop
-
-  for (var i = 123; i <= 125; i++) {
-    var char = String.fromCharCode(i);
-    var newtext = text + char + "mail.com";
-    cy.CheckOudpattern(newtext);
-  }
-});
-
-Cypress.Commands.add("Check_The_Word_Pre_At", () => {
-  cy.CheckOudpattern('abd"alla@gamil.com');
-  cy.CheckOudpattern('abdalla"@gamil.com');
-  cy.CheckOudpattern('"abdalla@gamil.com');
-  cy.CheckOudpattern("abd(alla@gamil.com");
-  cy.CheckOudpattern("(abdalla@gamil.com");
-  cy.CheckOudpattern("abdalla)@gamil.com");
-  cy.CheckOudpattern("abd@alla@gamil.com");
-  cy.CheckOudpattern("abdalla@@gamil.com");
-  cy.CheckOudpattern("@abdalla@gamil.com");
-  cy.CheckOudpattern("abd]alla@gamil.com");
-  cy.CheckOudpattern("abdalla]@gamil.com");
-  cy.CheckOudpattern("[abdalla@gamil.com");
-  cy.CheckOudpattern("abd\\alla@gamil.com");
-  cy.CheckOudpattern("abdalla\\@gamil.com");
-  cy.CheckOudpattern("\\abdalla@gamil.com");
-  cy.CheckOudpattern("abd;alla@gamil.com");
-  cy.CheckOudpattern("abdalla;@gamil.com");
-  cy.CheckOudpattern(";abdalla@gamil.com");
-  cy.CheckOudpattern("abd:alla@gamil.com");
-  cy.CheckOudpattern("abdalla:@gamil.com");
-  cy.CheckOudpattern(":abdalla@gamil.com");
-  cy.CheckOudpattern("abd<alla@gamil.com");
-  cy.CheckOudpattern("abdalla>@gamil.com");
-  cy.CheckOudpattern("<abdalla@gamil.com");
-  // THIS FUCNTION WILL HANDLE ALL TEST CASES THAT IS NOT COVERED IN
-  // IN THE PREVIUOS
-  cy.CheckOudpattern(".");
-  cy.CheckOudpattern("...");
-  cy.CheckOudpattern("@gmail.com");
-  // cy.CheckOudpattern('abdalla@gmail' )
-  cy.CheckOudpattern(".com");
-  cy.CheckOudpattern("!");
-  cy.CheckOudpattern("abdalla.com");
-  cy.CheckOudpattern("abdalla@gmail.");
-  cy.CheckOudpattern("abdalla@");
-  cy.CheckOudpattern("abdalla");
-});
-
-Cypress.Commands.add("ChangeTheEmail", () => {
-  cy.visit(URLS.EditProfileURL);
-  cy.get(AccountData.EmailBoxID).clear().type(AccountData.NewEmail);
-  cy.get(AccountData.ConfirmPasswordBoxID).type(AccountData.Password);
-  cy.get(AccountData.SaveProfileButtonID).click();
-  cy.contains("Profile saved successfully");
-});
-
-Cypress.Commands.add("OudCheck_The_Box", () => {
-  cy.visit(URLS.EditProfileURL);
-  cy.get(AccountData.EditProfileID).click({ force: true });
-  cy.Check_Start_Com_with_invalid_char();
-  cy.check_end_Com_With_invalid_char();
-  cy.Check_invalid_char_in_middle_in_Com();
-
-  cy.Check_Start_at_with_invalid_char();
-  cy.Check_end_at_with_invalid_char();
-  cy.Check_Middle_at_with_invalid_char();
-
-  cy.Check_The_Word_Pre_At();
-});
-
-// //Acutal Oud tests
-
-Cypress.Commands.add("CheckRoutes", () => {
-  cy.visit(URLS.AccountURL);
-  cy.contains("EDIT BROFILE").click();
-  cy.url().should("eq", URLS.EditProfileURL);
-});
-Cypress.Commands.add("CheckOudaccountoverview", () => {
-  cy.visit(URLS.AccountURL);
-  cy.get(AccountData.AccountOverviewID).click({ force: true });
-  cy.url().should("eq", URLS.OverViewURL);
-
-  cy.scrollTo(0, 500);
-  cy.contains("EDIT BROFILE").click({ force: true });
-  cy.url().should("eq", URLS.EditProfileURL);
-
-  cy.go("back"); //  the route won't be checked again when I get back bc it is a browser feature
-
-  cy.scrollTo(0, 1000);
-  cy.contains("JOIN PREMIUM").click({ force: true });
-  cy.url().should("eq", URLS.JoinPremiumURL);
-  cy.contains("Dummy Sign out and Dummy Get Premium Page");
-  cy.go("back");
-  cy.scrollTo(0, 1500);
-  cy.contains("SIGN OUT").click({ force: true });
-  cy.url().should("eq", URLS.SignoutURL);
-  cy.contains("Dummy Sign out and Dummy Get Premium Page");
-  cy.go("back");
-});
-
-Cypress.Commands.add("CheckOudpattern", (Pattern) => {
-  cy.get(AccountData.EmailBoxID).clear().clear().type(Pattern);
-  cy.contains(AccountData.InvalidEmailMessage);
-});
-
-Cypress.Commands.add("CheckInvalidPatterns", (number) => {
-  cy.visit(URLS.AccountURL);
-  cy.get(AccountData.EditProfileID).click({ force: true });
-  cy.wait(3000);
-  if (number == 1) cy.CheckOudpattern("123@gmail.-a");
-  else if (number == 2) cy.CheckOudpattern("123@gmail.a-");
-  else if (number == 3) cy.CheckOudpattern("test@gmail");
-  else cy.CheckOudpattern("123@gmail.0a");
-});
-
-Cypress.Commands.add("OudChange_Password", () => {
-  cy.visit(URLS.EditProfileURL);
-  cy.get(AccountData.ChangePasswordButton).click({ force: true });
-  cy.get(AccountData.CurrentPasswordBox).type("123");
-  cy.get(AccountData.SubmitButton).click({ force: true });
-  cy.contains(AccountData.WrongPasswordMessage);
-  // if you entered invalid password
-  cy.get(AccountData.CurrentPasswordBox).clear().type(AccountData.Password);
-  cy.get(AccountData.NewPasswordBox).clear().type(AccountData.WrongNewPassword);
-  cy.get(AccountData.ConfirmPasswordBox).clear().type(AccountData.NewPassword);
-  cy.get(AccountData.SubmitButton).click({ force: true });
-  cy.contains(AccountData.DismatchPasswordsMessage);
-  // if the password in the second box is not identical ...
-  cy.get(AccountData.CurrentPasswordBox).clear().type(AccountData.Password);
-  cy.get(AccountData.NewPasswordBox).clear().type(AccountData.NewPassword);
-  cy.get(AccountData.ConfirmPasswordBox).clear().type(AccountData.NewPassword);
-  // if y
-  cy.get(AccountData.SubmitButton).click({ force: true });
-  cy.contains(AccountData.ChangingPasswordSuccessfullyMessage);
-});
-Cypress.Commands.add("CheckChangingpassword", () => {
-  cy.visit("http://localhost:3000/account/changePassword");
-  cy.get(AccountData.CurrentPasswordBox).clear().type(AccountData.Password);
-  cy.get(AccountData.NewPasswordBox).clear().type(AccountData.WrongNewPassword);
-  cy.get(AccountData.ConfirmPasswordBox)
-    .clear()
-    .type(AccountData.WrongNewPassword);
-  // if y
-  cy.get(AccountData.SubmitButton).click({ force: true });
-  cy.contains(AccountData.WrongPasswordMessage);
-});
-
-Cypress.Commands.add("HomeOverView", () => {
-  cy.visit("http://localhost:3000");
-  cy.wait(3000);
-  cy.contains("Search").click();
-  cy.wait(2000);
-  cy.url().should("eq", URLS.SearchURL);
-  cy.get(Data.LogoID).click();
-  cy.url().should("eq", URLS.HomeURL);
-  cy.contains("Search").click();
-  cy.contains("Home").click();
-  cy.url().should("eq", URLS.HomeURL);
-  cy.contains("Your Library").click();
-  cy.url().should("eq", URLS.YourLibraryURL);
-  cy.go("back");
-  cy.contains("Create Playlist").click();
-  cy.url().should("eq", URLS.CreatingPlaylistURL);
-  cy.go("back");
-  cy.contains("Liked Songs").click();
-  cy.url().should("eq", URLS.LikedSongsURL);
-  cy.go("back");
-  cy.contains("Search").click();
-  cy.get(Data.LoginButtonID).click();
-  cy.url().should("eq", URLS.LoginURL);
-  cy.go("back");
-  cy.get(Data.SignUpButtonID).click();
-  cy.url().should("eq", URLS.SignUpURL);
-  cy.go("back");
-  cy.get(Data.LogoID).click();
-  cy.get(Data.UpgradeButtonID).click();
-  cy.url().should("eq", URLS.LoginURL);
-  cy.go("back");
-  cy.get(Data.ImgProfileID).click();
-  cy.get(Data.LogoutButtonID).click();
-  cy.url().should("eq", URLS.LogoutURL);
-  cy.go("back");
-  cy.get(Data.ImgProfileID).click();
-  cy.get(Data.AccountButtonID).click();
-  cy.url().should("eq", URLS.AccountURL);
-});
-
-Cypress.Commands.add("CheckCategories", () => {
-  cy.visit("/");
-  for (let i = 1; i <= 9; i++) {
-    cy.scrollTo(0, i * 750);
-    cy.wait(2000);
-    cy.xpath(
-      Data.SeeAllXpathFirstPart + i + Data.SeeAllXpathSecondPart
-    ).click();
-    cy.url().should("eq", URLS.SeeAllURL);
-    cy.go("back");
-    cy.wait(2000);
-  }
-});
-
-Cypress.Commands.add("CheckSearchBar", () => {
-  cy.visit("/");
-  cy.get(Data.SearchBarID).click();
-  cy.wait(2000);
-  cy.url().should("eq", URLS.SearchURL);
-  cy.get(Data.SearchBarID).type("Test search text");
-  cy.wait(2000);
-});
-
-Cypress.Commands.add("HomePlaylists", () => {
-  cy.visit("/");
-  cy.get(Data.LogoID).click();
-  cy.wait(2000);
-  for (let i = 1; i <= 10; i++) {
-    for (let j = 1; j < 6; j++) {
-      cy.xpath(
-        Data.PlaylistFirstHalfOfXpath +
-          i +
-          Data.PlaylistMiddleHalfOfXpath +
-          j +
-          Data.PlaylistlastHalfOfXpath
-      ).click({ force: true });
-      cy.url().should("eq", URLS.SeeAllURL);
-      cy.go("back");
-      cy.wait(2000);
+    cy.scrollTo(0,500)
+    cy.contains(cats[16])
+    cy.contains(cats[17])
+    cy.contains(cats[2]).click({force:true})
+    cy.wait(3000)
+    cy.url().should("eq",URL.contentofferurl)
+    cy.contains("Content")
+    cy.scrollTo(0,100)
+    let jobs=["Studios Marketing Lead","Head of Marketplace Business","Audio Line Producer, Parcast","Senior Growth Marketing Manager, Soundbetter","Senior Growth Marketing Manager, Soundbetter","Technical Account Manager","Senior Data Scientist, Podcasts"];
+    for (let i = 0 ; i<4 ; i++){
+        cy.contains(jobs[0])
     }
-  }
-});
+    cy.contains("More jobs").click({force:true})
+    cy.contains(jobs[4])
+    cy.contains(jobs[5])
+    cy.contains("Choose sub category").click({force:true})
+    cy.contains("Content Business").click({force:true})
+    cy.wait(3000)
+    cy.contains(jobs[1])
+    cy.contains(jobs[5])
+})
 
-Cypress.Commands.add("CheckUpgradeButtonResponsiveness", () => {
-  cy.visit("/");
-  cy.viewport(550, 750);
-  cy.get(Data.ToggleButton).click();
-  cy.get(Data.UpgradButtonIDToggleButton).click();
-  cy.wait(2000);
-  cy.url().should("eq", URLS.UpgradeURL);
-  cy.go("back");
-  ///
-});
+Cypress.Commands.add("locationpage",()=>{
+    
+    cy.contains("Locations").click({force:true})
+    cy.url().should("eq",URL.locationurl)
+    cy.wait(3000)
+    let locations =["Stockholm","New York","London","Tokyo","Seattle","Amsterdam","Berlin","Boston","Dubai","Cambridge","Gothenburg","Los Angeles","Hamburg","Frankfurt","Copenhagen","Dallas"]
+    for (let i = 0 ; i<12; i++){
+        cy.contains(locations[i])
+    }
+    cy.contains("View all locations").click({force:true})
+    for (let i = 12; i<16 ; i++){
+        cy.contains(locations[i])
+    }
+})
 
-Cypress.Commands.add("CheckBackForwardButtons", () => {
-  cy.visit("/");
-  cy.contains("Search").click({ force: true });
-  cy.xpath(Data.BackButtonXpath).click();
-  cy.url().should("eq", URLS.HomeURL);
-  cy.xpath(Data.ForwardButtonXpath).click();
-  cy.url().should("eq", URLS.SearchURL);
-});
-//   //"test": "echo \"Error: no test specified\" && exit 1"
-Cypress.Commands.add("CheckAccountButtonResponsiveness", () => {
-  cy.visit("/");
-  cy.viewport(550, 750);
-  cy.get(Data.ToggleButton).click();
-  cy.get(Data.ImgProfileID).click();
-  cy.get(Data.AccountButtonID).click();
-  cy.url().should("eq", URLS.AccountURL);
-});
-Cypress.Commands.add("CheckLogoutButtonResponsiveness", () => {
-  cy.visit("/");
-  cy.viewport(550, 750);
-  cy.get(Data.ToggleButton).click();
-  cy.get(Data.ImgProfileID).click();
-  cy.get(Data.LogoutButtonID).click();
-  cy.url().should("eq", URLS.LogoutURL);
-});
-Cypress.Commands.add("CheckLikedSongs", () => {
-  cy.visit("/");
-  cy.wait(2000);
-  cy.contains("Liked Songs").click({ force: true });
-  cy.wait(2000);
-  cy.url().should("eq", URLS.LikedSongsURL);
-  cy.xpath(Data.DropButtonXpath).click({ multiple: true, force: true });
-  cy.contains("Add to Playlist").click({ force: true });
-});
-Cypress.Commands.add("CheckRoutesinLikedSongs", () => {
-  cy.visit("/");
-  cy.wait(2000);
-  cy.contains("Liked Songs").click({ force: true });
-  cy.wait(2000);
-  cy.contains("Amr Diab").click();
-  cy.go("back");
-  cy.url().should("eq", URLS.LikedSongsURL);
-});
-Cypress.Commands.add("login", () => {
-  cy.get(`#${self.loginIds.email}`).type(self.loginData.email);
-  cy.get(`#${self.loginIds.password}`).type(self.loginData.password);
-  cy.get(`#${self.loginIds.button}`).click();
-});
+Cypress.Commands.add("searchforjobs",()=>{
+
+cy.contains("Search Jobs").click({force:true})
+cy.scrollTo(0,500)
+cy.url().should("eq",URL.searchjoburl)
+cy.contains("Studios Marketing Lead")
+cy.contains("Senior Accountant")
+cy.get(pages.searchbar).clear().type("Engineer")
+cy.get(pages.searchicon).click({force:true})
+cy.wait(3000)
+cy.contains("Full-Stack Engineer – Content Platform")
+cy.contains("Android Engineer – Spotify Lite")
+cy.get(pages.searchbar).clear()
+cy.get(pages.searchicon).click({force:true})
+cy.contains("Studios Marketing Lead")
+cy.contains("Senior Accountant")
+cy.contains("Choose category").click({force:true})
+cy.contains("Anchor").click({force:true})
+cy.get(pages.jobheader).click({force:true})
+cy.contains("Backend")
+cy.contains("Site Reliability Engineer – Podcaster Mission")
+cy.get(pages.clearicon).click({force:true})
+cy.wait(3000)
+cy.contains("Studios Marketing Lead")
+cy.contains("Senior Accountant")
+})
+Cypress.Commands.add("myfavorite",()=>{
+
+    cy.contains("Senior Accountant").click({force:true})
+    cy.url().should("eq",URL.savedjobsurl)
+    cy.contains("Save").click({force:true})
+    cy.contains("Saved")
+    cy.get(pages.heartid).click({force:true})
+    cy.contains("Saved jobs")
+    cy.contains("Senior Accountant")
+    cy.get(pages.trachid).click({force:true})
+    cy.wait(3000)
+    cy.contains("No saved jobs at the moment.")
+    cy.url().should("eq",URL.unsavedurl)
+
+})

@@ -10,7 +10,7 @@ public class extentReports {
 
 	ExtentHtmlReporter homeReporter, signupReporter, loginReporter, playerReporter,libraryArtistReporter,libraryAlbumReporter,libraryPlaylistReporter,searchReporter, playlistReporter, sharingReporter;
 
-	ExtentReports signup, home, login, Home_Account, PlayerRepo, libraryArtist, libraryAlbum, libraryPlaylist, search, playlist, sharing;
+	ExtentReports signup, home, login, Home_Account, PlayerRepo, libraryArtist, libraryAlbum, libraryPlaylist, search, playlist, sharing,Profile,FacebookProfile;
 
 	@BeforeSuite
 	public void reportSetup() {
@@ -50,6 +50,24 @@ public class extentReports {
 		libraryPlaylist.attachReporter(libraryPlaylistReporter); 
 		search.attachReporter(searchReporter);
 	}
+@BeforeSuite
+         public void ProfileAccountreportSetup() {
+		htmlReporter = new ExtentHtmlReporter("reports/Profile.html");
+		avent = new ExtentAventReporter("reports/Profile_A.html");
+		bdd = new ExtentBDDReporter("reports/Profile_B.html");
+
+		Profile = new ExtentReports();
+		Profile.attachReporter(avent, bdd, htmlReporter);
+	}
+          @BeforeSuite
+         public void FacebookprofilereportSetup() {
+		htmlReporter = new ExtentHtmlReporter("reports/FacebookProfile.html");
+		avent = new ExtentAventReporter("reports/FacebookProfile_A.html");
+		bdd = new ExtentBDDReporter("reports/FacebookProfile_B.html");
+
+		FacebookProfile = new ExtentReports();
+		FacebookProfile.attachReporter(avent, bdd, htmlReporter);
+	}
 
 	@AfterSuite
 	public void artistFlush()
@@ -81,5 +99,15 @@ public class extentReports {
 	public void sharingFlush()
 	{
 		sharing.flush();
+	}
+      @AfterSuite
+        public void ProfileAccounttearDown() {
+		// calling flush writes everything to the log file
+		Profile.flush();
+	}
+         @AfterSuite
+        public void FacebookProfiletearDown() {
+		// calling flush writes everything to the log file
+		FacebookProfile.flush();
 	}
 }

@@ -1,0 +1,11 @@
+{
+    "email":"",
+    "password":"",
+    "emailbox":"[id=\"login-username\"]",
+    "passwordbox":"[id=\"login-password\"]",
+    "loginbutton":"[id=\"login-button\"]",
+    "profileaccountbutton":"[data-testid=\"user-widget-link\"]",
+    "playlistbox":"[class=\"inputBox-input\"]",
+    "searchbox":"[data-testid=\"search-input\"]"
+    
+}
