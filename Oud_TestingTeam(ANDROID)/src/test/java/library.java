@@ -162,7 +162,7 @@ public class library extends BaseClass {
         WebElement artistName2 =  getElementByXpath(artistNameXPath);
         TouchAction action = new TouchAction(driver);
         action.longPress(LongPressOptions.longPressOptions().withElement (ElementOption.element (artistName2))).release().perform();
-        System.out.println("long press");
+        
         while(getItemWebViewXpath(followingButtonXPath).size()==0){}
         getElementByXpath(followingButtonXPath).click();
         getElementById(libraryIconID).click();

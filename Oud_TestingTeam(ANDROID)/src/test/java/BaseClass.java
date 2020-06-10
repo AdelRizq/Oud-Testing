@@ -62,6 +62,10 @@ public class BaseClass extends extentReports {
 	public MobileElement getElementByXpath(String xpath) {
 		return driver.findElementByXPath(xpath);
 	}
+	public MobileElement getElementByText (String text)
+	{
+		return driver.findElement(By.xpath("//*[text()='"+text+"']"));
+	}
 
 	public void Scroll(boolean direction) { // direction == 1 ? down : up
 		Dimension dimension = driver.manage().window().getSize();

@@ -8,9 +8,9 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 @SuppressWarnings("deprecation")
 public class extentReports {
 
-	ExtentHtmlReporter homeReporter, signupReporter, loginReporter, playerReporter,libraryArtistReporter,libraryAlbumReporter,libraryPlaylistReporter;
+	ExtentHtmlReporter homeReporter, signupReporter, loginReporter, playerReporter,libraryArtistReporter,libraryAlbumReporter,libraryPlaylistReporter,searchReporter;
 
-	ExtentReports signup, home, login, Home_Account, PlayerRepo,libraryArtist,libraryAlbum,libraryPlaylist;
+	ExtentReports signup, home, login, Home_Account, PlayerRepo,libraryArtist,libraryAlbum,libraryPlaylist,search;
 
 	@BeforeSuite
 	public void reportSetup() {
@@ -22,7 +22,7 @@ public class extentReports {
 		libraryArtistReporter = new ExtentHtmlReporter("reports/libraryArtist.html");
 		libraryAlbumReporter= new ExtentHtmlReporter("reports/libraryAlbum.html");
 		libraryPlaylistReporter = new ExtentHtmlReporter("reports/libraryPlaylist.html");
-
+		searchReporter = new  ExtentHtmlReporter("reports/search.html");
 		
 
 
@@ -35,7 +35,7 @@ public class extentReports {
 		libraryAlbum    = new ExtentReports();
 		libraryArtist   = new ExtentReports();
 		libraryPlaylist = new ExtentReports();
-
+		search = new ExtentReports();
 		Home_Account.attachReporter(homeReporter);
 		PlayerRepo.attachReporter(playerReporter);
 		signup.attachReporter(signupReporter);
@@ -44,6 +44,7 @@ public class extentReports {
 		libraryAlbum.attachReporter(libraryAlbumReporter); 
 		libraryArtist.attachReporter(libraryArtistReporter); 
 		libraryPlaylist.attachReporter(libraryPlaylistReporter); 
+		search.attachReporter(searchReporter);
 	}
 
 	@AfterSuite
@@ -60,5 +61,10 @@ public class extentReports {
 	public void albumFlush()
 	{
 		libraryPlaylist.flush();
+	}
+	@AfterSuite
+	public void searchFlush()
+	{
+		search.flush();
 	}
 }
