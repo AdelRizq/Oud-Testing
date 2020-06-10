@@ -99,12 +99,36 @@ public class BaseClass extends extentReports {
 		return null;
 	}
 
+	public MobileElement ScrollUntilId(String id) {
+		while(getItemWebViewId(id).size() == 0)
+		{
+			Scroll(false);
+		}
+		if (getItemWebViewId(id).size() > 0)
+		{
+			return getItemWebViewId(id).get(0);
+		}
+		return null;
+	}
+
 	public MobileElement ScrollUntilXpath(String xpath, boolean direction, int idx) {
 		while (getItemWebViewXpath(xpath).size() == 0) {
 			Scroll(direction);
 		}
 		if (getItemWebViewXpath(xpath).size() > 0) {
 			return getItemWebViewXpath(xpath).get(idx);
+		}
+		return null;
+	}
+
+	public MobileElement ScrollUntilXpath(String xpath) {
+		while(getItemWebViewXpath(xpath).size() == 0)
+		{
+			Scroll(false);
+		}
+		if (getItemWebViewXpath(xpath).size() > 0)
+		{
+			return getItemWebViewXpath(xpath).get(0);
 		}
 		return null;
 	}
