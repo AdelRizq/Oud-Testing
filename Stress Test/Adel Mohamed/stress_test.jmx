@@ -1,0 +1,381 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1591791767312,1282,random playlist,200,OK,Spotify stress test 1-5,text,true,,146507,458,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,144,0,64
+1591791767312,144,random playlist-0,301,Moved Permanently,Spotify stress test 1-5,,true,,191,153,5,5,http://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,144,0,64
+1591791767457,583,random playlist-1,301,Moved Permanently,Spotify stress test 1-5,text,true,,507,153,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,582,0,492
+1591791768040,554,random playlist-2,200,OK,Spotify stress test 1-5,text,true,,145809,152,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,210,0,0
+1591791766661,1944,random playlist,200,OK,Spotify stress test 1-1,text,true,,146506,458,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,236,0,150
+1591791766661,239,random playlist-0,301,Moved Permanently,Spotify stress test 1-1,,true,,191,153,5,5,http://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,236,0,150
+1591791766906,1136,random playlist-1,301,Moved Permanently,Spotify stress test 1-1,text,true,,507,153,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,1136,0,1049
+1591791768043,562,random playlist-2,200,OK,Spotify stress test 1-1,text,true,,145808,152,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,211,0,0
+1591791766720,1889,random playlist,200,OK,Spotify stress test 1-2,text,true,,146513,458,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,178,0,92
+1591791766720,181,random playlist-0,301,Moved Permanently,Spotify stress test 1-2,,true,,191,153,5,5,http://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,178,0,92
+1591791766906,1138,random playlist-1,301,Moved Permanently,Spotify stress test 1-2,text,true,,507,153,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,1138,0,1053
+1591791768044,565,random playlist-2,200,OK,Spotify stress test 1-2,text,true,,145815,152,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,206,0,0
+1591791767111,1516,random playlist,200,OK,Spotify stress test 1-4,text,true,,146508,458,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,148,0,60
+1591791767111,148,random playlist-0,301,Moved Permanently,Spotify stress test 1-4,,true,,191,153,5,5,http://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,148,0,60
+1591791767260,780,random playlist-1,301,Moved Permanently,Spotify stress test 1-4,text,true,,507,153,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,780,0,689
+1591791768040,587,random playlist-2,200,OK,Spotify stress test 1-4,text,true,,145810,152,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,219,0,0
+1591791766917,1725,random playlist,200,OK,Spotify stress test 1-3,text,true,,146509,458,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,138,0,62
+1591791766917,138,random playlist-0,301,Moved Permanently,Spotify stress test 1-3,,true,,191,153,5,5,http://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,138,0,62
+1591791767056,986,random playlist-1,301,Moved Permanently,Spotify stress test 1-3,text,true,,507,153,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,986,0,899
+1591791768043,599,random playlist-2,200,OK,Spotify stress test 1-3,text,true,,145811,152,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,229,0,0
+1591791768606,299,web player home,200,OK,Spotify stress test 1-1,text,true,,32457,242,5,5,https://open.spotify.com/,77,0,0
+1591791768606,77,web player home-0,301,Moved Permanently,Spotify stress test 1-1,,true,,159,121,5,5,http://open.spotify.com/,77,0,0
+1591791768684,221,web player home-1,200,OK,Spotify stress test 1-1,text,true,,32298,121,5,5,https://open.spotify.com/,168,0,0
+1591791768610,295,web player home,200,OK,Spotify stress test 1-2,text,true,,32453,242,5,5,https://open.spotify.com/,78,0,0
+1591791768610,78,web player home-0,301,Moved Permanently,Spotify stress test 1-2,,true,,159,121,5,5,http://open.spotify.com/,78,0,0
+1591791768688,217,web player home-1,200,OK,Spotify stress test 1-2,text,true,,32294,121,5,5,https://open.spotify.com/,164,0,0
+1591791768596,318,web player home,200,OK,Spotify stress test 1-5,text,true,,32459,242,5,5,https://open.spotify.com/,78,0,0
+1591791768596,78,web player home-0,301,Moved Permanently,Spotify stress test 1-5,,true,,159,121,5,5,http://open.spotify.com/,78,0,0
+1591791768674,240,web player home-1,200,OK,Spotify stress test 1-5,text,true,,32300,121,5,5,https://open.spotify.com/,187,0,0
+1591791768628,291,web player home,200,OK,Spotify stress test 1-4,text,true,,32457,242,5,5,https://open.spotify.com/,78,0,0
+1591791768628,78,web player home-0,301,Moved Permanently,Spotify stress test 1-4,,true,,159,121,5,5,http://open.spotify.com/,78,0,0
+1591791768706,213,web player home-1,200,OK,Spotify stress test 1-4,text,true,,32298,121,5,5,https://open.spotify.com/,173,0,0
+1591791768643,296,web player home,200,OK,Spotify stress test 1-3,text,true,,32459,242,5,5,https://open.spotify.com/,76,0,0
+1591791768643,76,web player home-0,301,Moved Permanently,Spotify stress test 1-3,,true,,159,121,5,5,http://open.spotify.com/,76,0,0
+1591791768719,220,web player home-1,200,OK,Spotify stress test 1-3,text,true,,32300,121,5,5,https://open.spotify.com/,201,0,0
+1591791768940,442,login page,200,OK,Spotify stress test 1-3,text,true,,4219,266,5,5,https://accounts.spotify.com/en/login,163,0,86
+1591791768940,163,login page-0,301,Moved Permanently,Spotify stress test 1-3,,true,,171,133,5,5,http://accounts.spotify.com/en/login,163,0,86
+1591791769104,278,login page-1,200,OK,Spotify stress test 1-3,text,true,,4048,133,5,5,https://accounts.spotify.com/en/login,277,0,191
+1591791768915,481,login page,200,OK,Spotify stress test 1-5,text,true,,4218,266,5,5,https://accounts.spotify.com/en/login,198,0,118
+1591791768915,198,login page-0,301,Moved Permanently,Spotify stress test 1-5,,true,,171,133,5,5,http://accounts.spotify.com/en/login,198,0,118
+1591791769113,283,login page-1,200,OK,Spotify stress test 1-5,text,true,,4047,133,5,5,https://accounts.spotify.com/en/login,283,0,201
+1591791768907,502,login page,200,OK,Spotify stress test 1-1,text,true,,4219,266,5,5,https://accounts.spotify.com/en/login,200,0,122
+1591791768907,200,login page-0,301,Moved Permanently,Spotify stress test 1-1,,true,,171,133,5,5,http://accounts.spotify.com/en/login,200,0,122
+1591791769108,301,login page-1,200,OK,Spotify stress test 1-1,text,true,,4048,133,5,5,https://accounts.spotify.com/en/login,301,0,190
+1591791768920,504,login page,200,OK,Spotify stress test 1-4,text,true,,4219,266,5,5,https://accounts.spotify.com/en/login,195,0,113
+1591791768920,195,login page-0,301,Moved Permanently,Spotify stress test 1-4,,true,,171,133,5,5,http://accounts.spotify.com/en/login,195,0,113
+1591791769116,308,login page-1,200,OK,Spotify stress test 1-4,text,true,,4048,133,5,5,https://accounts.spotify.com/en/login,308,0,207
+1591791768907,520,login page,200,OK,Spotify stress test 1-2,text,true,,4218,266,5,5,https://accounts.spotify.com/en/login,206,0,126
+1591791768907,206,login page-0,301,Moved Permanently,Spotify stress test 1-2,,true,,171,133,5,5,http://accounts.spotify.com/en/login,206,0,126
+1591791769113,314,login page-1,200,OK,Spotify stress test 1-2,text,true,,4047,133,5,5,https://accounts.spotify.com/en/login,314,0,206
+1591791769383,884,sign-up page,200,OK,Spotify stress test 1-3,text,true,,75154,706,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,136,0,61
+1591791769383,136,sign-up page-0,301,Moved Permanently,Spotify stress test 1-3,,true,,171,129,5,5,http://spotify.com/eg-ar/signup/,136,0,61
+1591791769520,290,sign-up page-1,302,Found,Spotify stress test 1-3,,true,,1202,133,5,5,https://www.spotify.com/eg-ar/signup/,290,0,195
+1591791769810,92,sign-up page-2,302,Found,Spotify stress test 1-3,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=1,92,0,0
+1591791769902,85,sign-up page-3,302,Found,Spotify stress test 1-3,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=2,85,0,0
+1591791769987,280,sign-up page-4,200,OK,Spotify stress test 1-3,text,true,,71339,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,134,0,0
+1591791769411,884,sign-up page,200,OK,Spotify stress test 1-1,text,true,,75154,706,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,139,0,61
+1591791769411,139,sign-up page-0,301,Moved Permanently,Spotify stress test 1-1,,true,,171,129,5,5,http://spotify.com/eg-ar/signup/,139,0,61
+1591791769551,288,sign-up page-1,302,Found,Spotify stress test 1-1,,true,,1202,133,5,5,https://www.spotify.com/eg-ar/signup/,288,0,187
+1591791769839,92,sign-up page-2,302,Found,Spotify stress test 1-1,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=1,92,0,0
+1591791769931,88,sign-up page-3,302,Found,Spotify stress test 1-1,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=2,88,0,0
+1591791770019,276,sign-up page-4,200,OK,Spotify stress test 1-1,text,true,,71339,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,114,0,0
+1591791769397,917,sign-up page,200,OK,Spotify stress test 1-5,text,true,,75154,706,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,137,0,61
+1591791769397,137,sign-up page-0,301,Moved Permanently,Spotify stress test 1-5,,true,,171,129,5,5,http://spotify.com/eg-ar/signup/,137,0,61
+1591791769535,292,sign-up page-1,302,Found,Spotify stress test 1-5,,true,,1202,133,5,5,https://www.spotify.com/eg-ar/signup/,292,0,196
+1591791769827,88,sign-up page-2,302,Found,Spotify stress test 1-5,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=1,88,0,0
+1591791769915,88,sign-up page-3,302,Found,Spotify stress test 1-5,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=2,88,0,0
+1591791770003,311,sign-up page-4,200,OK,Spotify stress test 1-5,text,true,,71339,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,145,0,0
+1591791769428,897,sign-up page,200,OK,Spotify stress test 1-2,text,true,,75154,706,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,140,0,61
+1591791769428,140,sign-up page-0,301,Moved Permanently,Spotify stress test 1-2,,true,,171,129,5,5,http://spotify.com/eg-ar/signup/,140,0,61
+1591791769568,280,sign-up page-1,302,Found,Spotify stress test 1-2,,true,,1202,133,5,5,https://www.spotify.com/eg-ar/signup/,280,0,192
+1591791769849,97,sign-up page-2,302,Found,Spotify stress test 1-2,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=1,97,0,0
+1591791769946,94,sign-up page-3,302,Found,Spotify stress test 1-2,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=2,94,0,0
+1591791770040,285,sign-up page-4,200,OK,Spotify stress test 1-2,text,true,,71339,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,136,0,0
+1591791769426,903,sign-up page,200,OK,Spotify stress test 1-4,text,true,,75154,706,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,140,0,60
+1591791769426,140,sign-up page-0,301,Moved Permanently,Spotify stress test 1-4,,true,,171,129,5,5,http://spotify.com/eg-ar/signup/,140,0,60
+1591791769567,295,sign-up page-1,302,Found,Spotify stress test 1-4,,true,,1202,133,5,5,https://www.spotify.com/eg-ar/signup/,295,0,194
+1591791769862,109,sign-up page-2,302,Found,Spotify stress test 1-4,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=1,109,0,0
+1591791769971,87,sign-up page-3,302,Found,Spotify stress test 1-4,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=2,87,0,0
+1591791770059,270,sign-up page-4,200,OK,Spotify stress test 1-4,text,true,,71339,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,124,0,0
+1591791770268,215,random album,200,OK,Spotify stress test 1-3,text,true,,32278,392,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,76,0,0
+1591791770268,76,random album-0,301,Moved Permanently,Spotify stress test 1-3,,true,,234,196,5,5,http://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,76,0,0
+1591791770344,139,random album-1,200,OK,Spotify stress test 1-3,text,true,,32044,196,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,114,0,0
+1591791770295,210,random album,200,OK,Spotify stress test 1-1,text,true,,32277,392,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,77,0,0
+1591791770295,77,random album-0,301,Moved Permanently,Spotify stress test 1-1,,true,,234,196,5,5,http://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,77,0,0
+1591791770373,132,random album-1,200,OK,Spotify stress test 1-1,text,true,,32043,196,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,111,0,0
+1591791770314,220,random album,200,OK,Spotify stress test 1-5,text,true,,32278,392,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,75,0,0
+1591791770314,75,random album-0,301,Moved Permanently,Spotify stress test 1-5,,true,,234,196,5,5,http://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,75,0,0
+1591791770389,145,random album-1,200,OK,Spotify stress test 1-5,text,true,,32044,196,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,113,0,0
+1591791770330,225,random album,200,OK,Spotify stress test 1-4,text,true,,32278,392,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,79,0,0
+1591791770330,79,random album-0,301,Moved Permanently,Spotify stress test 1-4,,true,,234,196,5,5,http://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,79,0,0
+1591791770409,146,random album-1,200,OK,Spotify stress test 1-4,text,true,,32044,196,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,109,0,0
+1591791770325,230,random album,200,OK,Spotify stress test 1-2,text,true,,32279,392,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,79,0,0
+1591791770325,79,random album-0,301,Moved Permanently,Spotify stress test 1-2,,true,,234,196,5,5,http://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,79,0,0
+1591791770404,151,random album-1,200,OK,Spotify stress test 1-2,text,true,,32045,196,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,111,0,0
+1591791770484,559,random playlist,200,OK,Spotify stress test 1-3,text,true,,146509,458,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,77,0,0
+1591791770484,77,random playlist-0,301,Moved Permanently,Spotify stress test 1-3,,true,,191,153,5,5,http://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,77,0,0
+1591791770561,85,random playlist-1,301,Moved Permanently,Spotify stress test 1-3,text,true,,507,153,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,85,0,0
+1591791770646,397,random playlist-2,200,OK,Spotify stress test 1-3,text,true,,145811,152,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,155,0,0
+1591791770506,631,random playlist,200,OK,Spotify stress test 1-1,text,true,,146509,458,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,79,0,0
+1591791770506,79,random playlist-0,301,Moved Permanently,Spotify stress test 1-1,,true,,191,153,5,5,http://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,79,0,0
+1591791770585,81,random playlist-1,301,Moved Permanently,Spotify stress test 1-1,text,true,,507,153,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,81,0,0
+1591791770666,471,random playlist-2,200,OK,Spotify stress test 1-1,text,true,,145811,152,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,134,0,0
+1591791770535,635,random playlist,200,OK,Spotify stress test 1-5,text,true,,146506,458,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,81,0,0
+1591791770535,81,random playlist-0,301,Moved Permanently,Spotify stress test 1-5,,true,,191,153,5,5,http://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,81,0,0
+1591791770616,81,random playlist-1,301,Moved Permanently,Spotify stress test 1-5,text,true,,507,153,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,81,0,0
+1591791770697,473,random playlist-2,200,OK,Spotify stress test 1-5,text,true,,145808,152,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,145,0,0
+1591791770555,630,random playlist,200,OK,Spotify stress test 1-4,text,true,,146508,458,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,81,0,0
+1591791770555,81,random playlist-0,301,Moved Permanently,Spotify stress test 1-4,,true,,191,153,5,5,http://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,81,0,0
+1591791770637,79,random playlist-1,301,Moved Permanently,Spotify stress test 1-4,text,true,,507,153,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,79,0,0
+1591791770716,469,random playlist-2,200,OK,Spotify stress test 1-4,text,true,,145810,152,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,171,0,0
+1591791770555,661,random playlist,200,OK,Spotify stress test 1-2,text,true,,146506,458,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,79,0,0
+1591791770555,79,random playlist-0,301,Moved Permanently,Spotify stress test 1-2,,true,,191,153,5,5,http://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,79,0,0
+1591791770634,86,random playlist-1,301,Moved Permanently,Spotify stress test 1-2,text,true,,507,153,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,86,0,0
+1591791770720,496,random playlist-2,200,OK,Spotify stress test 1-2,text,true,,145808,152,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,158,0,0
+1591791771043,259,web player home,200,OK,Spotify stress test 1-3,text,true,,32459,242,5,5,https://open.spotify.com/,129,0,0
+1591791771043,129,web player home-0,301,Moved Permanently,Spotify stress test 1-3,,true,,159,121,5,5,http://open.spotify.com/,129,0,0
+1591791771172,130,web player home-1,200,OK,Spotify stress test 1-3,text,true,,32300,121,5,5,https://open.spotify.com/,110,0,0
+1591791771138,245,web player home,200,OK,Spotify stress test 1-1,text,true,,32458,242,5,5,https://open.spotify.com/,79,0,0
+1591791771138,79,web player home-0,301,Moved Permanently,Spotify stress test 1-1,,true,,159,121,5,5,http://open.spotify.com/,79,0,0
+1591791771217,166,web player home-1,200,OK,Spotify stress test 1-1,text,true,,32299,121,5,5,https://open.spotify.com/,103,0,0
+1591791771185,210,web player home,200,OK,Spotify stress test 1-4,text,true,,32459,242,5,5,https://open.spotify.com/,77,0,0
+1591791771185,77,web player home-0,301,Moved Permanently,Spotify stress test 1-4,,true,,159,121,5,5,http://open.spotify.com/,77,0,0
+1591791771262,133,web player home-1,200,OK,Spotify stress test 1-4,text,true,,32300,121,5,5,https://open.spotify.com/,107,0,0
+1591791771171,257,web player home,200,OK,Spotify stress test 1-5,text,true,,32457,242,5,5,https://open.spotify.com/,77,0,0
+1591791771171,77,web player home-0,301,Moved Permanently,Spotify stress test 1-5,,true,,159,121,5,5,http://open.spotify.com/,77,0,0
+1591791771249,179,web player home-1,200,OK,Spotify stress test 1-5,text,true,,32298,121,5,5,https://open.spotify.com/,115,0,0
+1591791771217,252,web player home,200,OK,Spotify stress test 1-2,text,true,,32459,242,5,5,https://open.spotify.com/,78,0,0
+1591791771217,78,web player home-0,301,Moved Permanently,Spotify stress test 1-2,,true,,159,121,5,5,http://open.spotify.com/,78,0,0
+1591791771295,174,web player home-1,200,OK,Spotify stress test 1-2,text,true,,32300,121,5,5,https://open.spotify.com/,109,0,0
+1591791771303,168,login page,200,OK,Spotify stress test 1-3,text,true,,4218,266,5,5,https://accounts.spotify.com/en/login,80,0,0
+1591791771303,80,login page-0,301,Moved Permanently,Spotify stress test 1-3,,true,,171,133,5,5,http://accounts.spotify.com/en/login,80,0,0
+1591791771383,88,login page-1,200,OK,Spotify stress test 1-3,text,true,,4047,133,5,5,https://accounts.spotify.com/en/login,88,0,0
+1591791771384,162,login page,200,OK,Spotify stress test 1-1,text,true,,4218,266,5,5,https://accounts.spotify.com/en/login,82,0,0
+1591791771384,82,login page-0,301,Moved Permanently,Spotify stress test 1-1,,true,,171,133,5,5,http://accounts.spotify.com/en/login,82,0,0
+1591791771466,80,login page-1,200,OK,Spotify stress test 1-1,text,true,,4047,133,5,5,https://accounts.spotify.com/en/login,80,0,0
+1591791771396,168,login page,200,OK,Spotify stress test 1-4,text,true,,4219,266,5,5,https://accounts.spotify.com/en/login,82,0,0
+1591791771396,82,login page-0,301,Moved Permanently,Spotify stress test 1-4,,true,,171,133,5,5,http://accounts.spotify.com/en/login,82,0,0
+1591791771478,86,login page-1,200,OK,Spotify stress test 1-4,text,true,,4048,133,5,5,https://accounts.spotify.com/en/login,86,0,0
+1591791771428,159,login page,200,OK,Spotify stress test 1-5,text,true,,4217,266,5,5,https://accounts.spotify.com/en/login,77,0,0
+1591791771428,77,login page-0,301,Moved Permanently,Spotify stress test 1-5,,true,,171,133,5,5,http://accounts.spotify.com/en/login,77,0,0
+1591791771505,82,login page-1,200,OK,Spotify stress test 1-5,text,true,,4046,133,5,5,https://accounts.spotify.com/en/login,82,0,0
+1591791771469,159,login page,200,OK,Spotify stress test 1-2,text,true,,4219,266,5,5,https://accounts.spotify.com/en/login,78,0,0
+1591791771469,78,login page-0,301,Moved Permanently,Spotify stress test 1-2,,true,,171,133,5,5,http://accounts.spotify.com/en/login,78,0,0
+1591791771547,81,login page-1,200,OK,Spotify stress test 1-2,text,true,,4048,133,5,5,https://accounts.spotify.com/en/login,81,0,0
+1591791771471,529,sign-up page,200,OK,Spotify stress test 1-3,text,true,,75154,706,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,77,0,0
+1591791771471,77,sign-up page-0,301,Moved Permanently,Spotify stress test 1-3,,true,,171,129,5,5,http://spotify.com/eg-ar/signup/,77,0,0
+1591791771548,89,sign-up page-1,302,Found,Spotify stress test 1-3,,true,,1202,133,5,5,https://www.spotify.com/eg-ar/signup/,89,0,0
+1591791771637,92,sign-up page-2,302,Found,Spotify stress test 1-3,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=1,92,0,0
+1591791771729,86,sign-up page-3,302,Found,Spotify stress test 1-3,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=2,86,0,0
+1591791771815,185,sign-up page-4,200,OK,Spotify stress test 1-3,text,true,,71339,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,122,0,0
+1591791771546,561,sign-up page,200,OK,Spotify stress test 1-1,text,true,,75154,706,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,78,0,0
+1591791771546,78,sign-up page-0,301,Moved Permanently,Spotify stress test 1-1,,true,,171,129,5,5,http://spotify.com/eg-ar/signup/,78,0,0
+1591791771625,90,sign-up page-1,302,Found,Spotify stress test 1-1,,true,,1202,133,5,5,https://www.spotify.com/eg-ar/signup/,90,0,0
+1591791771715,86,sign-up page-2,302,Found,Spotify stress test 1-1,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=1,86,0,0
+1591791771801,90,sign-up page-3,302,Found,Spotify stress test 1-1,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=2,90,0,0
+1591791771891,216,sign-up page-4,200,OK,Spotify stress test 1-1,text,true,,71339,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,124,0,0
+1591791771564,561,sign-up page,200,OK,Spotify stress test 1-4,text,true,,75154,706,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,77,0,0
+1591791771564,77,sign-up page-0,301,Moved Permanently,Spotify stress test 1-4,,true,,171,129,5,5,http://spotify.com/eg-ar/signup/,77,0,0
+1591791771641,102,sign-up page-1,302,Found,Spotify stress test 1-4,,true,,1202,133,5,5,https://www.spotify.com/eg-ar/signup/,102,0,0
+1591791771743,86,sign-up page-2,302,Found,Spotify stress test 1-4,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=1,86,0,0
+1591791771829,87,sign-up page-3,302,Found,Spotify stress test 1-4,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=2,87,0,0
+1591791771916,209,sign-up page-4,200,OK,Spotify stress test 1-4,text,true,,71339,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,117,0,0
+1591791771587,554,sign-up page,200,OK,Spotify stress test 1-5,text,true,,75154,706,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,75,0,0
+1591791771587,75,sign-up page-0,301,Moved Permanently,Spotify stress test 1-5,,true,,171,129,5,5,http://spotify.com/eg-ar/signup/,75,0,0
+1591791771662,86,sign-up page-1,302,Found,Spotify stress test 1-5,,true,,1202,133,5,5,https://www.spotify.com/eg-ar/signup/,86,0,0
+1591791771748,89,sign-up page-2,302,Found,Spotify stress test 1-5,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=1,89,0,0
+1591791771838,88,sign-up page-3,302,Found,Spotify stress test 1-5,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=2,88,0,0
+1591791771927,214,sign-up page-4,200,OK,Spotify stress test 1-5,text,true,,71339,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,153,0,0
+1591791771628,593,sign-up page,200,OK,Spotify stress test 1-2,text,true,,75154,706,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,77,0,0
+1591791771628,77,sign-up page-0,301,Moved Permanently,Spotify stress test 1-2,,true,,171,129,5,5,http://spotify.com/eg-ar/signup/,77,0,0
+1591791771705,92,sign-up page-1,302,Found,Spotify stress test 1-2,,true,,1202,133,5,5,https://www.spotify.com/eg-ar/signup/,92,0,0
+1591791771797,94,sign-up page-2,302,Found,Spotify stress test 1-2,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=1,94,0,0
+1591791771891,129,sign-up page-3,302,Found,Spotify stress test 1-2,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=2,129,0,0
+1591791772020,201,sign-up page-4,200,OK,Spotify stress test 1-2,text,true,,71339,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,129,0,0
+1591791772001,243,random album,200,OK,Spotify stress test 1-3,text,true,,32279,392,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,104,0,0
+1591791772001,104,random album-0,301,Moved Permanently,Spotify stress test 1-3,,true,,234,196,5,5,http://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,104,0,0
+1591791772106,138,random album-1,200,OK,Spotify stress test 1-3,text,true,,32045,196,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,122,0,0
+1591791772126,208,random album,200,OK,Spotify stress test 1-4,text,true,,32279,392,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,75,0,0
+1591791772126,75,random album-0,301,Moved Permanently,Spotify stress test 1-4,,true,,234,196,5,5,http://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,75,0,0
+1591791772201,133,random album-1,200,OK,Spotify stress test 1-4,text,true,,32045,196,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,110,0,0
+1591791772108,249,random album,200,OK,Spotify stress test 1-1,text,true,,32277,392,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,78,0,0
+1591791772108,78,random album-0,301,Moved Permanently,Spotify stress test 1-1,,true,,234,196,5,5,http://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,78,0,0
+1591791772186,171,random album-1,200,OK,Spotify stress test 1-1,text,true,,32043,196,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,112,0,0
+1591791772142,261,random album,200,OK,Spotify stress test 1-5,text,true,,32277,392,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,85,0,0
+1591791772142,85,random album-0,301,Moved Permanently,Spotify stress test 1-5,,true,,234,196,5,5,http://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,85,0,0
+1591791772227,176,random album-1,200,OK,Spotify stress test 1-5,text,true,,32043,196,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,117,0,0
+1591791772223,262,random album,200,OK,Spotify stress test 1-2,text,true,,32279,392,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,78,0,0
+1591791772223,78,random album-0,301,Moved Permanently,Spotify stress test 1-2,,true,,234,196,5,5,http://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,78,0,0
+1591791772302,183,random album-1,200,OK,Spotify stress test 1-2,text,true,,32045,196,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,115,0,0
+1591791772245,380,random playlist,200,OK,Spotify stress test 1-3,text,true,,146509,458,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,76,0,0
+1591791772245,76,random playlist-0,301,Moved Permanently,Spotify stress test 1-3,,true,,191,153,5,5,http://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,76,0,0
+1591791772321,85,random playlist-1,301,Moved Permanently,Spotify stress test 1-3,text,true,,507,153,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,85,0,0
+1591791772407,218,random playlist-2,200,OK,Spotify stress test 1-3,text,true,,145811,152,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,125,0,0
+1591791772334,444,random playlist,200,OK,Spotify stress test 1-4,text,true,,146509,458,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,79,0,0
+1591791772334,79,random playlist-0,301,Moved Permanently,Spotify stress test 1-4,,true,,191,153,5,5,http://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,79,0,0
+1591791772414,78,random playlist-1,301,Moved Permanently,Spotify stress test 1-4,text,true,,507,153,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,78,0,0
+1591791772492,286,random playlist-2,200,OK,Spotify stress test 1-4,text,true,,145811,152,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,133,0,0
+1591791772625,219,web player home,200,OK,Spotify stress test 1-3,text,true,,32459,242,5,5,https://open.spotify.com/,83,0,0
+1591791772625,83,web player home-0,301,Moved Permanently,Spotify stress test 1-3,,true,,159,121,5,5,http://open.spotify.com/,83,0,0
+1591791772709,135,web player home-1,200,OK,Spotify stress test 1-3,text,true,,32300,121,5,5,https://open.spotify.com/,115,0,0
+1591791772358,563,random playlist,200,OK,Spotify stress test 1-1,text,true,,146507,458,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,80,0,0
+1591791772358,80,random playlist-0,301,Moved Permanently,Spotify stress test 1-1,,true,,191,153,5,5,http://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,80,0,0
+1591791772439,80,random playlist-1,301,Moved Permanently,Spotify stress test 1-1,text,true,,507,153,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,80,0,0
+1591791772519,402,random playlist-2,200,OK,Spotify stress test 1-1,text,true,,145809,152,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,130,0,0
+1591791772778,219,web player home,200,OK,Spotify stress test 1-4,text,true,,32459,242,5,5,https://open.spotify.com/,91,0,0
+1591791772778,91,web player home-0,301,Moved Permanently,Spotify stress test 1-4,,true,,159,121,5,5,http://open.spotify.com/,91,0,0
+1591791772869,128,web player home-1,200,OK,Spotify stress test 1-4,text,true,,32300,121,5,5,https://open.spotify.com/,106,0,0
+1591791772404,606,random playlist,200,OK,Spotify stress test 1-5,text,true,,146507,458,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,77,0,0
+1591791772404,77,random playlist-0,301,Moved Permanently,Spotify stress test 1-5,,true,,191,153,5,5,http://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,77,0,0
+1591791772481,77,random playlist-1,301,Moved Permanently,Spotify stress test 1-5,text,true,,507,153,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,77,0,0
+1591791772558,452,random playlist-2,200,OK,Spotify stress test 1-5,text,true,,145809,152,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,134,0,0
+1591791772844,168,login page,200,OK,Spotify stress test 1-3,text,true,,4218,266,5,5,https://accounts.spotify.com/en/login,77,0,0
+1591791772844,77,login page-0,301,Moved Permanently,Spotify stress test 1-3,,true,,171,133,5,5,http://accounts.spotify.com/en/login,77,0,0
+1591791772921,91,login page-1,200,OK,Spotify stress test 1-3,text,true,,4047,133,5,5,https://accounts.spotify.com/en/login,91,0,0
+1591791772486,596,random playlist,200,OK,Spotify stress test 1-2,text,true,,146506,458,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,77,0,0
+1591791772486,77,random playlist-0,301,Moved Permanently,Spotify stress test 1-2,,true,,191,153,5,5,http://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,77,0,0
+1591791772563,84,random playlist-1,301,Moved Permanently,Spotify stress test 1-2,text,true,,507,153,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,84,0,0
+1591791772647,435,random playlist-2,200,OK,Spotify stress test 1-2,text,true,,145808,152,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,136,0,0
+1591791772998,167,login page,200,OK,Spotify stress test 1-4,text,true,,4217,266,5,5,https://accounts.spotify.com/en/login,80,0,0
+1591791772998,80,login page-0,301,Moved Permanently,Spotify stress test 1-4,,true,,171,133,5,5,http://accounts.spotify.com/en/login,80,0,0
+1591791773078,87,login page-1,200,OK,Spotify stress test 1-4,text,true,,4046,133,5,5,https://accounts.spotify.com/en/login,87,0,0
+1591791772921,250,web player home,200,OK,Spotify stress test 1-1,text,true,,32458,242,5,5,https://open.spotify.com/,85,0,0
+1591791772921,85,web player home-0,301,Moved Permanently,Spotify stress test 1-1,,true,,159,121,5,5,http://open.spotify.com/,85,0,0
+1591791773006,165,web player home-1,200,OK,Spotify stress test 1-1,text,true,,32299,121,5,5,https://open.spotify.com/,116,0,0
+1591791773011,252,web player home,200,OK,Spotify stress test 1-5,text,true,,32458,242,5,5,https://open.spotify.com/,84,0,0
+1591791773011,84,web player home-0,301,Moved Permanently,Spotify stress test 1-5,,true,,159,121,5,5,http://open.spotify.com/,84,0,0
+1591791773095,168,web player home-1,200,OK,Spotify stress test 1-5,text,true,,32299,121,5,5,https://open.spotify.com/,106,0,0
+1591791773083,252,web player home,200,OK,Spotify stress test 1-2,text,true,,32458,242,5,5,https://open.spotify.com/,85,0,0
+1591791773083,85,web player home-0,301,Moved Permanently,Spotify stress test 1-2,,true,,159,121,5,5,http://open.spotify.com/,85,0,0
+1591791773168,167,web player home-1,200,OK,Spotify stress test 1-2,text,true,,32299,121,5,5,https://open.spotify.com/,112,0,0
+1591791773171,172,login page,200,OK,Spotify stress test 1-1,text,true,,4217,266,5,5,https://accounts.spotify.com/en/login,78,0,0
+1591791773171,78,login page-0,301,Moved Permanently,Spotify stress test 1-1,,true,,171,133,5,5,http://accounts.spotify.com/en/login,78,0,0
+1591791773250,93,login page-1,200,OK,Spotify stress test 1-1,text,true,,4046,133,5,5,https://accounts.spotify.com/en/login,93,0,0
+1591791773263,159,login page,200,OK,Spotify stress test 1-5,text,true,,4217,266,5,5,https://accounts.spotify.com/en/login,75,0,0
+1591791773263,75,login page-0,301,Moved Permanently,Spotify stress test 1-5,,true,,171,133,5,5,http://accounts.spotify.com/en/login,75,0,0
+1591791773338,84,login page-1,200,OK,Spotify stress test 1-5,text,true,,4046,133,5,5,https://accounts.spotify.com/en/login,83,0,0
+1591791773335,169,login page,200,OK,Spotify stress test 1-2,text,true,,4219,266,5,5,https://accounts.spotify.com/en/login,79,0,0
+1591791773335,79,login page-0,301,Moved Permanently,Spotify stress test 1-2,,true,,171,133,5,5,http://accounts.spotify.com/en/login,79,0,0
+1591791773414,90,login page-1,200,OK,Spotify stress test 1-2,text,true,,4048,133,5,5,https://accounts.spotify.com/en/login,90,0,0
+1591791773012,549,sign-up page,200,OK,Spotify stress test 1-3,text,true,,75154,706,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,84,0,0
+1591791773012,84,sign-up page-0,301,Moved Permanently,Spotify stress test 1-3,,true,,171,129,5,5,http://spotify.com/eg-ar/signup/,84,0,0
+1591791773096,93,sign-up page-1,302,Found,Spotify stress test 1-3,,true,,1202,133,5,5,https://www.spotify.com/eg-ar/signup/,93,0,0
+1591791773189,91,sign-up page-2,302,Found,Spotify stress test 1-3,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=1,91,0,0
+1591791773280,87,sign-up page-3,302,Found,Spotify stress test 1-3,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=2,87,0,0
+1591791773367,194,sign-up page-4,200,OK,Spotify stress test 1-3,text,true,,71339,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,127,0,0
+1591791773165,548,sign-up page,200,OK,Spotify stress test 1-4,text,true,,75154,706,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,79,0,0
+1591791773165,79,sign-up page-0,301,Moved Permanently,Spotify stress test 1-4,,true,,171,129,5,5,http://spotify.com/eg-ar/signup/,79,0,0
+1591791773244,107,sign-up page-1,302,Found,Spotify stress test 1-4,,true,,1202,133,5,5,https://www.spotify.com/eg-ar/signup/,107,0,0
+1591791773351,88,sign-up page-2,302,Found,Spotify stress test 1-4,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=1,88,0,0
+1591791773439,90,sign-up page-3,302,Found,Spotify stress test 1-4,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=2,90,0,0
+1591791773529,184,sign-up page-4,200,OK,Spotify stress test 1-4,text,true,,71339,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,120,0,0
+1591791773562,209,random album,200,OK,Spotify stress test 1-3,text,true,,32278,392,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,76,0,0
+1591791773562,76,random album-0,301,Moved Permanently,Spotify stress test 1-3,,true,,234,196,5,5,http://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,76,0,0
+1591791773638,133,random album-1,200,OK,Spotify stress test 1-3,text,true,,32044,196,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,117,0,0
+1591791773714,208,random album,200,OK,Spotify stress test 1-4,text,true,,32279,392,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,76,0,0
+1591791773714,76,random album-0,301,Moved Permanently,Spotify stress test 1-4,,true,,234,196,5,5,http://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,76,0,0
+1591791773790,132,random album-1,200,OK,Spotify stress test 1-4,text,true,,32045,196,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,117,0,0
+1591791773343,583,sign-up page,200,OK,Spotify stress test 1-1,text,true,,75154,706,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,78,0,0
+1591791773343,78,sign-up page-0,301,Moved Permanently,Spotify stress test 1-1,,true,,171,129,5,5,http://spotify.com/eg-ar/signup/,78,0,0
+1591791773422,106,sign-up page-1,302,Found,Spotify stress test 1-1,,true,,1202,133,5,5,https://www.spotify.com/eg-ar/signup/,106,0,0
+1591791773528,91,sign-up page-2,302,Found,Spotify stress test 1-1,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=1,91,0,0
+1591791773619,125,sign-up page-3,302,Found,Spotify stress test 1-1,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=2,125,0,0
+1591791773744,182,sign-up page-4,200,OK,Spotify stress test 1-1,text,true,,71339,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,113,0,0
+1591791773505,586,sign-up page,200,OK,Spotify stress test 1-2,text,true,,75154,706,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,75,0,0
+1591791773505,75,sign-up page-0,301,Moved Permanently,Spotify stress test 1-2,,true,,171,129,5,5,http://spotify.com/eg-ar/signup/,75,0,0
+1591791773581,90,sign-up page-1,302,Found,Spotify stress test 1-2,,true,,1202,133,5,5,https://www.spotify.com/eg-ar/signup/,90,0,0
+1591791773672,100,sign-up page-2,302,Found,Spotify stress test 1-2,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=1,100,0,0
+1591791773772,92,sign-up page-3,302,Found,Spotify stress test 1-2,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=2,92,0,0
+1591791773864,227,sign-up page-4,200,OK,Spotify stress test 1-2,text,true,,71339,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,141,0,0
+1591791773771,382,random playlist,200,OK,Spotify stress test 1-3,text,true,,146509,458,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,77,0,0
+1591791773771,77,random playlist-0,301,Moved Permanently,Spotify stress test 1-3,,true,,191,153,5,5,http://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,77,0,0
+1591791773848,81,random playlist-1,301,Moved Permanently,Spotify stress test 1-3,text,true,,507,153,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,81,0,0
+1591791773929,224,random playlist-2,200,OK,Spotify stress test 1-3,text,true,,145811,152,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,138,0,0
+1591791773926,247,random album,200,OK,Spotify stress test 1-1,text,true,,32279,392,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,79,0,0
+1591791773926,79,random album-0,301,Moved Permanently,Spotify stress test 1-1,,true,,234,196,5,5,http://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,79,0,0
+1591791774005,168,random album-1,200,OK,Spotify stress test 1-1,text,true,,32045,196,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,150,0,0
+1591791773923,393,random playlist,200,OK,Spotify stress test 1-4,text,true,,146506,458,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,76,0,0
+1591791773923,76,random playlist-0,301,Moved Permanently,Spotify stress test 1-4,,true,,191,153,5,5,http://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,76,0,0
+1591791773999,99,random playlist-1,301,Moved Permanently,Spotify stress test 1-4,text,true,,507,153,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,99,0,0
+1591791774099,217,random playlist-2,200,OK,Spotify stress test 1-4,text,true,,145808,152,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,137,0,0
+1591791774153,207,web player home,200,OK,Spotify stress test 1-3,text,true,,32458,242,5,5,https://open.spotify.com/,78,0,0
+1591791774153,78,web player home-0,301,Moved Permanently,Spotify stress test 1-3,,true,,159,121,5,5,http://open.spotify.com/,78,0,0
+1591791774231,129,web player home-1,200,OK,Spotify stress test 1-3,text,true,,32299,121,5,5,https://open.spotify.com/,110,0,0
+1591791774092,273,random album,200,OK,Spotify stress test 1-2,text,true,,32278,392,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,79,0,0
+1591791774092,79,random album-0,301,Moved Permanently,Spotify stress test 1-2,,true,,234,196,5,5,http://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,79,0,0
+1591791774172,193,random album-1,200,OK,Spotify stress test 1-2,text,true,,32044,196,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,144,0,0
+1591791774317,204,web player home,200,OK,Spotify stress test 1-4,text,true,,32459,242,5,5,https://open.spotify.com/,76,0,0
+1591791774317,76,web player home-0,301,Moved Permanently,Spotify stress test 1-4,,true,,159,121,5,5,http://open.spotify.com/,76,0,0
+1591791774393,128,web player home-1,200,OK,Spotify stress test 1-4,text,true,,32300,121,5,5,https://open.spotify.com/,107,0,0
+1591791774361,197,login page,200,OK,Spotify stress test 1-3,text,true,,4219,266,5,5,https://accounts.spotify.com/en/login,75,0,0
+1591791774361,75,login page-0,301,Moved Permanently,Spotify stress test 1-3,,true,,171,133,5,5,http://accounts.spotify.com/en/login,75,0,0
+1591791774436,122,login page-1,200,OK,Spotify stress test 1-3,text,true,,4048,133,5,5,https://accounts.spotify.com/en/login,122,0,0
+1591791774522,169,login page,200,OK,Spotify stress test 1-4,text,true,,4219,266,5,5,https://accounts.spotify.com/en/login,80,0,0
+1591791774522,80,login page-0,301,Moved Permanently,Spotify stress test 1-4,,true,,171,133,5,5,http://accounts.spotify.com/en/login,80,0,0
+1591791774602,89,login page-1,200,OK,Spotify stress test 1-4,text,true,,4048,133,5,5,https://accounts.spotify.com/en/login,89,0,0
+1591791774174,518,random playlist,200,OK,Spotify stress test 1-1,text,true,,146507,458,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,85,0,0
+1591791774174,85,random playlist-0,301,Moved Permanently,Spotify stress test 1-1,,true,,191,153,5,5,http://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,85,0,0
+1591791774259,80,random playlist-1,301,Moved Permanently,Spotify stress test 1-1,text,true,,507,153,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,79,0,0
+1591791774339,353,random playlist-2,200,OK,Spotify stress test 1-1,text,true,,145809,152,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,128,0,0
+1591791773422,1276,sign-up page,200,OK,Spotify stress test 1-5,text,true,,75154,706,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,84,0,0
+1591791773422,84,sign-up page-0,301,Moved Permanently,Spotify stress test 1-5,,true,,171,129,5,5,http://spotify.com/eg-ar/signup/,84,0,0
+1591791773507,752,sign-up page-1,302,Found,Spotify stress test 1-5,,true,,1202,133,5,5,https://www.spotify.com/eg-ar/signup/,752,0,0
+1591791774259,100,sign-up page-2,302,Found,Spotify stress test 1-5,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=1,100,0,0
+1591791774359,87,sign-up page-3,302,Found,Spotify stress test 1-5,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=2,87,0,0
+1591791774446,252,sign-up page-4,200,OK,Spotify stress test 1-5,text,true,,71339,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,177,0,0
+1591791774692,225,web player home,200,OK,Spotify stress test 1-1,text,true,,32457,242,5,5,https://open.spotify.com/,77,0,0
+1591791774692,77,web player home-0,301,Moved Permanently,Spotify stress test 1-1,,true,,159,121,5,5,http://open.spotify.com/,77,0,0
+1591791774769,148,web player home-1,200,OK,Spotify stress test 1-1,text,true,,32298,121,5,5,https://open.spotify.com/,106,0,0
+1591791774365,573,random playlist,200,OK,Spotify stress test 1-2,text,true,,146507,458,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,78,0,0
+1591791774365,78,random playlist-0,301,Moved Permanently,Spotify stress test 1-2,,true,,191,153,5,5,http://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,78,0,0
+1591791774443,80,random playlist-1,301,Moved Permanently,Spotify stress test 1-2,text,true,,507,153,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,80,0,0
+1591791774523,415,random playlist-2,200,OK,Spotify stress test 1-2,text,true,,145809,152,5,5,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,138,0,0
+1591791774698,249,random album,200,OK,Spotify stress test 1-5,text,true,,32277,392,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,78,0,0
+1591791774698,78,random album-0,301,Moved Permanently,Spotify stress test 1-5,,true,,234,196,5,5,http://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,78,0,0
+1591791774776,171,random album-1,200,OK,Spotify stress test 1-5,text,true,,32043,196,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,113,0,0
+1591791774559,544,sign-up page,200,OK,Spotify stress test 1-3,text,true,,75154,706,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,87,0,0
+1591791774559,87,sign-up page-0,301,Moved Permanently,Spotify stress test 1-3,,true,,171,129,5,5,http://spotify.com/eg-ar/signup/,87,0,0
+1591791774646,92,sign-up page-1,302,Found,Spotify stress test 1-3,,true,,1202,133,5,5,https://www.spotify.com/eg-ar/signup/,92,0,0
+1591791774738,87,sign-up page-2,302,Found,Spotify stress test 1-3,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=1,87,0,0
+1591791774825,102,sign-up page-3,302,Found,Spotify stress test 1-3,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=2,102,0,0
+1591791774928,175,sign-up page-4,200,OK,Spotify stress test 1-3,text,true,,71339,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,140,0,0
+1591791774917,188,login page,200,OK,Spotify stress test 1-1,text,true,,4218,266,5,5,https://accounts.spotify.com/en/login,97,0,0
+1591791774917,97,login page-0,301,Moved Permanently,Spotify stress test 1-1,,true,,171,133,5,5,http://accounts.spotify.com/en/login,97,0,0
+1591791775014,91,login page-1,200,OK,Spotify stress test 1-1,text,true,,4047,133,5,5,https://accounts.spotify.com/en/login,91,0,0
+1591791774939,255,web player home,200,OK,Spotify stress test 1-2,text,true,,32458,242,5,5,https://open.spotify.com/,81,0,0
+1591791774939,81,web player home-0,301,Moved Permanently,Spotify stress test 1-2,,true,,159,121,5,5,http://open.spotify.com/,81,0,0
+1591791775020,174,web player home-1,200,OK,Spotify stress test 1-2,text,true,,32299,121,5,5,https://open.spotify.com/,109,0,0
+1591791774691,530,sign-up page,200,OK,Spotify stress test 1-4,text,true,,75154,706,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,79,0,0
+1591791774691,79,sign-up page-0,301,Moved Permanently,Spotify stress test 1-4,,true,,171,129,5,5,http://spotify.com/eg-ar/signup/,79,0,0
+1591791774770,94,sign-up page-1,302,Found,Spotify stress test 1-4,,true,,1202,133,5,5,https://www.spotify.com/eg-ar/signup/,94,0,0
+1591791774864,93,sign-up page-2,302,Found,Spotify stress test 1-4,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=1,93,0,0
+1591791774957,91,sign-up page-3,302,Found,Spotify stress test 1-4,,true,,1221,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=2,91,0,0
+1591791775048,173,sign-up page-4,200,OK,Spotify stress test 1-4,text,true,,71339,148,5,5,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,133,0,0
+1591791775103,221,random album,200,OK,Spotify stress test 1-3,text,true,,32279,392,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,82,0,0
+1591791775103,82,random album-0,301,Moved Permanently,Spotify stress test 1-3,,true,,234,196,5,5,http://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,82,0,0
+1591791775185,139,random album-1,200,OK,Spotify stress test 1-3,text,true,,32045,196,5,5,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,116,0,0
+1591791775195,167,login page,200,OK,Spotify stress test 1-2,text,true,,4218,266,4,4,https://accounts.spotify.com/en/login,84,0,0
+1591791775195,84,login page-0,301,Moved Permanently,Spotify stress test 1-2,,true,,171,133,4,4,http://accounts.spotify.com/en/login,84,0,0
+1591791775279,83,login page-1,200,OK,Spotify stress test 1-2,text,true,,4047,133,4,4,https://accounts.spotify.com/en/login,83,0,0
+1591791775222,223,random album,200,OK,Spotify stress test 1-4,text,true,,32278,392,4,4,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,88,0,0
+1591791775222,88,random album-0,301,Moved Permanently,Spotify stress test 1-4,,true,,234,196,4,4,http://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,88,0,0
+1591791775311,134,random album-1,200,OK,Spotify stress test 1-4,text,true,,32044,196,4,4,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,114,0,0
+1591791774948,602,random playlist,200,OK,Spotify stress test 1-5,text,true,,146506,458,3,3,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,76,0,0
+1591791774948,76,random playlist-0,301,Moved Permanently,Spotify stress test 1-5,,true,,191,153,3,3,http://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,76,0,0
+1591791775024,81,random playlist-1,301,Moved Permanently,Spotify stress test 1-5,text,true,,507,153,3,3,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz/,81,0,0
+1591791775105,445,random playlist-2,200,OK,Spotify stress test 1-5,text,true,,145808,152,3,3,https://open.spotify.com/playlist/37i9dQZEVXcHnOb3M9befz,140,0,0
+1591791775105,529,sign-up page,200,OK,Spotify stress test 1-1,text,true,,75415,706,3,3,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,89,0,0
+1591791775105,89,sign-up page-0,301,Moved Permanently,Spotify stress test 1-1,,true,,171,129,3,3,http://spotify.com/eg-ar/signup/,89,0,0
+1591791775195,93,sign-up page-1,302,Found,Spotify stress test 1-1,,true,,1202,133,3,3,https://www.spotify.com/eg-ar/signup/,93,0,0
+1591791775289,87,sign-up page-2,302,Found,Spotify stress test 1-1,,true,,1221,148,3,3,https://www.spotify.com/eg-ar/signup/?sp_t_counter=1,87,0,0
+1591791775376,103,sign-up page-3,302,Found,Spotify stress test 1-1,,true,,1221,148,3,3,https://www.spotify.com/eg-ar/signup/?sp_t_counter=2,103,0,0
+1591791775480,154,sign-up page-4,200,OK,Spotify stress test 1-1,text,true,,71600,148,3,3,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,118,0,0
+1591791775550,249,web player home,200,OK,Spotify stress test 1-5,text,true,,32458,242,3,3,https://open.spotify.com/,86,0,0
+1591791775550,86,web player home-0,301,Moved Permanently,Spotify stress test 1-5,,true,,159,121,3,3,http://open.spotify.com/,86,0,0
+1591791775636,163,web player home-1,200,OK,Spotify stress test 1-5,text,true,,32299,121,3,3,https://open.spotify.com/,103,0,0
+1591791775362,528,sign-up page,200,OK,Spotify stress test 1-2,text,true,,75154,706,3,3,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,83,0,0
+1591791775362,83,sign-up page-0,301,Moved Permanently,Spotify stress test 1-2,,true,,171,129,3,3,http://spotify.com/eg-ar/signup/,83,0,0
+1591791775445,88,sign-up page-1,302,Found,Spotify stress test 1-2,,true,,1202,133,3,3,https://www.spotify.com/eg-ar/signup/,88,0,0
+1591791775533,102,sign-up page-2,302,Found,Spotify stress test 1-2,,true,,1221,148,3,3,https://www.spotify.com/eg-ar/signup/?sp_t_counter=1,102,0,0
+1591791775636,95,sign-up page-3,302,Found,Spotify stress test 1-2,,true,,1221,148,3,3,https://www.spotify.com/eg-ar/signup/?sp_t_counter=2,95,0,0
+1591791775731,159,sign-up page-4,200,OK,Spotify stress test 1-2,text,true,,71339,148,3,3,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,114,0,0
+1591791775634,259,random album,200,OK,Spotify stress test 1-1,text,true,,32278,392,3,3,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,79,0,0
+1591791775634,79,random album-0,301,Moved Permanently,Spotify stress test 1-1,,true,,234,196,3,3,http://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,79,0,0
+1591791775713,180,random album-1,200,OK,Spotify stress test 1-1,text,true,,32044,196,3,3,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,114,0,0
+1591791775800,185,login page,200,OK,Spotify stress test 1-5,text,true,,4217,266,2,2,https://accounts.spotify.com/en/login,93,0,0
+1591791775800,93,login page-0,301,Moved Permanently,Spotify stress test 1-5,,true,,171,133,2,2,http://accounts.spotify.com/en/login,93,0,0
+1591791775893,92,login page-1,200,OK,Spotify stress test 1-5,text,true,,4046,133,2,2,https://accounts.spotify.com/en/login,92,0,0
+1591791775891,254,random album,200,OK,Spotify stress test 1-2,text,true,,32277,392,2,2,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,87,0,0
+1591791775891,87,random album-0,301,Moved Permanently,Spotify stress test 1-2,,true,,234,196,2,2,http://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,87,0,0
+1591791775979,166,random album-1,200,OK,Spotify stress test 1-2,text,true,,32043,196,2,2,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,108,0,0
+1591791775985,497,sign-up page,200,OK,Spotify stress test 1-5,text,true,,75676,706,1,1,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,81,0,0
+1591791775985,81,sign-up page-0,301,Moved Permanently,Spotify stress test 1-5,,true,,171,129,1,1,http://spotify.com/eg-ar/signup/,81,0,0
+1591791776066,86,sign-up page-1,302,Found,Spotify stress test 1-5,,true,,1202,133,1,1,https://www.spotify.com/eg-ar/signup/,86,0,0
+1591791776152,87,sign-up page-2,302,Found,Spotify stress test 1-5,,true,,1482,148,1,1,https://www.spotify.com/eg-ar/signup/?sp_t_counter=1,87,0,0
+1591791776240,89,sign-up page-3,302,Found,Spotify stress test 1-5,,true,,1482,148,1,1,https://www.spotify.com/eg-ar/signup/?sp_t_counter=2,89,0,0
+1591791776329,153,sign-up page-4,200,OK,Spotify stress test 1-5,text,true,,71339,148,1,1,https://www.spotify.com/eg-ar/signup/?sp_t_counter=3,117,0,0
+1591791776483,256,random album,200,OK,Spotify stress test 1-5,text,true,,32279,392,1,1,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,76,0,0
+1591791776483,76,random album-0,301,Moved Permanently,Spotify stress test 1-5,,true,,234,196,1,1,http://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,76,0,0
+1591791776559,180,random album-1,200,OK,Spotify stress test 1-5,text,true,,32045,196,1,1,https://open.spotify.com/album/2uL4yvjeT0c3Wv8CF9lQcN?highlight=spotify:track:6rDaCGqcQB1urhpCrrD599,120,0,0
