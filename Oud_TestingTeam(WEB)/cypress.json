@@ -2,9 +2,9 @@
     "baseUrl": "https://www.spotify.com/eg-en/",
     "browser": "chrome",
     "reporter": "cypress-multi-reporters",
-    "env":{
-        "username" : "oudtesting@gmail.com",
-        "password" : "oud_testing12"
+    "env": {
+        "username": "oudtesting@gmail.com",
+        "password": "oudtesting123"
     },
     "reporterOptions": {
         "reporterEnabled": "mochawesome",

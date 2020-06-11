@@ -2,11 +2,11 @@
 
 describe("Add songs to a playlist", () => {
   beforeEach(() => {
-    cy.visit("/");
+    cy.visit("https://open.spotify.com/");
 
     cy.contains("Log in").click();
-    cy.get("#login-username").type("cry.try124@gmail.com");
-    cy.get("#login-password").type("Medodedo21");
+    cy.get("#login-username").type(Cypress.env("username"));
+    cy.get("#login-password").type(Cypress.env("password"));
     cy.get("#login-button").click();
 
     cy.fixture("URLS.json").then((URLSData) => {
